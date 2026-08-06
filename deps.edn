@@ -1,0 +1,9 @@
+{:paths ["src" "src-gen"]
+ :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+        org.clojure/clojurescript {:mvn/version "1.11.132"}
+        thheller/shadow-cljs {:mvn/version "2.26.2"}
+;;        jtk-dvlp/cljs-workers {:local/root "../cljs-workers"}
+        funcool/promesa {:mvn/version "11.0.678"}
+        com.taoensso/tempura {:mvn/version "1.5.4"}
+        paradise/client {:local/root "../Paradise"}}}
+
