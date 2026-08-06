@@ -1,0 +1,21 @@
+
+** Matrix Engine
+
+
+An engine for Paradise that maps the spec of Matrix to the modular main client.
+This enables Paradise to be a Matrix client, and so much more.
+
+
+
+
+
+
+
+
+
+Notes for myself:
+guix shell -C -N -F  --share=$HOME/Code -m ./manifest.scm
+
+
+Testing local:
+npx http-server dist --cors -p 8082
