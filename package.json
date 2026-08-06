@@ -1,0 +1,25 @@
+{
+    "name": "@paradise/matrix-engine",
+    "version": "0.1.0",
+    "type": "module",
+    "main": "dist/matrix-engine.js",
+    "scripts": {
+        "build:cljs": "shadow-cljs release engine",
+        "build:bundle": "esbuild dist/main.js --bundle --format=esm --outfile=dist/plugin.js",
+        "build:wasm": "cp node_modules/ffi-bindings/src/generated/wasm-bindgen/index_bg.wasm dist/",
+        "build": "npm run build:cljs && npm run build:bundle && npm run build:wasm"
+    },
+    "dependencies": {
+        "@noble/hashes": "^2.2.0",
+        "@nostrify/indexeddb": "^0.1.1",
+        "@nostrify/nostrify": "^0.54.0",
+        "ffi-bindings": "^1.0.6",
+        "nostr-tools": "^2.24.1",
+        "react": "18.3.1",
+        "react-dom": "18.3.1",
+        "shadow-cljs": "^3.3.6"
+    },
+    "devDependencies": {
+        "esbuild": "^0.28.1"
+    }
+}
