@@ -1,0 +1,9 @@
+{:deps true
+ :builds
+ {:engine
+  {:target :esm
+   :output-dir "dist"
+   :js-options {:js-provider :import}
+   :modules {:main {:entries [paradise.engine.matrix.core]
+                    :exports {bootstrap paradise.engine.matrix.core/bootstrap}}}
+   :compiler-options {:optimizations :simple}}}}
