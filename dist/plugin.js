@@ -90347,20 +90347,20 @@ var cljs$cst$1014$is_own_QMARK_ = new cljs.core.Keyword(null, "is-own?", "is-own
 var cljs$cst$2254$capitalize = new cljs.core.Symbol(null, "capitalize", "capitalize", -2143275164, null);
 var cljs$cst$477$taoensso_DOT_encore_SLASH_skip = new cljs.core.Keyword("taoensso.encore", "skip", "taoensso.encore/skip", -726061459);
 var cljs$cst$707$js = new cljs.core.Keyword(null, "js", "js", 1768080579);
-var cljs$cst$814$meta24553 = new cljs.core.Symbol(null, "meta24553", "meta24553", 1583555857, null);
 var cljs$cst$1988$bound_fn_STAR_ = new cljs.core.Symbol(null, "bound-fn*", "bound-fn*", 102308621, null);
 var cljs$cst$1837$prefers = new cljs.core.Symbol(null, "prefers", "prefers", -374265406, null);
 var cljs$cst$2580$after = new cljs.core.Symbol(null, "after", "after", -2059438855, null);
-var cljs$cst$1161$clojure_DOT_core_SLASH_array_map = new cljs.core.Symbol("clojure.core", "array-map", "clojure.core/array-map", -1351833961, null);
+var cljs$cst$1161$clojure_DOT_core_SLASH_array_map = new cljs.core.Symbol(
+  "clojure.core",
+  "array-map",
+  "clojure.core/array-map",
+  -1351833961,
+  null
+);
 var cljs$cst$1602$cljs_DOT_core_SLASH_chunk = new cljs.core.Symbol("cljs.core", "chunk", "cljs.core/chunk", 847936424, null);
 var cljs$cst$895$re_frame_DOT_db_SLASH_path_history = new cljs.core.Keyword("re-frame.db", "path-history", "re-frame.db/path-history", -1466258079);
 var cljs$cst$1981$empty = new cljs.core.Symbol(null, "empty", "empty", -1886564811, null);
-var cljs$cst$2702$fn_SLASH_h_1856395903 = new cljs.core.Keyword(
-  "fn",
-  "h-1856395903",
-  "fn/h-1856395903",
-  1888151370
-);
+var cljs$cst$2702$fn_SLASH_h_1856395903 = new cljs.core.Keyword("fn", "h-1856395903", "fn/h-1856395903", 1888151370);
 var cljs$cst$1561$shorts = new cljs.core.Symbol(null, "shorts", "shorts", 107738238, null);
 var cljs$cst$2152$options = new cljs.core.Symbol(null, "options", "options", 1740170016, null);
 var cljs$cst$2659$protocols = new cljs.core.Keyword(null, "protocols", "protocols", -5615896);
@@ -90379,69 +90379,62 @@ var cljs$cst$528$deny = new cljs.core.Keyword(null, "deny", "deny", 1589338523);
 var cljs$cst$1962$repeat = new cljs.core.Symbol(null, "repeat", "repeat", -1821743682, null);
 var cljs$cst$1428$_PERCENT_ = new cljs.core.Symbol(null, "%", "%", -950237169, null);
 var cljs$cst$1102$edit = new cljs.core.Keyword(null, "edit", "edit", -1641834166);
-var cljs$cst$1513$_STAR_ = new cljs.core.Symbol(null, "*", "*", 345799209, null);
+var cljs$cst$1513$_STAR_ = new cljs.core.Symbol(
+  null,
+  "*",
+  "*",
+  345799209,
+  null
+);
 var cljs$cst$4$print_length = new cljs.core.Keyword(null, "print-length", "print-length", 1931866356);
 var cljs$cst$2169$child = new cljs.core.Symbol(null, "child", "child", -2030468224, null);
 var cljs$cst$1552$_PLUS_ = new cljs.core.Symbol(null, "+", "+", -740910886, null);
 var cljs$cst$165$_DOT_ = new cljs.core.Symbol(null, ".", ".", 1975675962, null);
 var cljs$cst$1530$_ = new cljs.core.Symbol(null, "-", "-", -471816912, null);
-var cljs$cst$422$_SLASH_ = new cljs.core.Symbol(
+var cljs$cst$422$_SLASH_ = new cljs.core.Symbol(null, "/", "/", -1371932971, null);
+var cljs$cst$787$keys = new cljs.core.Keyword(
   null,
-  "/",
-  "/",
-  -1371932971,
-  null
+  "keys",
+  "keys",
+  1068423698
 );
-var cljs$cst$787$keys = new cljs.core.Keyword(null, "keys", "keys", 1068423698);
 var cljs$cst$1052$handle = new cljs.core.Keyword(null, "handle", "handle", 1538948854);
 var cljs$cst$2426$vthread_call = new cljs.core.Symbol(null, "vthread-call", "vthread-call", -1116007948, null);
 var cljs$cst$1793$load_reader = new cljs.core.Symbol(null, "load-reader", "load-reader", -734810126, null);
 var cljs$cst$1999$boolean_QMARK_ = new cljs.core.Symbol(null, "boolean?", "boolean?", 1790940868, null);
-var cljs$cst$644$ns_filter = new cljs.core.Keyword(
-  null,
-  "ns-filter",
-  "ns-filter",
-  108598448
-);
+var cljs$cst$644$ns_filter = new cljs.core.Keyword(null, "ns-filter", "ns-filter", 108598448);
 var cljs$cst$1584$cljs_DOT_core_SLASH_chunked_seq_QMARK_ = new cljs.core.Symbol("cljs.core", "chunked-seq?", "cljs.core/chunked-seq?", -712922369, null);
 var cljs$cst$869$re_frame_DOT_router_SLASH_fsm_trigger = new cljs.core.Keyword("re-frame.router", "fsm-trigger", "re-frame.router/fsm-trigger", 1379787274);
 var cljs$cst$2523$_set_ratom_generation_BANG_ = new cljs.core.Symbol(null, "-set-ratom-generation!", "-set-ratom-generation!", -1545989828, null);
-var cljs$cst$93$right = new cljs.core.Symbol(
-  null,
-  "right",
-  "right",
-  1187949694,
-  null
-);
+var cljs$cst$93$right = new cljs.core.Symbol(null, "right", "right", 1187949694, null);
 var cljs$cst$2675$re_frame_DOT_db_SLASH_broadcast_async_BANG_ = new cljs.core.Symbol("re-frame.db", "broadcast-async!", "re-frame.db/broadcast-async!", -507604412, null);
 var cljs$cst$2712$env_type = new cljs.core.Keyword(null, "env-type", "env-type", 1642533974);
 var cljs$cst$1031$caption = new cljs.core.Keyword(null, "caption", "caption", -855383902);
 var cljs$cst$2078$remove_watch = new cljs.core.Symbol(null, "remove-watch", "remove-watch", -1105301448, null);
-var cljs$cst$2044$multi_fn_add_method_impl = new cljs.core.Symbol(
-  null,
-  "multi-fn-add-method-impl",
-  "multi-fn-add-method-impl",
-  -523930142,
-  null
-);
+var cljs$cst$2044$multi_fn_add_method_impl = new cljs.core.Symbol(null, "multi-fn-add-method-impl", "multi-fn-add-method-impl", -523930142, null);
 var cljs$cst$2763$code = new cljs.core.Keyword(null, "code", "code", 1586293142);
 var cljs$cst$2082$IReset = new cljs.core.Symbol(null, "IReset", "IReset", -1893729426, null);
 var cljs$cst$18$arr = new cljs.core.Symbol(null, "arr", "arr", 2115492975, null);
 var cljs$cst$672$hostname_ = new cljs.core.Keyword(null, "hostname_", "hostname_", -2091647379);
 var cljs$cst$1007$content_available = new cljs.core.Keyword(null, "content-available", "content-available", 1191550393);
-var cljs$cst$2404$BINDINGS_IDX = new cljs.core.Symbol(null, "BINDINGS-IDX", "BINDINGS-IDX", 1667401912, null);
+var cljs$cst$2404$BINDINGS_IDX = new cljs.core.Symbol(
+  null,
+  "BINDINGS-IDX",
+  "BINDINGS-IDX",
+  1667401912,
+  null
+);
 var cljs$cst$591$head = new cljs.core.Keyword(null, "head", "head", -771383919);
 var cljs$cst$1046$paginate_amount = new cljs.core.Keyword(null, "paginate-amount", "paginate-amount", 1936276228);
 var cljs$cst$1702$_DOT_toFixed = new cljs.core.Symbol(null, ".toFixed", ".toFixed", -895046938, null);
 var cljs$cst$521$filter_spec = new cljs.core.Symbol(null, "filter-spec", "filter-spec", 539212879, null);
-var cljs$cst$2316$_LT__BANG_ = new cljs.core.Symbol(
+var cljs$cst$2316$_LT__BANG_ = new cljs.core.Symbol(null, "<!", "<!", -1961915773, null);
+var cljs$cst$473$rnum = new cljs.core.Keyword(
   null,
-  "<!",
-  "<!",
-  -1961915773,
-  null
+  "rnum",
+  "rnum",
+  -783850724
 );
-var cljs$cst$473$rnum = new cljs.core.Keyword(null, "rnum", "rnum", -783850724);
 var cljs$cst$17$_rest = new cljs.core.Symbol(null, "_rest", "_rest", -2100466189, null);
 var cljs$cst$228$_ = new cljs.core.Symbol(null, "_", "_", -1201019570, null);
 var cljs$cst$1977$cond__GT_ = new cljs.core.Symbol(null, "cond->", "cond->", 561741875, null);
@@ -90453,13 +90446,7 @@ var cljs$cst$776$a = new cljs.core.Symbol(null, "a", "a", -482876059, null);
 var cljs$cst$68$rear = new cljs.core.Symbol(null, "rear", "rear", -900164830, null);
 var cljs$cst$2134$d = new cljs.core.Symbol(null, "d", "d", -682293345, null);
 var cljs$cst$562$c = new cljs.core.Symbol(null, "c", "c", -122660552, null);
-var cljs$cst$1292$sci_DOT_impl_DOT_deftype_SLASH__inner_impl = new cljs.core.Symbol(
-  "sci.impl.deftype",
-  "-inner-impl",
-  "sci.impl.deftype/-inner-impl",
-  528349233,
-  null
-);
+var cljs$cst$1292$sci_DOT_impl_DOT_deftype_SLASH__inner_impl = new cljs.core.Symbol("sci.impl.deftype", "-inner-impl", "sci.impl.deftype/-inner-impl", 528349233, null);
 var cljs$cst$1462$body = new cljs.core.Symbol(null, "body", "body", -408674142, null);
 var cljs$cst$1508$booleans = new cljs.core.Symbol(null, "booleans", "booleans", 756846088, null);
 var cljs$cst$52$f = new cljs.core.Symbol(null, "f", "f", 43394975, null);
@@ -90467,122 +90454,120 @@ var cljs$cst$1321$sigs = new cljs.core.Keyword(null, "sigs", "sigs", -1653119622
 var cljs$cst$2106$e = new cljs.core.Symbol(null, "e", "e", -1273166571, null);
 var cljs$cst$2103$h = new cljs.core.Symbol(null, "h", "h", -1544777029, null);
 var cljs$cst$804$g = new cljs.core.Symbol(null, "g", "g", -916345864, null);
-var cljs$cst$19$i = new cljs.core.Symbol(null, "i", "i", 253690212, null);
+var cljs$cst$19$i = new cljs.core.Symbol(
+  null,
+  "i",
+  "i",
+  253690212,
+  null
+);
 var cljs$cst$1406$sci_DOT_impl_DOT_async_await_SLASH_catch_for_try = new cljs.core.Symbol("sci.impl.async-await", "catch-for-try", "sci.impl.async-await/catch-for-try", -653307970, null);
 var cljs$cst$2252$escape = new cljs.core.Symbol(null, "escape", "escape", 648929575, null);
 var cljs$cst$370$k = new cljs.core.Symbol(null, "k", "k", -505765866, null);
 var cljs$cst$179$n = new cljs.core.Symbol(null, "n", "n", -2092305744, null);
-var cljs$cst$2655$set_eve_atom_BANG_ = new cljs.core.Symbol(null, "set-eve-atom!", "set-eve-atom!", -1199310662, null);
+var cljs$cst$2655$set_eve_atom_BANG_ = new cljs.core.Symbol(
+  null,
+  "set-eve-atom!",
+  "set-eve-atom!",
+  -1199310662,
+  null
+);
 var cljs$cst$551$m = new cljs.core.Symbol(null, "m", "m", -1021758608, null);
 var cljs$cst$1388$m__42159__auto__ = new cljs.core.Symbol(null, "m__42159__auto__", "m__42159__auto__", -180188905, null);
 var cljs$cst$2119$attr_map_QMARK_ = new cljs.core.Symbol(null, "attr-map?", "attr-map?", 116307443, null);
 var cljs$cst$233$p = new cljs.core.Symbol(null, "p", "p", 1791580836, null);
-var cljs$cst$2387$fn_SLASH_h_1709758537 = new cljs.core.Keyword(
-  "fn",
-  "h-1709758537",
-  "fn/h-1709758537",
-  1651741262
-);
+var cljs$cst$2387$fn_SLASH_h_1709758537 = new cljs.core.Keyword("fn", "h-1709758537", "fn/h-1709758537", 1651741262);
 var cljs$cst$2538$sci_DOT_configs_DOT_reagent_DOT_reagent_SLASH__ratom_context = new cljs.core.Symbol("sci.configs.reagent.reagent", "-ratom-context", "sci.configs.reagent.reagent/-ratom-context", 270989566, null);
 var cljs$cst$2126$o = new cljs.core.Symbol(null, "o", "o", 290524299, null);
 var cljs$cst$1259$lazy_seq = new cljs.core.Symbol(null, "lazy-seq", "lazy-seq", 489632906, null);
 var cljs$cst$1812$read = new cljs.core.Symbol(null, "read", "read", -1514377108, null);
-var cljs$cst$2196$r = new cljs.core.Symbol(
-  null,
-  "r",
-  "r",
-  1169147337,
-  null
-);
+var cljs$cst$2196$r = new cljs.core.Symbol(null, "r", "r", 1169147337, null);
 var cljs$cst$592$options = new cljs.core.Keyword(null, "options", "options", 99638489);
 var cljs$cst$1547$doubles = new cljs.core.Symbol(null, "doubles", "doubles", -1517872169, null);
 var cljs$cst$2093$t = new cljs.core.Symbol(null, "t", "t", 242699008, null);
 var cljs$cst$2391$run = new cljs.core.Symbol(null, "run", "run", -180635126, null);
 var cljs$cst$14$s = new cljs.core.Symbol(null, "s", "s", -948495851, null);
 var cljs$cst$123$vf = new cljs.core.Keyword(null, "vf", "vf", -321423269);
-var cljs$cst$359$re_pattern = new cljs.core.Symbol(
+var cljs$cst$359$re_pattern = new cljs.core.Symbol(null, "re-pattern", "re-pattern", 1047705161, null);
+var cljs$cst$1291$__sci_this = new cljs.core.Symbol(
   null,
-  "re-pattern",
-  "re-pattern",
-  1047705161,
+  "__sci_this",
+  "__sci_this",
+  -193704996,
   null
 );
-var cljs$cst$1291$__sci_this = new cljs.core.Symbol(null, "__sci_this", "__sci_this", -193704996, null);
 var cljs$cst$57$v = new cljs.core.Symbol(null, "v", "v", 1661996586, null);
 var cljs$cst$478$x = new cljs.core.Symbol(null, "x", "x", -555367584, null);
 var cljs$cst$1511$_LT__EQ_ = new cljs.core.Symbol(null, "<=", "<=", 1244895369, null);
 var cljs$cst$2371$__GT_t_cljs$core$async27577 = new cljs.core.Symbol(null, "->t_cljs$core$async27577", "->t_cljs$core$async27577", 1396542579, null);
-var cljs$cst$2303$__GT_t_cljs$core$async28425 = new cljs.core.Symbol(null, "->t_cljs$core$async28425", "->t_cljs$core$async28425", 750182272, null);
+var cljs$cst$2303$__GT_t_cljs$core$async28425 = new cljs.core.Symbol(
+  null,
+  "->t_cljs$core$async28425",
+  "->t_cljs$core$async28425",
+  750182272,
+  null
+);
 var cljs$cst$1926$get_in = new cljs.core.Symbol(null, "get-in", "get-in", -1965644065, null);
 var cljs$cst$1493$_LT_ = new cljs.core.Symbol(null, "<", "<", 993667236, null);
 var cljs$cst$2277$yrel = new cljs.core.Symbol(null, "yrel", "yrel", -1573821256, null);
 var cljs$cst$735$preferBuffers = new cljs.core.Keyword(null, "preferBuffers", "preferBuffers", 1843176451);
-var cljs$cst$991$auth = new cljs.core.Keyword(
-  null,
-  "auth",
-  "auth",
-  1389754926
-);
+var cljs$cst$991$auth = new cljs.core.Keyword(null, "auth", "auth", 1389754926);
 var cljs$cst$1524$_GT_ = new cljs.core.Symbol(null, ">", ">", 1085014381, null);
 var cljs$cst$2410$fn_SLASH_h1071261442 = new cljs.core.Keyword("fn", "h1071261442", "fn/h1071261442", 555374375);
 var cljs$cst$1489$_EQ_ = new cljs.core.Symbol(null, "=", "=", -1501502141, null);
 var cljs$cst$1813$macroexpand = new cljs.core.Symbol(null, "macroexpand", "macroexpand", 1509933344, null);
 var cljs$cst$1108$filename = new cljs.core.Keyword(null, "filename", "filename", -1428840783);
-var cljs$cst$579$auto = new cljs.core.Keyword(
-  null,
-  "auto",
-  "auto",
-  -566279492
-);
+var cljs$cst$579$auto = new cljs.core.Keyword(null, "auto", "auto", -566279492);
 var cljs$cst$236$$fn_ptr = new cljs.core.Keyword(null, "$fn-ptr", "$fn-ptr", 2028261314);
 var cljs$cst$1842$every_QMARK_ = new cljs.core.Symbol(null, "every?", "every?", 2083724064, null);
 var cljs$cst$348$taoensso_DOT_truss_SLASH_update_ctx = new cljs.core.Symbol("taoensso.truss", "update-ctx", "taoensso.truss/update-ctx", 2138642429, null);
 var cljs$cst$2700$hash_kw = new cljs.core.Keyword(null, "hash-kw", "hash-kw", 1278192302);
-var cljs$cst$2650$old_state = new cljs.core.Symbol(
+var cljs$cst$2650$old_state = new cljs.core.Symbol(null, "old-state", "old-state", -1614855065, null);
+var cljs$cst$409$hierarchy = new cljs.core.Keyword(null, "hierarchy", "hierarchy", -1053470341);
+var cljs$cst$26$__hash = new cljs.core.Symbol(
   null,
-  "old-state",
-  "old-state",
-  -1614855065,
+  "__hash",
+  "__hash",
+  -1328796629,
   null
 );
-var cljs$cst$409$hierarchy = new cljs.core.Keyword(null, "hierarchy", "hierarchy", -1053470341);
-var cljs$cst$26$__hash = new cljs.core.Symbol(null, "__hash", "__hash", -1328796629, null);
 var cljs$cst$2229$keywordize_keys = new cljs.core.Symbol(null, "keywordize-keys", "keywordize-keys", -1343651517, null);
 var cljs$cst$2764$preload = new cljs.core.Keyword(null, "preload", "preload", 1646824722);
 var cljs$cst$316$engine_id = new cljs.core.Keyword(null, "engine-id", "engine-id", 1084988776);
-var cljs$cst$2325$__GT_t_cljs$core$async28433 = new cljs.core.Symbol(
+var cljs$cst$2325$__GT_t_cljs$core$async28433 = new cljs.core.Symbol(null, "->t_cljs$core$async28433", "->t_cljs$core$async28433", -1343511539, null);
+var cljs$cst$2377$_GT__BANG_ = new cljs.core.Symbol(
   null,
-  "->t_cljs$core$async28433",
-  "->t_cljs$core$async28433",
-  -1343511539,
+  ">!",
+  ">!",
+  -1080922249,
   null
 );
-var cljs$cst$2377$_GT__BANG_ = new cljs.core.Symbol(null, ">!", ">!", -1080922249, null);
 var cljs$cst$2286$async_load_fn = new cljs.core.Keyword(null, "async-load-fn", "async-load-fn", -472170029);
 var cljs$cst$1645$cljs_DOT_core_SLASH_alength = new cljs.core.Symbol("cljs.core", "alength", "cljs.core/alength", -1012804190, null);
 var cljs$cst$1558$_EQ__EQ_ = new cljs.core.Symbol(null, "==", "==", -234118149, null);
-var cljs$cst$2290$classes = new cljs.core.Keyword(
+var cljs$cst$2290$classes = new cljs.core.Keyword(null, "classes", "classes", 2037804510);
+var cljs$cst$2435$future = new cljs.core.Symbol(
   null,
-  "classes",
-  "classes",
-  2037804510
+  "future",
+  "future",
+  -776593045,
+  null
 );
-var cljs$cst$2435$future = new cljs.core.Symbol(null, "future", "future", -776593045, null);
 var cljs$cst$749$sl = new cljs.core.Keyword(null, "sl", "sl", 1007549161);
 var cljs$cst$729$arrayBuilder = new cljs.core.Keyword(null, "arrayBuilder", "arrayBuilder", 1446317421);
 var cljs$cst$1961$chunk_append = new cljs.core.Symbol(null, "chunk-append", "chunk-append", -1447349559, null);
 var cljs$cst$2040$double_QMARK_ = new cljs.core.Symbol(null, "double?", "double?", -2146564276, null);
-var cljs$cst$2402$__GT_t_cljs$core$async$impl$ioc_helpers23517 = new cljs.core.Symbol(null, "->t_cljs$core$async$impl$ioc_helpers23517", "->t_cljs$core$async$impl$ioc_helpers23517", -727105916, null);
+var cljs$cst$2402$__GT_t_cljs$core$async$impl$ioc_helpers23517 = new cljs.core.Symbol(
+  null,
+  "->t_cljs$core$async$impl$ioc_helpers23517",
+  "->t_cljs$core$async$impl$ioc_helpers23517",
+  -727105916,
+  null
+);
 var cljs$cst$207$change = new cljs.core.Symbol(null, "change", "change", 477485025, null);
 var cljs$cst$1611$_STAR_print_level_STAR_ = new cljs.core.Symbol(null, "*print-level*", "*print-level*", -634488505, null);
 var cljs$cst$245$stream_event_QMARK_ = new cljs.core.Keyword(null, "stream-event?", "stream-event?", -856376047);
-var cljs$cst$2383$p__GT_c = new cljs.core.Symbol(
-  null,
-  "p->c",
-  "p->c",
-  -1284512759,
-  null
-);
+var cljs$cst$2383$p__GT_c = new cljs.core.Symbol(null, "p->c", "p->c", -1284512759, null);
 var cljs$cst$1873$areduce = new cljs.core.Symbol(null, "areduce", "areduce", -1873477878, null);
 var cljs$cst$2676$re_frame_DOT_db_SLASH__BANG_reactive_state = new cljs.core.Symbol("re-frame.db", "!reactive-state", "re-frame.db/!reactive-state", -1453879866, null);
 var cljs$cst$1692$gen_class = new cljs.core.Keyword(null, "gen-class", "gen-class", -426712454);
@@ -90593,7 +90578,13 @@ var cljs$cst$1544$_GT__EQ_ = new cljs.core.Symbol(null, ">=", ">=", 1016916022, 
 var cljs$cst$701$raw_val = new cljs.core.Keyword(null, "raw-val", "raw-val", 573328996);
 var cljs$cst$1352$meth__40680__auto__ = new cljs.core.Symbol(null, "meth__40680__auto__", "meth__40680__auto__", 1397587972, null);
 var cljs$cst$2319$__GT_t_cljs$core$async27115 = new cljs.core.Symbol(null, "->t_cljs$core$async27115", "->t_cljs$core$async27115", 1090864151, null);
-var cljs$cst$2549$sci_DOT_configs_DOT_reagent_DOT_reagent_SLASH__tracking_QMARK_ = new cljs.core.Symbol("sci.configs.reagent.reagent", "-tracking?", "sci.configs.reagent.reagent/-tracking?", 201600244, null);
+var cljs$cst$2549$sci_DOT_configs_DOT_reagent_DOT_reagent_SLASH__tracking_QMARK_ = new cljs.core.Symbol(
+  "sci.configs.reagent.reagent",
+  "-tracking?",
+  "sci.configs.reagent.reagent/-tracking?",
+  201600244,
+  null
+);
 var cljs$cst$65$fseq = new cljs.core.Symbol(null, "fseq", "fseq", -1466412450, null);
 var cljs$cst$480$z = new cljs.core.Symbol(null, "z", "z", 851004344, null);
 var cljs$cst$479$y = new cljs.core.Symbol(null, "y", "y", -117328249, null);
@@ -90605,12 +90596,24 @@ var cljs$cst$2542$reagent_DOT_debug = new cljs.core.Symbol(null, "reagent.debug"
 var cljs$cst$1016$ts = new cljs.core.Keyword(null, "ts", "ts", 1617209904);
 var cljs$cst$1191$row = new cljs.core.Symbol(null, "row", "row", 1070392006, null);
 var cljs$cst$460$nempty_str = new cljs.core.Keyword(null, "nempty-str", "nempty-str", -215700100);
-var cljs$cst$1436$_STAR_data_readers_STAR_ = new cljs.core.Symbol(null, "*data-readers*", "*data-readers*", 1269051058, null);
+var cljs$cst$1436$_STAR_data_readers_STAR_ = new cljs.core.Symbol(
+  null,
+  "*data-readers*",
+  "*data-readers*",
+  1269051058,
+  null
+);
 var cljs$cst$658$_QMARK_column = new cljs.core.Keyword(null, "?column", "?column", 1004649085);
 var cljs$cst$2308$admix_STAR_ = new cljs.core.Symbol(null, "admix*", "admix*", 1745259777, null);
 var cljs$cst$2484$reactify_component = new cljs.core.Symbol(null, "reactify-component", "reactify-component", -882526483, null);
 var cljs$cst$146$clojure_DOT_error_SLASH_phase = new cljs.core.Keyword("clojure.error", "phase", "clojure.error/phase", 275140358);
-var cljs$cst$2261$separator = new cljs.core.Symbol(null, "separator", "separator", 11782402, null);
+var cljs$cst$2261$separator = new cljs.core.Symbol(
+  null,
+  "separator",
+  "separator",
+  11782402,
+  null
+);
 var cljs$cst$214$attrs = new cljs.core.Symbol(null, "attrs", "attrs", -450137186, null);
 var cljs$cst$1580$cljs_DOT_core_SLASH_unchecked_inc = new cljs.core.Symbol("cljs.core", "unchecked-inc", "cljs.core/unchecked-inc", -501313167, null);
 var cljs$cst$1929$read_string = new cljs.core.Symbol(null, "read-string", "read-string", -558384455, null);
@@ -90637,13 +90640,25 @@ var cljs$cst$1619$cljs_DOT_core_SLASH_binding = new cljs.core.Symbol("cljs.core"
 var cljs$cst$857$reaction = new cljs.core.Keyword(null, "reaction", "reaction", 490869788);
 var cljs$cst$1393$sci_DOT_impl_DOT_analyzer_SLASH_static_access = new cljs.core.Keyword("sci.impl.analyzer", "static-access", "sci.impl.analyzer/static-access", -79014e3);
 var cljs$cst$2258$substr = new cljs.core.Symbol(null, "substr", "substr", -2116301839, null);
-var cljs$cst$121$meta21469 = new cljs.core.Symbol(null, "meta21469", "meta21469", -905533801, null);
+var cljs$cst$121$meta21469 = new cljs.core.Symbol(
+  null,
+  "meta21469",
+  "meta21469",
+  -905533801,
+  null
+);
 var cljs$cst$1775$js_delete = new cljs.core.Symbol(null, "js-delete", "js-delete", 170306730, null);
 var cljs$cst$1901$sorted_QMARK_ = new cljs.core.Symbol(null, "sorted?", "sorted?", 892797714, null);
 var cljs$cst$1111$alt_text = new cljs.core.Keyword(null, "alt-text", "alt-text", -1540833707);
 var cljs$cst$504$secs = new cljs.core.Keyword(null, "secs", "secs", 1532330091);
 var cljs$cst$868$run_queue = new cljs.core.Keyword(null, "run-queue", "run-queue", -1701798027);
-var cljs$cst$2543$js_SLASH_console = new cljs.core.Symbol("js", "console", "js/console", -1426368245, null);
+var cljs$cst$2543$js_SLASH_console = new cljs.core.Symbol(
+  "js",
+  "console",
+  "js/console",
+  -1426368245,
+  null
+);
 var cljs$cst$1440$raw_classes = new cljs.core.Keyword(null, "raw-classes", "raw-classes", 1669916511);
 var cljs$cst$2009$partial = new cljs.core.Symbol(null, "partial", "partial", 1881673272, null);
 var cljs$cst$733$preferStrings = new cljs.core.Keyword(null, "preferStrings", "preferStrings", -1532249482);
@@ -91523,16 +91538,17 @@ var cljs$cst$646$ns_blacklist = new cljs.core.Keyword(
   1957763142
 );
 var cljs$cst$2607$re_frame_DOT_core_SLASH_reg_sub = new cljs.core.Symbol("re-frame.core", "reg-sub", "re-frame.core/reg-sub", -1693960551, null);
+var cljs$cst$814$meta24452 = new cljs.core.Symbol(null, "meta24452", "meta24452", -365040684, null);
 var cljs$cst$2168$quoted_sym = new cljs.core.Symbol(null, "quoted-sym", "quoted-sym", 474507191, null);
 var cljs$cst$324$rejections = new cljs.core.Keyword(null, "rejections", "rejections", -1620899911);
-var cljs$cst$440$cljs_DOT_core_SLASH_concat = new cljs.core.Symbol("cljs.core", "concat", "cljs.core/concat", -1133584918, null);
-var cljs$cst$540$delay = new cljs.core.Symbol(
-  null,
-  "delay",
-  "delay",
-  1066306308,
+var cljs$cst$440$cljs_DOT_core_SLASH_concat = new cljs.core.Symbol(
+  "cljs.core",
+  "concat",
+  "cljs.core/concat",
+  -1133584918,
   null
 );
+var cljs$cst$540$delay = new cljs.core.Symbol(null, "delay", "delay", 1066306308, null);
 var cljs$cst$1987$halt_when = new cljs.core.Symbol(null, "halt-when", "halt-when", -140999689, null);
 var cljs$cst$1477$sci_DOT_impl_DOT_analyzer_SLASH_method_name = new cljs.core.Keyword("sci.impl.analyzer", "method-name", "sci.impl.analyzer/method-name", -842600667);
 var cljs$cst$1671$cljs_DOT_core_SLASH_bound_fn_STAR_ = new cljs.core.Symbol("cljs.core", "bound-fn*", "cljs.core/bound-fn*", -556238942, null);
@@ -91543,50 +91559,48 @@ var cljs$cst$2055$merge_with = new cljs.core.Symbol(null, "merge-with", "merge-w
 var cljs$cst$1120$packs = new cljs.core.Keyword(null, "packs", "packs", -1048532907);
 var cljs$cst$41$xf = new cljs.core.Symbol(null, "xf", "xf", 2042434515, null);
 var cljs$cst$905$cleanup = new cljs.core.Keyword(null, "cleanup", "cleanup", 1045776959);
-var cljs$cst$834$coeffects = new cljs.core.Keyword(
-  null,
-  "coeffects",
-  "coeffects",
-  497912985
-);
+var cljs$cst$834$coeffects = new cljs.core.Keyword(null, "coeffects", "coeffects", 497912985);
 var cljs$cst$2284$eof = new cljs.core.Symbol(null, "eof", "eof", 1151468290, null);
 var cljs$cst$2113$new_value = new cljs.core.Symbol(null, "new-value", "new-value", -1567397401, null);
 var cljs$cst$1758$simple_ident_QMARK_ = new cljs.core.Symbol(null, "simple-ident?", "simple-ident?", 194189851, null);
 var cljs$cst$182$takes = new cljs.core.Symbol(null, "takes", "takes", 298247964, null);
 var cljs$cst$2077$chunk_rest = new cljs.core.Symbol(null, "chunk-rest", "chunk-rest", -1853526420, null);
-var cljs$cst$489$round = new cljs.core.Keyword(
-  null,
-  "round",
-  "round",
-  2009433328
-);
+var cljs$cst$489$round = new cljs.core.Keyword(null, "round", "round", 2009433328);
 var cljs$cst$2190$xs = new cljs.core.Symbol(null, "xs", "xs", -2004992428, null);
 var cljs$cst$1556$byte = new cljs.core.Symbol(null, "byte", "byte", -1970660549, null);
 var cljs$cst$1877$complement = new cljs.core.Symbol(null, "complement", "complement", -913606051, null);
 var cljs$cst$730$map_builder = new cljs.core.Keyword(null, "map-builder", "map-builder", -1843343288);
-var cljs$cst$1770$hash = new cljs.core.Symbol(null, "hash", "hash", 1626749931, null);
-var cljs$cst$899$inject_global_interceptors = new cljs.core.Keyword(
+var cljs$cst$1770$hash = new cljs.core.Symbol(
   null,
-  "inject-global-interceptors",
-  "inject-global-interceptors",
-  -2144129737
+  "hash",
+  "hash",
+  1626749931,
+  null
 );
+var cljs$cst$899$inject_global_interceptors = new cljs.core.Keyword(null, "inject-global-interceptors", "inject-global-interceptors", -2144129737);
 var cljs$cst$2175$rsym = new cljs.core.Symbol(null, "rsym", "rsym", 204230332, null);
 var cljs$cst$144$trace = new cljs.core.Keyword(null, "trace", "trace", -1082747415);
 var cljs$cst$2141$idx2 = new cljs.core.Symbol(null, "idx2", "idx2", 195459820, null);
 var cljs$cst$580$xhr_pool = new cljs.core.Keyword(null, "xhr-pool", "xhr-pool", 1499305499);
-var cljs$cst$519$keyword = new cljs.core.Symbol(null, "keyword", "keyword", -1843046022, null);
+var cljs$cst$519$keyword = new cljs.core.Symbol(
+  null,
+  "keyword",
+  "keyword",
+  -1843046022,
+  null
+);
 var cljs$cst$912$re_frame_DOT_flow_DOT_alpha_SLASH_cleared_QMARK_ = new cljs.core.Keyword("re-frame.flow.alpha", "cleared?", "re-frame.flow.alpha/cleared?", 1524733548);
 var cljs$cst$523$disallow = new cljs.core.Keyword(null, "disallow", "disallow", -861898595);
 var cljs$cst$2425$reject_BANG_ = new cljs.core.Symbol(null, "reject!", "reject!", -854885003, null);
 var cljs$cst$1027$is_edited_QMARK_ = new cljs.core.Keyword(null, "is-edited?", "is-edited?", 1530351758);
-var cljs$cst$120$initk = new cljs.core.Symbol(null, "initk", "initk", -52811460, null);
-var cljs$cst$918$flow = new cljs.core.Keyword(
+var cljs$cst$120$initk = new cljs.core.Symbol(
   null,
-  "flow",
-  "flow",
-  590489032
+  "initk",
+  "initk",
+  -52811460,
+  null
 );
+var cljs$cst$918$flow = new cljs.core.Keyword(null, "flow", "flow", 590489032);
 var cljs$cst$346$update_map_or_fn = new cljs.core.Symbol(null, "update-map-or-fn", "update-map-or-fn", 1067081399, null);
 var cljs$cst$2386$cljs_DOT_core_DOT_async_DOT_interop_SLASH_p__GT_c = new cljs.core.Symbol("cljs.core.async.interop", "p->c", "cljs.core.async.interop/p->c", 2063436353, null);
 var cljs$cst$2595$trim_v = new cljs.core.Symbol(null, "trim-v", "trim-v", 365592887, null);
@@ -91610,51 +91624,68 @@ var cljs$cst$1055$boot_timeline = new cljs.core.Keyword(null, "boot-timeline", "
 var cljs$cst$1198$suppress_read = new cljs.core.Keyword(null, "suppress-read", "suppress-read", -1620847046);
 var cljs$cst$2563$enqueue = new cljs.core.Symbol(null, "enqueue", "enqueue", 1377000435, null);
 var cljs$cst$1368$function = new cljs.core.Symbol(null, "function", "function", -486723946, null);
-var cljs$cst$1202$edamame_DOT_impl_DOT_parser_SLASH_fn_literal = new cljs.core.Keyword("edamame.impl.parser", "fn-literal", "edamame.impl.parser/fn-literal", -1835933155);
+var cljs$cst$1202$edamame_DOT_impl_DOT_parser_SLASH_fn_literal = new cljs.core.Keyword(
+  "edamame.impl.parser",
+  "fn-literal",
+  "edamame.impl.parser/fn-literal",
+  -1835933155
+);
 var cljs$cst$1514$min = new cljs.core.Symbol(null, "min", "min", 2085523049, null);
 var cljs$cst$1503$unsigned_bit_shift_right = new cljs.core.Symbol(null, "unsigned-bit-shift-right", "unsigned-bit-shift-right", -1953076601, null);
 var cljs$cst$2084$min_key = new cljs.core.Symbol(null, "min-key", "min-key", 246826648, null);
 var cljs$cst$2231$postwalk_replace = new cljs.core.Symbol(null, "postwalk-replace", "postwalk-replace", 77744733, null);
-var cljs$cst$1276$sci_DOT_impl_SLASH_print_method = new cljs.core.Keyword("sci.impl", "print-method", "sci.impl/print-method", 281191566);
+var cljs$cst$1276$sci_DOT_impl_SLASH_print_method = new cljs.core.Keyword(
+  "sci.impl",
+  "print-method",
+  "sci.impl/print-method",
+  281191566
+);
 var cljs$cst$1958$find_ns = new cljs.core.Symbol(null, "find-ns", "find-ns", -884829568, null);
 var cljs$cst$429$features = new cljs.core.Keyword(null, "features", "features", -1146962336);
 var cljs$cst$1672$cljs_DOT_core_SLASH_with_redefs_fn = new cljs.core.Symbol("cljs.core", "with-redefs-fn", "cljs.core/with-redefs-fn", -1271194088, null);
 var cljs$cst$2174$sigs = new cljs.core.Symbol(null, "sigs", "sigs", -12588095, null);
-var cljs$cst$1430$_AMPERSAND_form = new cljs.core.Symbol(null, "&form", "&form", 1482799337, null);
-var cljs$cst$2364$mix = new cljs.core.Symbol(null, "mix", "mix", 2121373763, null);
-var cljs$cst$596$progress_fn = new cljs.core.Keyword(
+var cljs$cst$1430$_AMPERSAND_form = new cljs.core.Symbol(
   null,
-  "progress-fn",
-  "progress-fn",
-  -1146547855
+  "&form",
+  "&form",
+  1482799337,
+  null
 );
+var cljs$cst$2364$mix = new cljs.core.Symbol(null, "mix", "mix", 2121373763, null);
+var cljs$cst$596$progress_fn = new cljs.core.Keyword(null, "progress-fn", "progress-fn", -1146547855);
 var cljs$cst$992$lang = new cljs.core.Keyword(null, "lang", "lang", -1819677104);
 var cljs$cst$1087$order_by = new cljs.core.Keyword(null, "order_by", "order_by", 439432200);
 var cljs$cst$2073$not_empty = new cljs.core.Symbol(null, "not-empty", "not-empty", 2029453590, null);
-var cljs$cst$2184$decls = new cljs.core.Symbol(null, "decls", "decls", -1311111277, null);
+var cljs$cst$2184$decls = new cljs.core.Symbol(
+  null,
+  "decls",
+  "decls",
+  -1311111277,
+  null
+);
 var cljs$cst$1429$cljs_DOT_core_SLASH_assert = new cljs.core.Symbol("cljs.core", "assert", "cljs.core/assert", 1075777968, null);
 var cljs$cst$2288$sci_DOT_lang_DOT_Type = new cljs.core.Symbol(null, "sci.lang.Type", "sci.lang.Type", -534180168, null);
 var cljs$cst$1880$find_var = new cljs.core.Symbol(null, "find-var", "find-var", -497901917, null);
 var cljs$cst$1722$with_out_str = new cljs.core.Symbol(null, "with-out-str", "with-out-str", -140201577, null);
-var cljs$cst$1846$with_open = new cljs.core.Symbol(null, "with-open", "with-open", 172119667, null);
-var cljs$cst$1413$await = new cljs.core.Symbol(null, "await", "await", 1341799365, null);
-var cljs$cst$2320$untap = new cljs.core.Symbol(
+var cljs$cst$1846$with_open = new cljs.core.Symbol(
   null,
-  "untap",
-  "untap",
-  206858233,
+  "with-open",
+  "with-open",
+  172119667,
   null
 );
+var cljs$cst$1413$await = new cljs.core.Symbol(null, "await", "await", 1341799365, null);
+var cljs$cst$2320$untap = new cljs.core.Symbol(null, "untap", "untap", 206858233, null);
 var cljs$cst$1174$cljs_DOT_tools_DOT_reader_DOT_impl_DOT_commons_SLASH_number_literal_QMARK_ = new cljs.core.Symbol("cljs.tools.reader.impl.commons", "number-literal?", "cljs.tools.reader.impl.commons/number-literal?", -1450304800, null);
 var cljs$cst$1736$disj = new cljs.core.Symbol(null, "disj", "disj", -1076545178, null);
-var cljs$cst$2483$as_element = new cljs.core.Symbol(null, "as-element", "as-element", -2139409597, null);
-var cljs$cst$2614$re_frame_DOT_core_SLASH_subscribe = new cljs.core.Symbol(
-  "re-frame.core",
-  "subscribe",
-  "re-frame.core/subscribe",
-  -774932115,
+var cljs$cst$2483$as_element = new cljs.core.Symbol(
+  null,
+  "as-element",
+  "as-element",
+  -2139409597,
   null
 );
+var cljs$cst$2614$re_frame_DOT_core_SLASH_subscribe = new cljs.core.Symbol("re-frame.core", "subscribe", "re-frame.core/subscribe", -774932115, null);
 var cljs$cst$1398$iden__GT_invoke_idx = new cljs.core.Keyword(null, "iden->invoke-idx", "iden->invoke-idx", -1797627026);
 var cljs$cst$2504$class = new cljs.core.Symbol(null, "class", "class", -390430469, null);
 var cljs$cst$2059$distinct_QMARK_ = new cljs.core.Symbol(null, "distinct?", "distinct?", -1684357959, null);
@@ -91662,31 +91693,37 @@ var cljs$cst$2605$re_frame_DOT_core_SLASH_reg_sub_raw = new cljs.core.Symbol("re
 var cljs$cst$1478$sci_DOT_impl_SLASH_fast_path = new cljs.core.Keyword("sci.impl", "fast-path", "sci.impl/fast-path", 1273254676);
 var cljs$cst$1384$meta__42157__auto__ = new cljs.core.Symbol(null, "meta__42157__auto__", "meta__42157__auto__", 651726267, null);
 var cljs$cst$948$space_id = new cljs.core.Keyword(null, "space-id", "space-id", -1184098216);
-var cljs$cst$1704$cljs_DOT_core_SLASH_undefined_QMARK_ = new cljs.core.Symbol("cljs.core", "undefined?", "cljs.core/undefined?", -1206515693, null);
-var cljs$cst$2598$make_restore_fn = new cljs.core.Symbol(
-  null,
-  "make-restore-fn",
-  "make-restore-fn",
-  -439197753,
+var cljs$cst$1704$cljs_DOT_core_SLASH_undefined_QMARK_ = new cljs.core.Symbol(
+  "cljs.core",
+  "undefined?",
+  "cljs.core/undefined?",
+  -1206515693,
   null
 );
+var cljs$cst$2598$make_restore_fn = new cljs.core.Symbol(null, "make-restore-fn", "make-restore-fn", -439197753, null);
 var cljs$cst$703$catch = new cljs.core.Keyword(null, "catch", "catch", 1038065524);
 var cljs$cst$2723$_BANG_virtualizer_pool = new cljs.core.Keyword(null, "!virtualizer-pool", "!virtualizer-pool", 1299944188);
 var cljs$cst$1495$unchecked_long = new cljs.core.Symbol(null, "unchecked-long", "unchecked-long", 1306610949, null);
-var cljs$cst$1590$cljs_DOT_core_SLASH_first = new cljs.core.Symbol("cljs.core", "first", "cljs.core/first", -752535972, null);
+var cljs$cst$1590$cljs_DOT_core_SLASH_first = new cljs.core.Symbol(
+  "cljs.core",
+  "first",
+  "cljs.core/first",
+  -752535972,
+  null
+);
 var cljs$cst$1250$local = new cljs.core.Keyword(null, "local", "local", -1497766724);
 var cljs$cst$967$is_space_QMARK_ = new cljs.core.Keyword(null, "is-space?", "is-space?", 1147141193);
 var cljs$cst$1411$binding = new cljs.core.Keyword(null, "binding", "binding", 539932593);
 var cljs$cst$2752$login = new cljs.core.Keyword(null, "login", "login", 55217519);
 var cljs$cst$846$interceptors = new cljs.core.Keyword(null, "interceptors", "interceptors", -1546782951);
-var cljs$cst$1884$hash_ordered_coll = new cljs.core.Symbol(null, "hash-ordered-coll", "hash-ordered-coll", 114448715, null);
-var cljs$cst$774$diff_map = new cljs.core.Symbol(
+var cljs$cst$1884$hash_ordered_coll = new cljs.core.Symbol(
   null,
-  "diff-map",
-  "diff-map",
-  -711364586,
+  "hash-ordered-coll",
+  "hash-ordered-coll",
+  114448715,
   null
 );
+var cljs$cst$774$diff_map = new cljs.core.Symbol(null, "diff-map", "diff-map", -711364586, null);
 var cljs$cst$1583$cljs_DOT_core_SLASH_nth = new cljs.core.Symbol("cljs.core", "nth", "cljs.core/nth", 1961052085, null);
 var cljs$cst$37$vals = new cljs.core.Symbol(null, "vals", "vals", -1886377036, null);
 var cljs$cst$1550$float_array = new cljs.core.Symbol(null, "float-array", "float-array", 2043038265, null);
@@ -91696,96 +91733,84 @@ var cljs$cst$1402$sci_DOT_impl_DOT_macroexpand_SLASH_unresolved = new cljs.core.
 var cljs$cst$2382$cljs_DOT_core_DOT_async_DOT_interop = new cljs.core.Symbol(null, "cljs.core.async.interop", "cljs.core.async.interop", -945160983, null);
 var cljs$cst$2521$make_track = new cljs.core.Symbol(null, "make-track", "make-track", -1388299455, null);
 var cljs$cst$1681$_mutate = new cljs.core.Symbol(null, "-mutate", "-mutate", -795549165, null);
-var cljs$cst$1647$cljs_DOT_core_SLASH_unchecked_inc_int = new cljs.core.Symbol(
-  "cljs.core",
-  "unchecked-inc-int",
-  "cljs.core/unchecked-inc-int",
-  -2007014592,
-  null
-);
+var cljs$cst$1647$cljs_DOT_core_SLASH_unchecked_inc_int = new cljs.core.Symbol("cljs.core", "unchecked-inc-int", "cljs.core/unchecked-inc-int", -2007014592, null);
 var cljs$cst$89$has_nil_QMARK_ = new cljs.core.Symbol(null, "has-nil?", "has-nil?", 825886722, null);
 var cljs$cst$178$length = new cljs.core.Symbol(null, "length", "length", -2065447907, null);
-var cljs$cst$1886$qualified_ident_QMARK_ = new cljs.core.Symbol(null, "qualified-ident?", "qualified-ident?", -928894763, null);
-var cljs$cst$84$collision_hash = new cljs.core.Symbol(null, "collision-hash", "collision-hash", -35831342, null);
-var cljs$cst$2651$new_state = new cljs.core.Symbol(
+var cljs$cst$1886$qualified_ident_QMARK_ = new cljs.core.Symbol(
   null,
-  "new-state",
-  "new-state",
-  1150182315,
+  "qualified-ident?",
+  "qualified-ident?",
+  -928894763,
   null
 );
+var cljs$cst$84$collision_hash = new cljs.core.Symbol(null, "collision-hash", "collision-hash", -35831342, null);
+var cljs$cst$2651$new_state = new cljs.core.Symbol(null, "new-state", "new-state", 1150182315, null);
 var cljs$cst$1417$ex_idx = new cljs.core.Keyword(null, "ex-idx", "ex-idx", 795118805);
 var cljs$cst$249$warn = new cljs.core.Keyword(null, "warn", "warn", -436710552);
 var cljs$cst$2263$project = new cljs.core.Symbol(null, "project", "project", -1530041190, null);
-var cljs$cst$2577$console = new cljs.core.Symbol(null, "console", "console", -1426363712, null);
-var cljs$cst$78$tag = new cljs.core.Keyword(null, "tag", "tag", -1290361223);
-var cljs$cst$2567$subscribe = new cljs.core.Symbol(
+var cljs$cst$2577$console = new cljs.core.Symbol(
   null,
-  "subscribe",
-  "subscribe",
-  2056785283,
+  "console",
+  "console",
+  -1426363712,
   null
 );
+var cljs$cst$78$tag = new cljs.core.Keyword(null, "tag", "tag", -1290361223);
+var cljs$cst$2567$subscribe = new cljs.core.Symbol(null, "subscribe", "subscribe", 2056785283, null);
 var cljs$cst$1600$cljs_DOT_core_SLASH_chunk_buffer = new cljs.core.Symbol("cljs.core", "chunk-buffer", "cljs.core/chunk-buffer", 14093626, null);
 var cljs$cst$566$init_val = new cljs.core.Keyword(null, "init-val", "init-val", -70272968);
 var cljs$cst$2550$track_console = new cljs.core.Symbol(null, "track-console", "track-console", 17070495, null);
 var cljs$cst$1129$local_url = new cljs.core.Keyword(null, "local-url", "local-url", 2020238236);
-var cljs$cst$1617$s__42582__auto__ = new cljs.core.Symbol(
-  null,
-  "s__42582__auto__",
-  "s__42582__auto__",
-  2085349670,
-  null
-);
+var cljs$cst$1617$s__42582__auto__ = new cljs.core.Symbol(null, "s__42582__auto__", "s__42582__auto__", 2085349670, null);
 var cljs$cst$1767$loaded_libs = new cljs.core.Symbol(null, "loaded-libs", "loaded-libs", 484141875, null);
 var cljs$cst$508$years = new cljs.core.Keyword(null, "years", "years", -1298579689);
 var cljs$cst$286$reagent_render = new cljs.core.Keyword(null, "reagent-render", "reagent-render", -985383853);
-var cljs$cst$1644$l__46299__auto__ = new cljs.core.Symbol(null, "l__46299__auto__", "l__46299__auto__", -1333719240, null);
+var cljs$cst$1644$l__46299__auto__ = new cljs.core.Symbol(
+  null,
+  "l__46299__auto__",
+  "l__46299__auto__",
+  -1333719240,
+  null
+);
 var cljs$cst$843$db_handler = new cljs.core.Keyword(null, "db-handler", "db-handler", 579530098);
 var cljs$cst$800$Coord = new cljs.core.Symbol(null, "Coord", "Coord", 462878922, null);
 var cljs$cst$1737$with_redefs_fn = new cljs.core.Symbol(null, "with-redefs-fn", "with-redefs-fn", -595725379, null);
 var cljs$cst$2050$dedupe = new cljs.core.Symbol(null, "dedupe", "dedupe", -461856254, null);
-var cljs$cst$1107$send_attachments = new cljs.core.Keyword(null, "send-attachments", "send-attachments", 187151418);
-var cljs$cst$417$regex = new cljs.core.Keyword(null, "regex", "regex", 939488856);
-var cljs$cst$2732$client_DOT_state = new cljs.core.Symbol(
+var cljs$cst$1107$send_attachments = new cljs.core.Keyword(
   null,
-  "client.state",
-  "client.state",
-  2037924422,
-  null
+  "send-attachments",
+  "send-attachments",
+  187151418
 );
+var cljs$cst$417$regex = new cljs.core.Keyword(null, "regex", "regex", 939488856);
+var cljs$cst$2732$client_DOT_state = new cljs.core.Symbol(null, "client.state", "client.state", 2037924422, null);
 var cljs$cst$608$xhr = new cljs.core.Keyword(null, "xhr", "xhr", -177710851);
 var cljs$cst$1989$record_QMARK_ = new cljs.core.Symbol(null, "record?", "record?", -1305224237, null);
 var cljs$cst$1425$var_arg_name = new cljs.core.Keyword(null, "var-arg-name", "var-arg-name", -1100024887);
-var cljs$cst$2530$reagent_DOT_ratom_SLASH_atom = new cljs.core.Symbol("reagent.ratom", "atom", "reagent.ratom/atom", -391081187, null);
-var cljs$cst$1381$sci_DOT_impl_DOT_records_SLASH__create_record_type = new cljs.core.Symbol(
-  "sci.impl.records",
-  "-create-record-type",
-  "sci.impl.records/-create-record-type",
-  558578550,
+var cljs$cst$2530$reagent_DOT_ratom_SLASH_atom = new cljs.core.Symbol(
+  "reagent.ratom",
+  "atom",
+  "reagent.ratom/atom",
+  -391081187,
   null
 );
+var cljs$cst$1381$sci_DOT_impl_DOT_records_SLASH__create_record_type = new cljs.core.Symbol("sci.impl.records", "-create-record-type", "sci.impl.records/-create-record-type", 558578550, null);
 var cljs$cst$154$loop_STAR_ = new cljs.core.Symbol(null, "loop*", "loop*", 615029416, null);
 var cljs$cst$949$fetch_room_membership = new cljs.core.Keyword(null, "fetch-room-membership", "fetch-room-membership", -84978039);
-var cljs$cst$1993$defmulti = new cljs.core.Symbol(null, "defmulti", "defmulti", 1936112154, null);
-var cljs$cst$280$contextTypes = new cljs.core.Keyword(null, "contextTypes", "contextTypes", -2023853910);
-var cljs$cst$1457$verbose = new cljs.core.Keyword(
+var cljs$cst$1993$defmulti = new cljs.core.Symbol(
   null,
-  "verbose",
-  "verbose",
-  1694226060
+  "defmulti",
+  "defmulti",
+  1936112154,
+  null
 );
+var cljs$cst$280$contextTypes = new cljs.core.Keyword(null, "contextTypes", "contextTypes", -2023853910);
+var cljs$cst$1457$verbose = new cljs.core.Keyword(null, "verbose", "verbose", 1694226060);
 var cljs$cst$2695$client_DOT_registry_SLASH__BANG_anon_fns = new cljs.core.Symbol("client.registry", "!anon-fns", "client.registry/!anon-fns", -1252846130, null);
 var cljs$cst$585$get = new cljs.core.Keyword(null, "get", "get", 1683182755);
 var cljs$cst$917$cleared = new cljs.core.Keyword(null, "cleared", "cleared", -1267667336);
 var cljs$cst$1666$v__46902__auto__ = new cljs.core.Symbol(null, "v__46902__auto__", "v__46902__auto__", -1732839952, null);
-var cljs$cst$2139$then = new cljs.core.Symbol(
-  null,
-  "then",
-  "then",
-  2101129597,
-  null
-);
+var cljs$cst$2139$then = new cljs.core.Symbol(null, "then", "then", 2101129597, null);
 var cljs$cst$55$edit = new cljs.core.Symbol(null, "edit", "edit", -1302639, null);
 var cljs$cst$1248$thread_bound = new cljs.core.Symbol(null, "thread-bound", "thread-bound", 1232527493, null);
 var cljs$cst$1903$cycle = new cljs.core.Symbol(null, "cycle", "cycle", -1944070485, null);
@@ -91805,30 +91830,40 @@ var cljs$cst$64$node = new cljs.core.Symbol(null, "node", "node", -2073234571, n
 var cljs$cst$982$disabled = new cljs.core.Keyword(null, "disabled", "disabled", -1529784218);
 var cljs$cst$2575$reg_global_interceptor = new cljs.core.Symbol(null, "reg-global-interceptor", "reg-global-interceptor", 2060591173, null);
 var cljs$cst$1815$if_not = new cljs.core.Symbol(null, "if-not", "if-not", -265415609, null);
-var cljs$cst$1144$aliases = new cljs.core.Keyword(null, "aliases", "aliases", 1346874714);
+var cljs$cst$1144$aliases = new cljs.core.Keyword(
+  null,
+  "aliases",
+  "aliases",
+  1346874714
+);
 var cljs$cst$331$pred = new cljs.core.Keyword(null, "pred", "pred", 1927423397);
 var cljs$cst$794$heap = new cljs.core.Symbol(null, "heap", "heap", -1614725577, null);
 var cljs$cst$69$keys = new cljs.core.Symbol(null, "keys", "keys", -1586012071, null);
 var cljs$cst$98$cljs_DOT_core_SLASH_not_found = new cljs.core.Keyword("cljs.core", "not-found", "cljs.core/not-found", -1572889185);
 var cljs$cst$671$appenders = new cljs.core.Keyword(null, "appenders", "appenders", 1245583998);
-var cljs$cst$217$mute = new cljs.core.Keyword(null, "mute", "mute", 1151223646);
+var cljs$cst$217$mute = new cljs.core.Keyword(
+  null,
+  "mute",
+  "mute",
+  1151223646
+);
 var cljs$cst$876$trigger = new cljs.core.Keyword(null, "trigger", "trigger", 103466139);
 var cljs$cst$552$worst_lid = new cljs.core.Symbol(null, "worst-lid", "worst-lid", -2058001927, null);
 var cljs$cst$2079$pos_int_QMARK_ = new cljs.core.Symbol(null, "pos-int?", "pos-int?", -1205815015, null);
 var cljs$cst$2207$cljs_DOT_core_SLASH_resolve = new cljs.core.Symbol("cljs.core", "resolve", "cljs.core/resolve", 1796776582, null);
 var cljs$cst$2159$c1 = new cljs.core.Symbol(null, "c1", "c1", -1521904966, null);
-var cljs$cst$1331$default__40069__auto__ = new cljs.core.Symbol(
-  null,
-  "default__40069__auto__",
-  "default__40069__auto__",
-  1630436531,
-  null
-);
+var cljs$cst$1331$default__40069__auto__ = new cljs.core.Symbol(null, "default__40069__auto__", "default__40069__auto__", 1630436531, null);
 var cljs$cst$1904$simple_symbol_QMARK_ = new cljs.core.Symbol(null, "simple-symbol?", "simple-symbol?", 1408454822, null);
 var cljs$cst$1420$fixed_arity = new cljs.core.Keyword(null, "fixed-arity", "fixed-arity", 1586445869);
 var cljs$cst$2160$c2 = new cljs.core.Symbol(null, "c2", "c2", 78651156, null);
 var cljs$cst$2162$c3 = new cljs.core.Symbol(null, "c3", "c3", 468715789, null);
-var cljs$cst$1599$size__40040__auto__ = new cljs.core.Symbol(null, "size__40040__auto__", "size__40040__auto__", 1201905086, null);
+var cljs$cst$1599$size__40040__auto__ = new cljs.core.Symbol(
+  null,
+  "size__40040__auto__",
+  "size__40040__auto__",
+  1201905086,
+  null
+);
 var cljs$cst$1640$cljs_DOT_core_SLASH_when_not = new cljs.core.Symbol("cljs.core", "when-not", "cljs.core/when-not", -556141047, null);
 var cljs$cst$1634$declared = new cljs.core.Keyword(null, "declared", "declared", 92336021);
 var cljs$cst$1782$_write = new cljs.core.Symbol(null, "-write", "-write", 1999625154, null);
@@ -91838,7 +91873,12 @@ var cljs$cst$405$vector = new cljs.core.Keyword(null, "vector", "vector", 190296
 var cljs$cst$1990$tagged_literal_QMARK_ = new cljs.core.Symbol(null, "tagged-literal?", "tagged-literal?", 1117865390, null);
 var cljs$cst$2584$new_loggers = new cljs.core.Symbol(null, "new-loggers", "new-loggers", -1268568509, null);
 var cljs$cst$328$bindings = new cljs.core.Keyword(null, "bindings", "bindings", 1271397192);
-var cljs$cst$906$re_frame_DOT_flow_DOT_alpha_SLASH_registered = new cljs.core.Keyword("re-frame.flow.alpha", "registered", "re-frame.flow.alpha/registered", 1321658162);
+var cljs$cst$906$re_frame_DOT_flow_DOT_alpha_SLASH_registered = new cljs.core.Keyword(
+  "re-frame.flow.alpha",
+  "registered",
+  "re-frame.flow.alpha/registered",
+  1321658162
+);
 var cljs$cst$2698$_BANG_anon_fns = new cljs.core.Keyword(null, "!anon-fns", "!anon-fns", 1049906311);
 var cljs$cst$614$goog_DOT_net_DOT_ErrorCode_SLASH_NO_ERROR = new cljs.core.Symbol("goog.net.ErrorCode", "NO_ERROR", "goog.net.ErrorCode/NO_ERROR", -376372140, null);
 var cljs$cst$501$weeks = new cljs.core.Keyword(null, "weeks", "weeks", 1844596125);
@@ -91856,12 +91896,7 @@ var cljs$cst$2246$trim_newline = new cljs.core.Symbol(null, "trim-newline", "tri
 var cljs$cst$204$ch = new cljs.core.Symbol(null, "ch", "ch", 1085813622, null);
 var cljs$cst$21$ci = new cljs.core.Symbol(null, "ci", "ci", 2049808339, null);
 var cljs$cst$198$cb = new cljs.core.Symbol(null, "cb", "cb", -2064487928, null);
-var cljs$cst$863$sub_SLASH_run = new cljs.core.Keyword(
-  "sub",
-  "run",
-  "sub/run",
-  -1821315581
-);
+var cljs$cst$863$sub_SLASH_run = new cljs.core.Keyword("sub", "run", "sub/run", -1821315581);
 var cljs$cst$1734$fnext = new cljs.core.Symbol(null, "fnext", "fnext", 1424835295, null);
 var cljs$cst$2041$rseq = new cljs.core.Symbol(null, "rseq", "rseq", -1719353554, null);
 var cljs$cst$2489$create_compiler = new cljs.core.Symbol(null, "create-compiler", "create-compiler", 1059333141, null);
@@ -91872,13 +91907,7 @@ var cljs$cst$2721$_BANG_slots = new cljs.core.Keyword(null, "!slots", "!slots", 
 var cljs$cst$153$finally = new cljs.core.Symbol(null, "finally", "finally", -1065347064, null);
 var cljs$cst$1084$search_categories = new cljs.core.Keyword(null, "search_categories", "search_categories", 1887737049);
 var cljs$cst$205$cs = new cljs.core.Symbol(null, "cs", "cs", -117024463, null);
-var cljs$cst$1387$cljs_DOT_core_SLASH_merge = new cljs.core.Symbol(
-  "cljs.core",
-  "merge",
-  "cljs.core/merge",
-  -822184067,
-  null
-);
+var cljs$cst$1387$cljs_DOT_core_SLASH_merge = new cljs.core.Symbol("cljs.core", "merge", "cljs.core/merge", -822184067, null);
 var cljs$cst$570$result__ = new cljs.core.Symbol(null, "result__", "result__", 1529131748, null);
 var cljs$cst$865$yield = new cljs.core.Keyword(null, "yield", "yield", 177875009);
 var cljs$cst$2130$msg = new cljs.core.Symbol(null, "msg", "msg", 254428083, null);
@@ -91890,44 +91919,52 @@ var cljs$cst$2233$prewalk = new cljs.core.Symbol(null, "prewalk", "prewalk", 133
 var cljs$cst$1236$edamame_DOT_core_SLASH_eof = new cljs.core.Keyword("edamame.core", "eof", "edamame.core/eof", 1855384188);
 var cljs$cst$2686$extracted_fns = new cljs.core.Keyword(null, "extracted-fns", "extracted-fns", -820249808);
 var cljs$cst$379$dynamic = new cljs.core.Keyword(null, "dynamic", "dynamic", 704819571);
-var cljs$cst$465$nemail = new cljs.core.Keyword(
-  null,
-  "nemail",
-  "nemail",
-  318708381
-);
+var cljs$cst$465$nemail = new cljs.core.Keyword(null, "nemail", "nemail", 318708381);
 var cljs$cst$1023$internal_id = new cljs.core.Keyword(null, "internal-id", "internal-id", -305922306);
 var cljs$cst$2017$hash_set = new cljs.core.Symbol(null, "hash-set", "hash-set", -1145168432, null);
 var cljs$cst$155$do = new cljs.core.Symbol(null, "do", "do", 1686842252, null);
 var cljs$cst$2155$f1 = new cljs.core.Symbol(null, "f1", "f1", -939903380, null);
-var cljs$cst$2156$f2 = new cljs.core.Symbol(null, "f2", "f2", 2036700123, null);
+var cljs$cst$2156$f2 = new cljs.core.Symbol(
+  null,
+  "f2",
+  "f2",
+  2036700123,
+  null
+);
 var cljs$cst$700$first_char = new cljs.core.Keyword(null, "first-char", "first-char", 1251551296);
 var cljs$cst$2157$f3 = new cljs.core.Symbol(null, "f3", "f3", -699606726, null);
 var cljs$cst$768$editscript_DOT_diff_DOT_quick_SLASH_diff_map = new cljs.core.Symbol("editscript.diff.quick", "diff-map", "editscript.diff.quick/diff-map", 1973051147, null);
 var cljs$cst$2029$if_some = new cljs.core.Symbol(null, "if-some", "if-some", 1960677609, null);
-var cljs$cst$1797$take_while = new cljs.core.Symbol(null, "take-while", "take-while", 2007268328, null);
+var cljs$cst$1797$take_while = new cljs.core.Symbol(
+  null,
+  "take-while",
+  "take-while",
+  2007268328,
+  null
+);
 var cljs$cst$1480$self_ref_QMARK_ = new cljs.core.Keyword(null, "self-ref?", "self-ref?", 412808630);
 var cljs$cst$502$msecs = new cljs.core.Keyword(null, "msecs", "msecs", 1711980553);
 var cljs$cst$1807$push_thread_bindings = new cljs.core.Symbol(null, "push-thread-bindings", "push-thread-bindings", 1054019843, null);
 var cljs$cst$724$hs_url = new cljs.core.Keyword(null, "hs-url", "hs-url", 955183864);
 var cljs$cst$88$seen = new cljs.core.Symbol(null, "seen", "seen", 1121531738, null);
-var cljs$cst$2081$persistent_BANG_ = new cljs.core.Symbol(null, "persistent!", "persistent!", 1286555698, null);
-var cljs$cst$1422$invoc_size = new cljs.core.Keyword(
+var cljs$cst$2081$persistent_BANG_ = new cljs.core.Symbol(
   null,
-  "invoc-size",
-  "invoc-size",
-  2053298058
-);
-var cljs$cst$54$seed = new cljs.core.Symbol(null, "seed", "seed", 1709144854, null);
-var cljs$cst$2476$reagent_DOT_ratom_SLASH__set_ratom_generation_BANG_ = new cljs.core.Symbol("reagent.ratom", "-set-ratom-generation!", "reagent.ratom/-set-ratom-generation!", -963803973, null);
-var cljs$cst$140$cljs_DOT_core_SLASH_ExceptionInfo = new cljs.core.Symbol("cljs.core", "ExceptionInfo", "cljs.core/ExceptionInfo", 701839050, null);
-var cljs$cst$1157$clojure_DOT_core_SLASH_seq = new cljs.core.Symbol(
-  "clojure.core",
-  "seq",
-  "clojure.core/seq",
-  -1551838743,
+  "persistent!",
+  "persistent!",
+  1286555698,
   null
 );
+var cljs$cst$1422$invoc_size = new cljs.core.Keyword(null, "invoc-size", "invoc-size", 2053298058);
+var cljs$cst$54$seed = new cljs.core.Symbol(null, "seed", "seed", 1709144854, null);
+var cljs$cst$2476$reagent_DOT_ratom_SLASH__set_ratom_generation_BANG_ = new cljs.core.Symbol("reagent.ratom", "-set-ratom-generation!", "reagent.ratom/-set-ratom-generation!", -963803973, null);
+var cljs$cst$140$cljs_DOT_core_SLASH_ExceptionInfo = new cljs.core.Symbol(
+  "cljs.core",
+  "ExceptionInfo",
+  "cljs.core/ExceptionInfo",
+  701839050,
+  null
+);
+var cljs$cst$1157$clojure_DOT_core_SLASH_seq = new cljs.core.Symbol("clojure.core", "seq", "clojure.core/seq", -1551838743, null);
 var cljs$cst$2749$homeserverUrl = new cljs.core.Keyword(null, "homeserverUrl", "homeserverUrl", 1490673264);
 var cljs$cst$1625$n__44939__auto__ = new cljs.core.Symbol(null, "n__44939__auto__", "n__44939__auto__", -369959122, null);
 var cljs$cst$831$comment = new cljs.core.Keyword(null, "comment", "comment", 532206069);
@@ -91942,206 +91979,226 @@ var cljs$cst$1955$qualified_keyword_QMARK_ = new cljs.core.Symbol(null, "qualifi
 var cljs$cst$1845$char_QMARK_ = new cljs.core.Symbol(null, "char?", "char?", -1072221244, null);
 var cljs$cst$42$sourceIter = new cljs.core.Symbol(null, "sourceIter", "sourceIter", 1068220306, null);
 var cljs$cst$1604$_STAR_in_STAR_ = new cljs.core.Symbol(null, "*in*", "*in*", 1130010229, null);
-var cljs$cst$2132$idx = new cljs.core.Symbol(null, "idx", "idx", -1600747296, null);
-var cljs$cst$1593$iterys__40014__auto__ = new cljs.core.Symbol(
+var cljs$cst$2132$idx = new cljs.core.Symbol(
   null,
-  "iterys__40014__auto__",
-  "iterys__40014__auto__",
-  -166439097,
+  "idx",
+  "idx",
+  -1600747296,
   null
 );
+var cljs$cst$1593$iterys__40014__auto__ = new cljs.core.Symbol(null, "iterys__40014__auto__", "iterys__40014__auto__", -166439097, null);
 var cljs$cst$2271$intersection = new cljs.core.Symbol(null, "intersection", "intersection", -650544759, null);
 var cljs$cst$340$ex = new cljs.core.Symbol(null, "ex", "ex", 226760186, null);
 var cljs$cst$1320$cljs_DOT_core_SLASH__STAR_ns_STAR_ = new cljs.core.Symbol("cljs.core", "*ns*", "cljs.core/*ns*", 1155497085, null);
-var cljs$cst$926$re_frame_SLASH_pre_flow_db = new cljs.core.Keyword("re-frame", "pre-flow-db", "re-frame/pre-flow-db", 1774332137);
+var cljs$cst$926$re_frame_SLASH_pre_flow_db = new cljs.core.Keyword(
+  "re-frame",
+  "pre-flow-db",
+  "re-frame/pre-flow-db",
+  1774332137
+);
 var cljs$cst$2450$thenable_QMARK_ = new cljs.core.Symbol(null, "thenable?", "thenable?", -1206584560, null);
 var cljs$cst$925$id__GT_old_live_in = new cljs.core.Keyword(null, "id->old-live-in", "id->old-live-in", 992766074);
 var cljs$cst$2311$t_cljs$core$async27883 = new cljs.core.Symbol(null, "t_cljs$core$async27883", "t_cljs$core$async27883", -1775945225, null);
 var cljs$cst$1717$derive = new cljs.core.Symbol(null, "derive", "derive", 1727397303, null);
-var cljs$cst$1623$cljs = new cljs.core.Keyword(null, "cljs", "cljs", 1492417629);
-var cljs$cst$2221$clojure_DOT_template = new cljs.core.Symbol(
+var cljs$cst$1623$cljs = new cljs.core.Keyword(
   null,
-  "clojure.template",
-  "clojure.template",
-  -1162325089,
-  null
+  "cljs",
+  "cljs",
+  1492417629
 );
+var cljs$cst$2221$clojure_DOT_template = new cljs.core.Symbol(null, "clojure.template", "clojure.template", -1162325089, null);
 var cljs$cst$1861$cond__GT__GT_ = new cljs.core.Symbol(null, "cond->>", "cond->>", 348844960, null);
 var cljs$cst$81$next_entry = new cljs.core.Symbol(null, "next-entry", "next-entry", 1091342476, null);
 var cljs$cst$1817$bit_flip = new cljs.core.Symbol(null, "bit-flip", "bit-flip", 809639606, null);
-var cljs$cst$1412$transformed = new cljs.core.Keyword(null, "transformed", "transformed", 1969289512);
+var cljs$cst$1412$transformed = new cljs.core.Keyword(
+  null,
+  "transformed",
+  "transformed",
+  1969289512
+);
 var cljs$cst$1207$deref = new cljs.core.Keyword(null, "deref", "deref", -145586795);
 var cljs$cst$2158$fs = new cljs.core.Symbol(null, "fs", "fs", -482394717, null);
 var cljs$cst$2398$EXCEPTION_FRAMES = new cljs.core.Symbol(null, "EXCEPTION-FRAMES", "EXCEPTION-FRAMES", 42533793, null);
 var cljs$cst$2356$timeout = new cljs.core.Symbol(null, "timeout", "timeout", 1321906209, null);
 var cljs$cst$28$fn = new cljs.core.Symbol(null, "fn", "fn", 465265323, null);
-var cljs$cst$75$ext_map_iter = new cljs.core.Symbol(null, "ext-map-iter", "ext-map-iter", -1215982757, null);
-var cljs$cst$184$puts = new cljs.core.Symbol(
+var cljs$cst$75$ext_map_iter = new cljs.core.Symbol(
   null,
-  "puts",
-  "puts",
-  -1883877054,
+  "ext-map-iter",
+  "ext-map-iter",
+  -1215982757,
   null
 );
+var cljs$cst$184$puts = new cljs.core.Symbol(null, "puts", "puts", -1883877054, null);
 var cljs$cst$1278$type = new cljs.core.Symbol(null, "type", "type", -1480165421, null);
 var cljs$cst$1875$dotimes = new cljs.core.Symbol(null, "dotimes", "dotimes", -818708397, null);
 var cljs$cst$325$resolved_QMARK_ = new cljs.core.Keyword(null, "resolved?", "resolved?", 862515389);
 var cljs$cst$2269$subset_QMARK_ = new cljs.core.Symbol(null, "subset?", "subset?", 1551079215, null);
-var cljs$cst$2060$map_indexed = new cljs.core.Symbol(null, "map-indexed", "map-indexed", -1391025435, null);
-var cljs$cst$355$ex_info = new cljs.core.Keyword(
+var cljs$cst$2060$map_indexed = new cljs.core.Symbol(
   null,
-  "ex-info",
-  "ex-info",
-  2114560529
+  "map-indexed",
+  "map-indexed",
+  -1391025435,
+  null
 );
+var cljs$cst$355$ex_info = new cljs.core.Keyword(null, "ex-info", "ex-info", 2114560529);
 var cljs$cst$1281$clojure_DOT_core_SLASH_deftype = new cljs.core.Symbol("clojure.core", "deftype", "clojure.core/deftype", -1728257017, null);
 var cljs$cst$2036$conj = new cljs.core.Symbol(null, "conj", "conj", -1127293942, null);
 var cljs$cst$137$cached_hierarchy = new cljs.core.Symbol(null, "cached-hierarchy", "cached-hierarchy", -1085460203, null);
 var cljs$cst$1196$char = new cljs.core.Keyword(null, "char", "char", -641587586);
-var cljs$cst$923$id__GT_old_in = new cljs.core.Keyword(
-  null,
-  "id->old-in",
-  "id->old-in",
-  -504402935
-);
+var cljs$cst$923$id__GT_old_in = new cljs.core.Keyword(null, "id->old-in", "id->old-in", -504402935);
 var cljs$cst$1598$cljs_DOT_core_SLASH_chunk_append = new cljs.core.Symbol("cljs.core", "chunk-append", "cljs.core/chunk-append", -243671470, null);
 var cljs$cst$1754$newline = new cljs.core.Symbol(null, "newline", "newline", -864364446, null);
 var cljs$cst$1810$cons = new cljs.core.Symbol(null, "cons", "cons", 755448454, null);
 var cljs$cst$2759$get_client_context = new cljs.core.Keyword(null, "get-client-context", "get-client-context", -477395803);
-var cljs$cst$896$re_frame_DOT_db_SLASH_path = new cljs.core.Keyword(
-  "re-frame.db",
-  "path",
-  "re-frame.db/path",
-  -1845708459
-);
+var cljs$cst$896$re_frame_DOT_db_SLASH_path = new cljs.core.Keyword("re-frame.db", "path", "re-frame.db/path", -1845708459);
 var cljs$cst$499$formatter = new cljs.core.Keyword(null, "formatter", "formatter", -483008823);
 var cljs$cst$1853$neg_int_QMARK_ = new cljs.core.Symbol(null, "neg-int?", "neg-int?", -1610409390, null);
 var cljs$cst$1897$underive = new cljs.core.Symbol(null, "underive", "underive", -242982950, null);
 var cljs$cst$1500$boolean_array = new cljs.core.Symbol(null, "boolean-array", "boolean-array", -640353913, null);
-var cljs$cst$2360$go = new cljs.core.Symbol(null, "go", "go", 1493584872, null);
+var cljs$cst$2360$go = new cljs.core.Symbol(
+  null,
+  "go",
+  "go",
+  1493584872,
+  null
+);
 var cljs$cst$2511$reagent_DOT_core_SLASH_create_element = new cljs.core.Symbol("reagent.core", "create-element", "reagent.core/create-element", -1888667366, null);
 var cljs$cst$1225$end_row_key = new cljs.core.Symbol(null, "end-row-key", "end-row-key", 513868847, null);
 var cljs$cst$2204$clojure_DOT_repl_SLASH_dir_fn = new cljs.core.Symbol("clojure.repl", "dir-fn", "clojure.repl/dir-fn", 901908317, null);
 var cljs$cst$2211$cljs_DOT_core_SLASH_ns_name = new cljs.core.Symbol("cljs.core", "ns-name", "cljs.core/ns-name", 171430027, null);
-var cljs$cst$1915$cond = new cljs.core.Symbol(
-  null,
-  "cond",
-  "cond",
-  1606708055,
-  null
-);
+var cljs$cst$1915$cond = new cljs.core.Symbol(null, "cond", "cond", 1606708055, null);
 var cljs$cst$2729$_BANG_active_overrides = new cljs.core.Symbol(null, "!active-overrides", "!active-overrides", -342351581, null);
 var cljs$cst$2381$pipeline = new cljs.core.Symbol(null, "pipeline", "pipeline", 1238785485, null);
 var cljs$cst$2032$mod = new cljs.core.Symbol(null, "mod", "mod", 1510044207, null);
 var cljs$cst$2104$keyfn = new cljs.core.Symbol(null, "keyfn", "keyfn", -1874375437, null);
-var cljs$cst$1594$fs__40015__auto__ = new cljs.core.Symbol(null, "fs__40015__auto__", "fs__40015__auto__", 625030884, null);
+var cljs$cst$1594$fs__40015__auto__ = new cljs.core.Symbol(
+  null,
+  "fs__40015__auto__",
+  "fs__40015__auto__",
+  625030884,
+  null
+);
 var cljs$cst$2291$proxy_fn = new cljs.core.Keyword(null, "proxy-fn", "proxy-fn", 1116677438);
 var cljs$cst$2566$clear_event = new cljs.core.Symbol(null, "clear-event", "clear-event", -1884567988, null);
 var cljs$cst$255$key = new cljs.core.Keyword(null, "key", "key", -1516042587);
 var cljs$cst$1553$chars = new cljs.core.Symbol(null, "chars", "chars", 545901210, null);
 var cljs$cst$1690$and__48717__auto__ = new cljs.core.Symbol(null, "and__48717__auto__", "and__48717__auto__", 907413611, null);
-var cljs$cst$94$comp = new cljs.core.Symbol(null, "comp", "comp", -1462482139, null);
+var cljs$cst$94$comp = new cljs.core.Symbol(
+  null,
+  "comp",
+  "comp",
+  -1462482139,
+  null
+);
 var cljs$cst$1699$cljs_DOT_core_SLASH_system_time = new cljs.core.Symbol("cljs.core", "system-time", "cljs.core/system-time", 1562011930, null);
 var cljs$cst$450$clojure_DOT_core_SLASH_deref = new cljs.core.Symbol("clojure.core", "deref", "clojure.core/deref", 188719157, null);
 var cljs$cst$106$alt_impl = new cljs.core.Keyword(null, "alt-impl", "alt-impl", 670969595);
 var cljs$cst$832$unnamed = new cljs.core.Keyword(null, "unnamed", "unnamed", -26044928);
-var cljs$cst$783$diff_lst = new cljs.core.Symbol(null, "diff-lst", "diff-lst", 799109538, null);
-var cljs$cst$1753$inst_ms = new cljs.core.Symbol(
+var cljs$cst$783$diff_lst = new cljs.core.Symbol(
   null,
-  "inst-ms",
-  "inst-ms",
-  -653961375,
+  "diff-lst",
+  "diff-lst",
+  799109538,
   null
 );
+var cljs$cst$1753$inst_ms = new cljs.core.Symbol(null, "inst-ms", "inst-ms", -653961375, null);
 var cljs$cst$12$val = new cljs.core.Symbol(null, "val", "val", 1769233139, null);
 var cljs$cst$744$str = new cljs.core.Keyword(null, "str", "str", 1089608819);
 var cljs$cst$1062$emoji = new cljs.core.Keyword(null, "emoji", "emoji", 1031230144);
 var cljs$cst$1079$pinned = new cljs.core.Keyword(null, "pinned", "pinned", -1216085339);
-var cljs$cst$1627$cljs_DOT_core_SLASH_not = new cljs.core.Symbol("cljs.core", "not", "cljs.core/not", 100665144, null);
-var cljs$cst$166$var = new cljs.core.Symbol(
-  null,
-  "var",
-  "var",
-  870848730,
+var cljs$cst$1627$cljs_DOT_core_SLASH_not = new cljs.core.Symbol(
+  "cljs.core",
+  "not",
+  "cljs.core/not",
+  100665144,
   null
 );
+var cljs$cst$166$var = new cljs.core.Symbol(null, "var", "var", 870848730, null);
 var cljs$cst$819$global_interceptors = new cljs.core.Keyword(null, "global-interceptors", "global-interceptors", -1995759472);
 var cljs$cst$2537$on_dispose = new cljs.core.Symbol(null, "on-dispose", "on-dispose", -549129409, null);
 var cljs$cst$2098$dispatch_val = new cljs.core.Symbol(null, "dispatch-val", "dispatch-val", 69061e3, null);
 var cljs$cst$2137$seq_exprs = new cljs.core.Symbol(null, "seq-exprs", "seq-exprs", -637209651, null);
-var cljs$cst$773$no_doc = new cljs.core.Keyword(null, "no-doc", "no-doc", 1559921891);
+var cljs$cst$773$no_doc = new cljs.core.Keyword(
+  null,
+  "no-doc",
+  "no-doc",
+  1559921891
+);
 var cljs$cst$1069$bytes = new cljs.core.Keyword(null, "bytes", "bytes", 1175866680);
 var cljs$cst$291$id = new cljs.core.Symbol(null, "id", "id", 252129435, null);
 var cljs$cst$2519$reagent_DOT_ratom = new cljs.core.Symbol(null, "reagent.ratom", "reagent.ratom", -2036346616, null);
 var cljs$cst$820$sub = new cljs.core.Keyword(null, "sub", "sub", -2093760025);
 var cljs$cst$1181$escape_char = new cljs.core.Symbol(null, "escape-char", "escape-char", -2072670949, null);
-var cljs$cst$2403$FN_IDX = new cljs.core.Symbol(null, "FN-IDX", "FN-IDX", -1191692716, null);
-var cljs$cst$157$if = new cljs.core.Symbol(
+var cljs$cst$2403$FN_IDX = new cljs.core.Symbol(
   null,
-  "if",
-  "if",
-  1181717262,
+  "FN-IDX",
+  "FN-IDX",
+  -1191692716,
   null
 );
+var cljs$cst$157$if = new cljs.core.Symbol(null, "if", "if", 1181717262, null);
 var cljs$cst$114$coll = new cljs.core.Symbol(null, "coll", "coll", -1006698606, null);
 var cljs$cst$1433$_AMPERSAND_env = new cljs.core.Symbol(null, "&env", "&env", -919163083, null);
 var cljs$cst$1806$drop = new cljs.core.Symbol(null, "drop", "drop", 2005013138, null);
 var cljs$cst$368$in = new cljs.core.Symbol(null, "in", "in", 109346662, null);
-var cljs$cst$2235$stringify_keys = new cljs.core.Symbol(null, "stringify-keys", "stringify-keys", 1735215919, null);
-var cljs$cst$2302$put_BANG_ = new cljs.core.Symbol(
+var cljs$cst$2235$stringify_keys = new cljs.core.Symbol(
   null,
-  "put!",
-  "put!",
-  -531220546,
+  "stringify-keys",
+  "stringify-keys",
+  1735215919,
   null
 );
+var cljs$cst$2302$put_BANG_ = new cljs.core.Symbol(null, "put!", "put!", -531220546, null);
 var cljs$cst$70$strobj = new cljs.core.Symbol(null, "strobj", "strobj", 1088091283, null);
 var cljs$cst$2433$pending_QMARK_ = new cljs.core.Symbol(null, "pending?", "pending?", -493087265, null);
 var cljs$cst$1705$cljs_DOT_core_SLASH_some_QMARK_ = new cljs.core.Symbol("cljs.core", "some?", "cljs.core/some?", -440439360, null);
 var cljs$cst$2755$pass = new cljs.core.Keyword(null, "pass", "pass", 1574159993);
-var cljs$cst$2460$Date = new cljs.core.Symbol(null, "Date", "Date", 946857020, null);
-var cljs$cst$1048$users = new cljs.core.Keyword(
+var cljs$cst$2460$Date = new cljs.core.Symbol(
   null,
-  "users",
-  "users",
-  -713552705
+  "Date",
+  "Date",
+  946857020,
+  null
 );
+var cljs$cst$1048$users = new cljs.core.Keyword(null, "users", "users", -713552705);
 var cljs$cst$2740$cljs_workers_DOT_mesh = new cljs.core.Symbol(null, "cljs-workers.mesh", "cljs-workers.mesh", 1298295120, null);
 var cljs$cst$474$pnum_BANG_ = new cljs.core.Keyword(null, "pnum!", "pnum!", 837651383);
 var cljs$cst$1186$read_symbolic_value = new cljs.core.Symbol(null, "read-symbolic-value", "read-symbolic-value", -100790078, null);
-var cljs$cst$2583$set_loggers_BANG_ = new cljs.core.Symbol(null, "set-loggers!", "set-loggers!", -1947820787, null);
-var cljs$cst$1253$sci_DOT_impl_SLASH_op = new cljs.core.Keyword(
-  "sci.impl",
-  "op",
-  "sci.impl/op",
-  950953978
+var cljs$cst$2583$set_loggers_BANG_ = new cljs.core.Symbol(
+  null,
+  "set-loggers!",
+  "set-loggers!",
+  -1947820787,
+  null
 );
+var cljs$cst$1253$sci_DOT_impl_SLASH_op = new cljs.core.Keyword("sci.impl", "op", "sci.impl/op", 950953978);
 var cljs$cst$674$error_fn = new cljs.core.Keyword(null, "error-fn", "error-fn", -171437615);
 var cljs$cst$11$_meta = new cljs.core.Symbol(null, "_meta", "_meta", -1716892533, null);
 var cljs$cst$2585$assoc_effect = new cljs.core.Symbol(null, "assoc-effect", "assoc-effect", 300107315, null);
-var cljs$cst$1312$method_cache__38663__auto__ = new cljs.core.Symbol(null, "method-cache__38663__auto__", "method-cache__38663__auto__", -282872158, null);
-var cljs$cst$1340$default__40097__auto__ = new cljs.core.Symbol(
+var cljs$cst$1312$method_cache__38663__auto__ = new cljs.core.Symbol(
   null,
-  "default__40097__auto__",
-  "default__40097__auto__",
-  -1005699063,
+  "method-cache__38663__auto__",
+  "method-cache__38663__auto__",
+  -282872158,
   null
 );
+var cljs$cst$1340$default__40097__auto__ = new cljs.core.Symbol(null, "default__40097__auto__", "default__40097__auto__", -1005699063, null);
 var cljs$cst$1840$keep_indexed = new cljs.core.Symbol(null, "keep-indexed", "keep-indexed", -2020916352, null);
 var cljs$cst$2217$source_fn = new cljs.core.Symbol(null, "source-fn", "source-fn", -1114937984, null);
 var cljs$cst$125$initk = new cljs.core.Keyword(null, "initk", "initk", -1693342987);
 var cljs$cst$1792$any_QMARK_ = new cljs.core.Symbol(null, "any?", "any?", -318999933, null);
 var cljs$cst$403$string = new cljs.core.Keyword(null, "string", "string", -1989541586);
-var cljs$cst$652$log_data = new cljs.core.Keyword(
-  null,
-  "log-data",
-  "log-data",
-  1563839042
-);
+var cljs$cst$652$log_data = new cljs.core.Keyword(null, "log-data", "log-data", 1563839042);
 var cljs$cst$2056$assert = new cljs.core.Symbol(null, "assert", "assert", 677428501, null);
 var cljs$cst$2581$register_handler = new cljs.core.Symbol(null, "register-handler", "register-handler", -2025780993, null);
 var cljs$cst$1303$cljs_DOT_core_SLASH_defn = new cljs.core.Symbol("cljs.core", "defn", "cljs.core/defn", -1606493717, null);
-var cljs$cst$138$uuid = new cljs.core.Symbol(null, "uuid", "uuid", -504564192, null);
+var cljs$cst$138$uuid = new cljs.core.Symbol(
+  null,
+  "uuid",
+  "uuid",
+  -504564192,
+  null
+);
 var cljs$cst$976$accounts = new cljs.core.Keyword(null, "accounts", "accounts", -935308676);
 var cljs$cst$1146$imports = new cljs.core.Keyword(null, "imports", "imports", -1249933394);
 var cljs$cst$1180$cljs_DOT_tools_DOT_reader_DOT_edn = new cljs.core.Symbol(null, "cljs.tools.reader.edn", "cljs.tools.reader.edn", -1275821532, null);
@@ -92152,13 +92209,25 @@ var cljs$cst$1841$js_obj = new cljs.core.Symbol(null, "js-obj", "js-obj", 342383
 var cljs$cst$932$updates = new cljs.core.Keyword(null, "updates", "updates", 2013983452);
 var cljs$cst$942$preview = new cljs.core.Keyword(null, "preview", "preview", 451279890);
 var cljs$cst$1496$unchecked_negate = new cljs.core.Symbol(null, "unchecked-negate", "unchecked-negate", -1669067451, null);
-var cljs$cst$2429$wait_all_STAR_ = new cljs.core.Symbol(null, "wait-all*", "wait-all*", -1875097397, null);
+var cljs$cst$2429$wait_all_STAR_ = new cljs.core.Symbol(
+  null,
+  "wait-all*",
+  "wait-all*",
+  -1875097397,
+  null
+);
 var cljs$cst$929$parse_fn = new cljs.core.Keyword(null, "parse-fn", "parse-fn", 1818406345);
 var cljs$cst$1636$ex_message = new cljs.core.Symbol(null, "ex-message", "ex-message", -1128293394, null);
 var cljs$cst$2153$colls = new cljs.core.Symbol(null, "colls", "colls", -397642425, null);
 var cljs$cst$109$status = new cljs.core.Keyword(null, "status", "status", -1997798413);
 var cljs$cst$254$style = new cljs.core.Keyword(null, "style", "style", -496642736);
-var cljs$cst$2620$re_frame_DOT_core_SLASH_reg_global_interceptor = new cljs.core.Symbol("re-frame.core", "reg-global-interceptor", "re-frame.core/reg-global-interceptor", -2081719141, null);
+var cljs$cst$2620$re_frame_DOT_core_SLASH_reg_global_interceptor = new cljs.core.Symbol(
+  "re-frame.core",
+  "reg-global-interceptor",
+  "re-frame.core/reg-global-interceptor",
+  -2081719141,
+  null
+);
 var cljs$cst$824$operation = new cljs.core.Keyword(null, "operation", "operation", -1267664310);
 var cljs$cst$1333$cljs_DOT_core_SLASH_ex_info = new cljs.core.Symbol("cljs.core", "ex-info", "cljs.core/ex-info", -409744395, null);
 var cljs$cst$1367$js_SLASH_Array = new cljs.core.Symbol("js", "Array", "js/Array", -423508366, null);
@@ -92169,13 +92238,7 @@ var cljs$cst$2164$iref = new cljs.core.Symbol(null, "iref", "iref", -647796531, 
 var cljs$cst$1979$demunge = new cljs.core.Symbol(null, "demunge", "demunge", -1865491845, null);
 var cljs$cst$910$reg_flow = new cljs.core.Keyword(null, "reg-flow", "reg-flow", -1365926178);
 var cljs$cst$2215$dir = new cljs.core.Symbol(null, "dir", "dir", -919681108, null);
-var cljs$cst$2392$cljs_DOT_core_DOT_async_DOT_impl_DOT_ioc_helpers = new cljs.core.Symbol(
-  null,
-  "cljs.core.async.impl.ioc-helpers",
-  "cljs.core.async.impl.ioc-helpers",
-  -720605574,
-  null
-);
+var cljs$cst$2392$cljs_DOT_core_DOT_async_DOT_impl_DOT_ioc_helpers = new cljs.core.Symbol(null, "cljs.core.async.impl.ioc-helpers", "cljs.core.async.impl.ioc-helpers", -720605574, null);
 var cljs$cst$2037$LazySeq = new cljs.core.Symbol(null, "LazySeq", "LazySeq", 1579450882, null);
 var cljs$cst$557$with_state_QMARK_ = new cljs.core.Keyword(null, "with-state?", "with-state?", 1044523183);
 var cljs$cst$1460$self_ref_idx = new cljs.core.Keyword(null, "self-ref-idx", "self-ref-idx", -1384537812);
@@ -92185,51 +92248,64 @@ var cljs$cst$2052$filter = new cljs.core.Symbol(null, "filter", "filter", 691993
 var cljs$cst$2664$cljs_DOT_core_SLASH_IDeref = new cljs.core.Symbol("cljs.core", "IDeref", "cljs.core/IDeref", 1331648568, null);
 var cljs$cst$135$prefer_table = new cljs.core.Symbol(null, "prefer-table", "prefer-table", 462168584, null);
 var cljs$cst$732$prefer_strings = new cljs.core.Keyword(null, "prefer-strings", "prefer-strings", 1254507185);
-var cljs$cst$321$parallelism = new cljs.core.Keyword(null, "parallelism", "parallelism", -930922333);
+var cljs$cst$321$parallelism = new cljs.core.Keyword(
+  null,
+  "parallelism",
+  "parallelism",
+  -930922333
+);
 var cljs$cst$2250$starts_with_QMARK_ = new cljs.core.Symbol(null, "starts-with?", "starts-with?", 1014173927, null);
 var cljs$cst$2298$to_chan = new cljs.core.Symbol(null, "to-chan", "to-chan", -1992175286, null);
 var cljs$cst$1114$width = new cljs.core.Keyword(null, "width", "width", -384071477);
 var cljs$cst$1358$meth__40725__auto__ = new cljs.core.Symbol(null, "meth__40725__auto__", "meth__40725__auto__", 1340153020, null);
-var cljs$cst$1785$ex_info = new cljs.core.Symbol(null, "ex-info", "ex-info", -539875240, null);
-var cljs$cst$2494$max_fixed_arity = new cljs.core.Keyword(
+var cljs$cst$1785$ex_info = new cljs.core.Symbol(
   null,
-  "max-fixed-arity",
-  "max-fixed-arity",
-  -690205543
+  "ex-info",
+  "ex-info",
+  -539875240,
+  null
 );
+var cljs$cst$2494$max_fixed_arity = new cljs.core.Keyword(null, "max-fixed-arity", "max-fixed-arity", -690205543);
 var cljs$cst$1676$__GT_record_impl = new cljs.core.Symbol(null, "->record-impl", "->record-impl", 1274709757, null);
 var cljs$cst$510$norm_form = new cljs.core.Symbol(null, "norm-form", "norm-form", -1587703891, null);
 var cljs$cst$159$deftype_STAR_ = new cljs.core.Symbol(null, "deftype*", "deftype*", 962659890, null);
-var cljs$cst$1483$unchecked_remainder_int = new cljs.core.Symbol(null, "unchecked-remainder-int", "unchecked-remainder-int", 1427188224, null);
-var cljs$cst$1922$interpose = new cljs.core.Symbol(
+var cljs$cst$1483$unchecked_remainder_int = new cljs.core.Symbol(
   null,
-  "interpose",
-  "interpose",
-  -2078295140,
+  "unchecked-remainder-int",
+  "unchecked-remainder-int",
+  1427188224,
   null
 );
+var cljs$cst$1922$interpose = new cljs.core.Symbol(null, "interpose", "interpose", -2078295140, null);
 var cljs$cst$628$report = new cljs.core.Keyword(null, "report", "report", 1394055010);
 var cljs$cst$497$qualifier = new cljs.core.Keyword(null, "qualifier", "qualifier", 125841738);
 var cljs$cst$1537$bit_and = new cljs.core.Symbol(null, "bit-and", "bit-and", -479352589, null);
 var cljs$cst$1060$amount = new cljs.core.Keyword(null, "amount", "amount", 364489504);
 var cljs$cst$541$udt = new cljs.core.Symbol(null, "udt", "udt", -642723018, null);
-var cljs$cst$467$nat_int = new cljs.core.Keyword(
-  null,
-  "nat-int",
-  "nat-int",
-  313429715
-);
+var cljs$cst$467$nat_int = new cljs.core.Keyword(null, "nat-int", "nat-int", 313429715);
 var cljs$cst$2105$aseq = new cljs.core.Symbol(null, "aseq", "aseq", -1865515628, null);
 var cljs$cst$290$component_will_unmount = new cljs.core.Keyword(null, "component-will-unmount", "component-will-unmount", -2058314698);
 var cljs$cst$471$pos_float = new cljs.core.Keyword(null, "pos-float", "pos-float", -715200084);
 var cljs$cst$877$current_state = new cljs.core.Keyword(null, "current-state", "current-state", 1048284452);
-var cljs$cst$1818$aset = new cljs.core.Symbol(null, "aset", "aset", 900773178, null);
+var cljs$cst$1818$aset = new cljs.core.Symbol(
+  null,
+  "aset",
+  "aset",
+  900773178,
+  null
+);
 var cljs$cst$2307$ioc_alts_BANG_ = new cljs.core.Symbol(null, "ioc-alts!", "ioc-alts!", 2136069053, null);
 var cljs$cst$2447$resolve_BANG_ = new cljs.core.Symbol(null, "resolve!", "resolve!", 2140913414, null);
 var cljs$cst$242$success = new cljs.core.Keyword(null, "success", "success", 1890645906);
 var cljs$cst$313$plugin_id = new cljs.core.Keyword(null, "plugin-id", "plugin-id", -1788213395);
 var cljs$cst$2423$promise = new cljs.core.Symbol(null, "promise", "promise", -887306482, null);
-var cljs$cst$62$tail = new cljs.core.Symbol(null, "tail", "tail", 494507963, null);
+var cljs$cst$62$tail = new cljs.core.Symbol(
+  null,
+  "tail",
+  "tail",
+  494507963,
+  null
+);
 var cljs$cst$1801$false_QMARK_ = new cljs.core.Symbol(null, "false?", "false?", -1522377573, null);
 var cljs$cst$1418$tag_class = new cljs.core.Keyword(null, "tag-class", "tag-class", 714967874);
 var cljs$cst$1635$cljs_DOT_core_SLASH_ex_message = new cljs.core.Symbol("cljs.core", "ex-message", "cljs.core/ex-message", -747602175, null);
@@ -92241,47 +92317,49 @@ var cljs$cst$1959$string_QMARK_ = new cljs.core.Symbol(null, "string?", "string?
 var cljs$cst$1938$js_in = new cljs.core.Symbol(null, "js-in", "js-in", 1388959023, null);
 var cljs$cst$1871$methods = new cljs.core.Symbol(null, "methods", "methods", 2094462393, null);
 var cljs$cst$1216$source_key = new cljs.core.Keyword(null, "source-key", "source-key", -1325875542);
-var cljs$cst$1712$doto = new cljs.core.Symbol(null, "doto", "doto", 1252536074, null);
+var cljs$cst$1712$doto = new cljs.core.Symbol(
+  null,
+  "doto",
+  "doto",
+  1252536074,
+  null
+);
 var cljs$cst$1764$println = new cljs.core.Symbol(null, "println", "println", -733595439, null);
 var cljs$cst$538$swap_SLASH_abort = new cljs.core.Keyword("swap", "abort", "swap/abort", 508048993);
 var cljs$cst$911$do_flow_fx = new cljs.core.Keyword(null, "do-flow-fx", "do-flow-fx", 528807066);
 var cljs$cst$505$mins = new cljs.core.Keyword(null, "mins", "mins", 467369676);
 var cljs$cst$775$script = new cljs.core.Symbol(null, "script", "script", 336087726, null);
-var cljs$cst$516$filter_input_arg = new cljs.core.Symbol(null, "filter-input-arg", "filter-input-arg", 1147690060, null);
+var cljs$cst$516$filter_input_arg = new cljs.core.Symbol(
+  null,
+  "filter-input-arg",
+  "filter-input-arg",
+  1147690060,
+  null
+);
 var cljs$cst$1444$use = new cljs.core.Keyword(null, "use", "use", -1846382424);
 var cljs$cst$503$months = new cljs.core.Keyword(null, "months", "months", -45571637);
 var cljs$cst$2710$tail = new cljs.core.Keyword(null, "tail", "tail", -1146023564);
 var cljs$cst$2177$fnspecs = new cljs.core.Symbol(null, "fnspecs", "fnspecs", -958581686, null);
 var cljs$cst$2249$trim = new cljs.core.Symbol(null, "trim", "trim", -1880116002, null);
-var cljs$cst$1195$edamame_DOT_impl_DOT_parser_SLASH_opened_delimiter = new cljs.core.Keyword(
-  "edamame.impl.parser",
-  "opened-delimiter",
-  "edamame.impl.parser/opened-delimiter",
-  1199661648
-);
+var cljs$cst$1195$edamame_DOT_impl_DOT_parser_SLASH_opened_delimiter = new cljs.core.Keyword("edamame.impl.parser", "opened-delimiter", "edamame.impl.parser/opened-delimiter", 1199661648);
 var cljs$cst$2743$register = new cljs.core.Symbol(null, "register", "register", -685913253, null);
 var cljs$cst$263$path = new cljs.core.Symbol(null, "path", "path", 1452340359, null);
 var cljs$cst$1019$sender_id = new cljs.core.Keyword(null, "sender-id", "sender-id", -1032660135);
 var cljs$cst$170$def = new cljs.core.Symbol(null, "def", "def", 597100991, null);
 var cljs$cst$407$map = new cljs.core.Keyword(null, "map", "map", 1371690461);
-var cljs$cst$587$params = new cljs.core.Keyword(
-  null,
-  "params",
-  "params",
-  710516235
-);
+var cljs$cst$587$params = new cljs.core.Keyword(null, "params", "params", 710516235);
 var cljs$cst$2657$__GT_t_re_frame$db32363 = new cljs.core.Symbol(null, "->t_re_frame$db32363", "->t_re_frame$db32363", 1236076938, null);
 var cljs$cst$185$dirty_puts = new cljs.core.Symbol(null, "dirty-puts", "dirty-puts", 57041148, null);
 var cljs$cst$1492$dec = new cljs.core.Symbol(null, "dec", "dec", -766002333, null);
 var cljs$cst$648$iso8601 = new cljs.core.Keyword(null, "iso8601", "iso8601", 609352650);
-var cljs$cst$401$frames = new cljs.core.Symbol(null, "frames", "frames", -888748272, null);
-var cljs$cst$1510$inc_SINGLEQUOTE_ = new cljs.core.Symbol(
+var cljs$cst$401$frames = new cljs.core.Symbol(
   null,
-  "inc'",
-  "inc'",
-  1740049128,
+  "frames",
+  "frames",
+  -888748272,
   null
 );
+var cljs$cst$1510$inc_SINGLEQUOTE_ = new cljs.core.Symbol(null, "inc'", "inc'", 1740049128, null);
 var cljs$cst$481$max = new cljs.core.Keyword(null, "max", "max", 61366548);
 var cljs$cst$2579$reg_cofx = new cljs.core.Symbol(null, "reg-cofx", "reg-cofx", 91685178, null);
 var cljs$cst$1401$check_permissions = new cljs.core.Keyword(null, "check-permissions", "check-permissions", 669054317);
@@ -92291,73 +92369,77 @@ var cljs$cst$544$tick_lfu = new cljs.core.Symbol(null, "tick-lfu", "tick-lfu", -
 var cljs$cst$1100$mime = new cljs.core.Keyword(null, "mime", "mime", -1846414642);
 var cljs$cst$1738$_new_var = new cljs.core.Symbol(null, "-new-var", "-new-var", 1200468147, null);
 var cljs$cst$2122$doc_PLUS_methods = new cljs.core.Symbol(null, "doc+methods", "doc+methods", 2036080922, null);
-var cljs$cst$2468$reagent_DOT_ratom_SLASH_with_let_values = new cljs.core.Symbol("reagent.ratom", "with-let-values", "reagent.ratom/with-let-values", -575838306, null);
+var cljs$cst$2468$reagent_DOT_ratom_SLASH_with_let_values = new cljs.core.Symbol(
+  "reagent.ratom",
+  "with-let-values",
+  "reagent.ratom/with-let-values",
+  -575838306,
+  null
+);
 var cljs$cst$1456$handled = new cljs.core.Keyword(null, "handled", "handled", 1889700151);
 var cljs$cst$539$swap_SLASH_dissoc = new cljs.core.Keyword("swap", "dissoc", "swap/dissoc", -605373782);
 var cljs$cst$1731$ns_unalias = new cljs.core.Symbol(null, "ns-unalias", "ns-unalias", 445102632, null);
 var cljs$cst$1314$cljs_DOT_core_SLASH_multi_fn_impl = new cljs.core.Symbol("cljs.core", "multi-fn-impl", "cljs.core/multi-fn-impl", 1399453884, null);
-var cljs$cst$1371$bindingx = new cljs.core.Keyword(null, "bindingx", "bindingx", 679516896);
-var cljs$cst$1360$default = new cljs.core.Symbol(
+var cljs$cst$1371$bindingx = new cljs.core.Keyword(
   null,
-  "default",
-  "default",
-  -347290801,
-  null
+  "bindingx",
+  "bindingx",
+  679516896
 );
+var cljs$cst$1360$default = new cljs.core.Symbol(null, "default", "default", -347290801, null);
 var cljs$cst$456$doc = new cljs.core.Keyword(null, "doc", "doc", 1913296891);
 var cljs$cst$38$iters = new cljs.core.Symbol(null, "iters", "iters", 719353031, null);
 var cljs$cst$1231$end_location = new cljs.core.Symbol(null, "end-location", "end-location", 441082060, null);
 var cljs$cst$452$readers = new cljs.core.Keyword(null, "readers", "readers", -2118263030);
-var cljs$cst$1208$quote = new cljs.core.Keyword(null, "quote", "quote", -262615245);
-var cljs$cst$168$catch = new cljs.core.Symbol(
+var cljs$cst$1208$quote = new cljs.core.Keyword(
   null,
-  "catch",
-  "catch",
-  -1616370245,
-  null
+  "quote",
+  "quote",
+  -262615245
 );
+var cljs$cst$168$catch = new cljs.core.Symbol(null, "catch", "catch", -1616370245, null);
 var cljs$cst$2222$apply_template = new cljs.core.Symbol(null, "apply-template", "apply-template", 1809601838, null);
 var cljs$cst$1888$coll_QMARK_ = new cljs.core.Symbol(null, "coll?", "coll?", -1874821441, null);
 var cljs$cst$2683$re_frame_DOT_db_SLASH__BANG_eve_ref = new cljs.core.Symbol("re-frame.db", "!eve-ref", "re-frame.db/!eve-ref", -377734709, null);
 var cljs$cst$261$path = new cljs.core.Keyword(null, "path", "path", -188191168);
-var cljs$cst$1318$cljs_DOT_core_SLASH_cond__GT_ = new cljs.core.Symbol(
-  "cljs.core",
-  "cond->",
-  "cljs.core/cond->",
-  -113941356,
-  null
-);
+var cljs$cst$1318$cljs_DOT_core_SLASH_cond__GT_ = new cljs.core.Symbol("cljs.core", "cond->", "cljs.core/cond->", -113941356, null);
 var cljs$cst$2112$newval = new cljs.core.Symbol(null, "newval", "newval", 717803975, null);
 var cljs$cst$247$handler = new cljs.core.Keyword(null, "handler", "handler", -195596612);
 var cljs$cst$1700$ret__48922__auto__ = new cljs.core.Symbol(null, "ret__48922__auto__", "ret__48922__auto__", 281027646, null);
 var cljs$cst$1905$reify = new cljs.core.Symbol(null, "reify", "reify", 1885539699, null);
-var cljs$cst$2031$to_array_2d = new cljs.core.Symbol(null, "to-array-2d", "to-array-2d", -1563270737, null);
-var cljs$cst$826$tags = new cljs.core.Keyword(
+var cljs$cst$2031$to_array_2d = new cljs.core.Symbol(
   null,
-  "tags",
-  "tags",
-  1771418977
+  "to-array-2d",
+  "to-array-2d",
+  -1563270737,
+  null
 );
+var cljs$cst$826$tags = new cljs.core.Keyword(null, "tags", "tags", 1771418977);
 var cljs$cst$1159$clojure_DOT_core_SLASH_apply = new cljs.core.Symbol("clojure.core", "apply", "clojure.core/apply", 1654646389, null);
 var cljs$cst$904$live_QMARK_ = new cljs.core.Keyword(null, "live?", "live?", -1539352230);
 var cljs$cst$2649$broadcast_async_BANG_ = new cljs.core.Symbol(null, "broadcast-async!", "broadcast-async!", 1115877199, null);
-var cljs$cst$1288$cljs_DOT_core_SLASH_alter_meta_BANG_ = new cljs.core.Symbol("cljs.core", "alter-meta!", "cljs.core/alter-meta!", 574694262, null);
+var cljs$cst$1288$cljs_DOT_core_SLASH_alter_meta_BANG_ = new cljs.core.Symbol(
+  "cljs.core",
+  "alter-meta!",
+  "cljs.core/alter-meta!",
+  574694262,
+  null
+);
 var cljs$cst$116$map__21467 = new cljs.core.Symbol(null, "map__21467", "map__21467", 1063037960, null);
 var cljs$cst$2253$includes_QMARK_ = new cljs.core.Symbol(null, "includes?", "includes?", -2049283381, null);
 var cljs$cst$2709$_BANG_plugin_id_atom = new cljs.core.Keyword(null, "!plugin-id-atom", "!plugin-id-atom", 1801366066);
 var cljs$cst$1629$cljs_DOT_core_SLASH___GT_ = new cljs.core.Symbol("cljs.core", "->", "cljs.core/->", 1488366311, null);
-var cljs$cst$2498$arglists_meta = new cljs.core.Keyword(null, "arglists-meta", "arglists-meta", 1944829838);
+var cljs$cst$2498$arglists_meta = new cljs.core.Keyword(
+  null,
+  "arglists-meta",
+  "arglists-meta",
+  1944829838
+);
 var cljs$cst$1061$toggle_reaction = new cljs.core.Keyword(null, "toggle-reaction", "toggle-reaction", 1368365763);
 var cljs$cst$195$meta25215 = new cljs.core.Symbol(null, "meta25215", "meta25215", 967607764, null);
 var cljs$cst$1026$inner = new cljs.core.Keyword(null, "inner", "inner", -1383171215);
 var cljs$cst$1386$sci_DOT_impl_DOT_records_SLASH___GT_record_impl = new cljs.core.Symbol("sci.impl.records", "->record-impl", "sci.impl.records/->record-impl", -1005013370, null);
-var cljs$cst$2179$start_test = new cljs.core.Symbol(
-  null,
-  "start-test",
-  "start-test",
-  687547962,
-  null
-);
+var cljs$cst$2179$start_test = new cljs.core.Symbol(null, "start-test", "start-test", 687547962, null);
 var cljs$cst$1193$some = new cljs.core.Keyword(null, "some", "some", -1951079573);
 var cljs$cst$1050$back = new cljs.core.Keyword(null, "back", "back", -417520012);
 var cljs$cst$350$map = new cljs.core.Symbol(null, "map", "map", -1282745308, null);
@@ -92375,13 +92457,7 @@ var cljs$cst$1560$compare = new cljs.core.Symbol(null, "compare", "compare", 110
 var cljs$cst$218$solo = new cljs.core.Keyword(null, "solo", "solo", -316350075);
 var cljs$cst$226$meta27884 = new cljs.core.Symbol(null, "meta27884", "meta27884", 436304335, null);
 var cljs$cst$1044$focus_obj = new cljs.core.Keyword(null, "focus-obj", "focus-obj", -922539819);
-var cljs$cst$2065$multi_fn_QMARK__impl = new cljs.core.Symbol(
-  null,
-  "multi-fn?-impl",
-  "multi-fn?-impl",
-  1372639302,
-  null
-);
+var cljs$cst$2065$multi_fn_QMARK__impl = new cljs.core.Symbol(null, "multi-fn?-impl", "multi-fn?-impl", 1372639302, null);
 var cljs$cst$2645$set_async_broadcaster_BANG_ = new cljs.core.Symbol(null, "set-async-broadcaster!", "set-async-broadcaster!", -1818270308, null);
 var cljs$cst$1653$_DOT_close = new cljs.core.Symbol(null, ".close", ".close", -1017758745, null);
 var cljs$cst$496$version = new cljs.core.Keyword(null, "version", "version", 425292698);
@@ -92395,12 +92471,23 @@ var cljs$cst$1431$sci_DOT_impl_SLASH_fn = new cljs.core.Keyword(
 var cljs$cst$436$clojure_DOT_core_SLASH_unquote = new cljs.core.Symbol("clojure.core", "unquote", "clojure.core/unquote", 843087510, null);
 var cljs$cst$2527$_ratom_context = new cljs.core.Symbol(null, "-ratom-context", "-ratom-context", 1646839514, null);
 var cljs$cst$2677$re_frame_DOT_db_SLASH_apply_remote_patch_BANG_ = new cljs.core.Symbol("re-frame.db", "apply-remote-patch!", "re-frame.db/apply-remote-patch!", -493605083, null);
-var cljs$cst$1067$redact_event = new cljs.core.Keyword(null, "redact-event", "redact-event", -1456941777);
+var cljs$cst$1067$redact_event = new cljs.core.Keyword(
+  null,
+  "redact-event",
+  "redact-event",
+  -1456941777
+);
 var cljs$cst$2697$fn_SLASH_h_1951845603 = new cljs.core.Keyword("fn", "h-1951845603", "fn/h-1951845603", 615873600);
 var cljs$cst$1864$load_string = new cljs.core.Symbol(null, "load-string", "load-string", -403739145, null);
 var cljs$cst$203$compute = new cljs.core.Keyword(null, "compute", "compute", 1555393130);
 var cljs$cst$1466$iden__GT_invoke_idx = new cljs.core.Symbol(null, "iden->invoke-idx", "iden->invoke-idx", -157095499, null);
-var cljs$cst$1899$range = new cljs.core.Symbol(null, "range", "range", -1014743483, null);
+var cljs$cst$1899$range = new cljs.core.Symbol(
+  null,
+  "range",
+  "range",
+  -1014743483,
+  null
+);
 var cljs$cst$1946$use = new cljs.core.Symbol(null, "use", "use", -205850897, null);
 var cljs$cst$50$current = new cljs.core.Symbol(null, "current", "current", 552492924, null);
 var cljs$cst$2427$TimeoutException = new cljs.core.Symbol(null, "TimeoutException", "TimeoutException", 1995468529, null);
@@ -123118,7 +123205,7 @@ paradise.shared.client.session_store.delete_db_BANG_ = function(a2) {
                 ["Destroyed IDB:", a2],
                 null
               );
-            }, null), null, 12, null, null, null);
+            }, null), null, 4, null, null, null);
             return c2.cljs$core$IFn$_invoke$arity$1 ? c2.cljs$core$IFn$_invoke$arity$1(true) : c2.call(null, true);
           };
           g.$fn_ptr = cljs$cst$716$fn_SLASH_h1466011990;
@@ -123129,7 +123216,7 @@ paradise.shared.client.session_store.delete_db_BANG_ = function(a2) {
           var g = function() {
             taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.shared.client.session-store", "file:/home/jaggar/Code/Paradise/src-gen/paradise/shared/client/session_store.cljs", 383, 59, cljs$cst$677$p, cljs$cst$579$auto, new cljs.core.Delay(function() {
               return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Error deleting IDB:", a2], null);
-            }, null), null, 13, null, null, null);
+            }, null), null, 5, null, null, null);
             return c2.cljs$core$IFn$_invoke$arity$1 ? c2.cljs$core$IFn$_invoke$arity$1(false) : c2.call(null, false);
           };
           g.$fn_ptr = cljs$cst$719$fn_SLASH_h_455501711;
@@ -123151,7 +123238,7 @@ paradise.shared.client.session_store.delete_db_BANG_ = function(a2) {
                 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["BLOCKED deleting IDB:", a2], null);
               }, null),
               null,
-              14,
+              6,
               null,
               null,
               null
@@ -123177,7 +123264,7 @@ paradise.shared.client.session_store.delete_db_BANG_ = function(a2) {
             return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Fatal crash attempting to delete IDB:", a2, "Error:", h], null);
           }, null),
           null,
-          11,
+          3,
           null,
           null,
           null
@@ -123337,7 +123424,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
         return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Destroyed IDB:", b2], null);
       }, null),
       null,
-      15,
+      7,
       null,
       null,
       null
@@ -123374,7 +123461,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
         return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["BLOCKED deleting IDB:", b2], null);
       }, null),
       null,
-      16,
+      8,
       null,
       null,
       null
@@ -123515,7 +123602,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
         return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Error deleting IDB:", b2], null);
       }, null),
       null,
-      17,
+      9,
       null,
       null,
       null
@@ -123561,7 +123648,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
               return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Destroyed IDB:", e], null);
             }, null),
             null,
-            20,
+            11,
             null,
             null,
             null
@@ -123596,7 +123683,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
               return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Error deleting IDB:", e], null);
             }, null),
             null,
-            21,
+            12,
             null,
             null,
             null
@@ -123622,7 +123709,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
               return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["BLOCKED deleting IDB:", e], null);
             }, null),
             null,
-            22,
+            13,
             null,
             null,
             null
@@ -123649,7 +123736,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
           ["Fatal crash attempting to delete IDB:", e, "Error:", m],
           null
         );
-      }, null), null, 19, null, null, null);
+      }, null), null, 10, null, null, null);
       return f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(false) : f.call(null, false);
     }
   };
@@ -128617,41 +128704,41 @@ BigInt.prototype.cljs$core$IHash$ = cljs.core.PROTOCOL_SENTINEL;
 BigInt.prototype.cljs$core$IHash$_hash$arity$1 = function(a2) {
   return cljs.core.hash(this.toString());
 };
-re_frame.db.t_re_frame$db24552 = function(a2) {
-  this.meta24553 = a2;
+re_frame.db.t_re_frame$db24451 = function(a2) {
+  this.meta24452 = a2;
   this.cljs$lang$protocol_mask$partition0$ = 425984;
   this.cljs$lang$protocol_mask$partition1$ = 98306;
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(a2, b2) {
-  return new re_frame.db.t_re_frame$db24552(b2);
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(a2, b2) {
+  return new re_frame.db.t_re_frame$db24451(b2);
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$IMeta$_meta$arity$1 = function(a2) {
-  return this.meta24553;
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$IMeta$_meta$arity$1 = function(a2) {
+  return this.meta24452;
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$IDeref$_deref$arity$1 = function(a2) {
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$IDeref$_deref$arity$1 = function(a2) {
   return cljs.core.deref(re_frame.db._BANG_reactive_state);
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$IReset$_reset_BANG_$arity$2 = function(a2, b2) {
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$IReset$_reset_BANG_$arity$2 = function(a2, b2) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.reset_BANG_(a2, b2), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$ISwap$_swap_BANG_$arity$2 = function(a2, b2) {
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$ISwap$_swap_BANG_$arity$2 = function(a2, b2) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(a2, b2), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(re_frame.db._BANG_reactive_state, b2), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$ISwap$_swap_BANG_$arity$3 = function(a2, b2, c2) {
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$ISwap$_swap_BANG_$arity$3 = function(a2, b2, c2) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$3(a2, b2, c2), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$3(re_frame.db._BANG_reactive_state, b2, c2), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$ISwap$_swap_BANG_$arity$4 = function(a2, b2, c2, d) {
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$ISwap$_swap_BANG_$arity$4 = function(a2, b2, c2, d) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(a2, b2, c2, d), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(re_frame.db._BANG_reactive_state, b2, c2, d), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$ISwap$_swap_BANG_$arity$5 = function(a2, b2, c2, d, e) {
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$ISwap$_swap_BANG_$arity$5 = function(a2, b2, c2, d, e) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.apply.cljs$core$IFn$_invoke$arity$variadic(cljs.core.swap_BANG_, a2, b2, c2, d, cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([e], 0)), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.apply.cljs$core$IFn$_invoke$arity$variadic(
     cljs.core.swap_BANG_,
@@ -128663,27 +128750,27 @@ re_frame.db.t_re_frame$db24552.prototype.cljs$core$ISwap$_swap_BANG_$arity$5 = f
   ), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$IWatchable$_notify_watches$arity$3 = function(a2, b2, c2) {
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$IWatchable$_notify_watches$arity$3 = function(a2, b2, c2) {
   return re_frame.db._BANG_reactive_state.cljs$core$IWatchable$_notify_watches$arity$3(null, b2, c2);
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$IWatchable$_add_watch$arity$3 = function(a2, b2, c2) {
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$IWatchable$_add_watch$arity$3 = function(a2, b2, c2) {
   return re_frame.db._BANG_reactive_state.cljs$core$IWatchable$_add_watch$arity$3(null, b2, c2);
 };
-re_frame.db.t_re_frame$db24552.prototype.cljs$core$IWatchable$_remove_watch$arity$2 = function(a2, b2) {
+re_frame.db.t_re_frame$db24451.prototype.cljs$core$IWatchable$_remove_watch$arity$2 = function(a2, b2) {
   return re_frame.db._BANG_reactive_state.cljs$core$IWatchable$_remove_watch$arity$2(null, b2);
 };
-re_frame.db.t_re_frame$db24552.getBasis = function() {
-  return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs$cst$814$meta24553], null);
+re_frame.db.t_re_frame$db24451.getBasis = function() {
+  return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs$cst$814$meta24452], null);
 };
-re_frame.db.t_re_frame$db24552.cljs$lang$type = true;
-re_frame.db.t_re_frame$db24552.cljs$lang$ctorStr = "re-frame.db/t_re_frame$db24552";
-re_frame.db.t_re_frame$db24552.cljs$lang$ctorPrWriter = function(a2, b2, c2) {
-  return cljs.core._write(b2, "re-frame.db/t_re_frame$db24552");
+re_frame.db.t_re_frame$db24451.cljs$lang$type = true;
+re_frame.db.t_re_frame$db24451.cljs$lang$ctorStr = "re-frame.db/t_re_frame$db24451";
+re_frame.db.t_re_frame$db24451.cljs$lang$ctorPrWriter = function(a2, b2, c2) {
+  return cljs.core._write(b2, "re-frame.db/t_re_frame$db24451");
 };
-re_frame.db.__GT_t_re_frame$db24552 = function(a2) {
-  return new re_frame.db.t_re_frame$db24552(a2);
+re_frame.db.__GT_t_re_frame$db24451 = function(a2) {
+  return new re_frame.db.t_re_frame$db24451(a2);
 };
-re_frame.db.app_db = new re_frame.db.t_re_frame$db24552(cljs.core.PersistentArrayMap.EMPTY);
+re_frame.db.app_db = new re_frame.db.t_re_frame$db24451(cljs.core.PersistentArrayMap.EMPTY);
 re_frame.loggers = {};
 re_frame.loggers.loggers = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentArrayMap(
   null,
@@ -131969,7 +132056,7 @@ paradise.engine.matrix.diffs.apply_generic_diffs_BANG_ = function(a2) {
             ["Diff Panic at", c2, ":", l],
             null
           );
-        }, null), null, 18, null, null, null);
+        }, null), null, 21, null, null, null);
       });
     });
   });
@@ -132236,7 +132323,7 @@ paradise.engine.matrix.rooms.parse_room = function(a2, b2, c2) {
                       return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Background preview fetch failed:", r], null);
                     }, null),
                     null,
-                    33,
+                    36,
                     null,
                     null,
                     null
@@ -132259,7 +132346,7 @@ paradise.engine.matrix.rooms.parse_room = function(a2, b2, c2) {
                   ["Failed to parse room:", g, n],
                   null
                 );
-              }, null), null, 32, null, null, null);
+              }, null), null, 35, null, null, null);
               return new cljs.core.PersistentArrayMap(null, 2, [cljs$cst$293$id, g, cljs$cst$250$name, "Error parsing room"], null);
             }
           })());
@@ -132331,7 +132418,7 @@ paradise.engine.matrix.rooms.apply_home_diffs_async_BANG_ = function(a2, b2, c2)
             return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Global Diff Panic:", e], null);
           }, null),
           null,
-          35,
+          37,
           null,
           null,
           null
@@ -132374,7 +132461,7 @@ paradise.engine.matrix.rooms.apply_bg_rooms_diffs_BANG_ = function(a2, b2, c2) {
             return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Global Diff Panic:", e], null);
           }, null),
           null,
-          36,
+          38,
           null,
           null,
           null
@@ -133888,7 +133975,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
             };
           })();
           f = new cljs.core.Delay(f, null);
-          var l = taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.engine.matrix.settings", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/settings.cljs", 55, 28, cljs$cst$677$p, cljs$cst$579$auto, f, null, 27, null, null, null);
+          var l = taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.engine.matrix.settings", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/settings.cljs", 55, 28, cljs$cst$677$p, cljs$cst$579$auto, f, null, 23, null, null, null);
           f = cljs.core.PersistentHashMap.fromArrays([cljs$cst$109$status, cljs$cst$239$msg], [
             cljs$cst$243$error,
             k
@@ -133928,7 +134015,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
             cljs$cst$579$auto,
             l,
             null,
-            28,
+            24,
             null,
             null,
             null
@@ -133960,7 +134047,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           cljs$cst$579$auto,
           l,
           null,
-          29,
+          25,
           null,
           null,
           null
@@ -134029,7 +134116,7 @@ paradise.engine.matrix.settings.setup_encryption_listeners_BANG_ = function(a2) 
         return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Worker stream: Recovery state changed to:", b2, "->", c2], null);
       },
       null
-    ), null, 34, null, null, null);
+    ), null, 26, null, null, null);
     return cljs_workers.worker.stream_BANG_.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentArrayMap(null, 2, [cljs$cst$139$type, "recovery-state-update", cljs$cst$241$state, c2], null));
   } });
   return cljs.core.reset_BANG_(paradise.engine.matrix.settings._BANG_recovery_listener_handle, a2);
@@ -134331,8 +134418,9 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (54 === g) {
+          var S = h[15], O = h[19], R = h[21], T = h[23];
           G = h[14];
-          var S = h[18], O = h[20], R = h[21], T = h[23], U = h[24], V = h[26], W = h[27], X = h[2], Y = /* @__PURE__ */ (function() {
+          var U = h[24], V = h[26], W = h[27], X = h[2], Y = /* @__PURE__ */ (function() {
             var Ua = W;
             return function() {
               return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Failed to delete pusher", Ua, ":", X], null);
@@ -134348,7 +134436,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
             cljs$cst$579$auto,
             da,
             null,
-            40,
+            28,
             null,
             null,
             null
@@ -134375,11 +134463,11 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           G = h[14];
           W = h[27];
           var ta = cljs.core.first(G), va = cljs$cst$994$pushkey.cljs$core$IFn$_invoke$arity$1(ta), Va = cljs$cst$996$app_id.cljs$core$IFn$_invoke$arity$1(ta);
-          S = { pushkey: va, appId: Va };
-          h[15] = ta;
+          O = { pushkey: va, appId: Va };
+          h[16] = ta;
           h[27] = va;
-          h[17] = Va;
-          h[18] = S;
+          h[18] = Va;
+          h[19] = O;
           var Wa = k = h;
           Wa[2] = null;
           Wa[1] = 52;
@@ -134401,9 +134489,9 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (32 === g) {
-          R = h[21];
+          S = h[15];
           U = h[24];
-          var ka = h[32], Ba = cljs.core._nth(R, U), wa = cljs$cst$994$pushkey.cljs$core$IFn$_invoke$arity$1(Ba), Ia = cljs$cst$996$app_id.cljs$core$IFn$_invoke$arity$1(Ba), Xa = { pushkey: wa, appId: Ia };
+          var ka = h[32], Ba = cljs.core._nth(S, U), wa = cljs$cst$994$pushkey.cljs$core$IFn$_invoke$arity$1(Ba), Ia = cljs$cst$996$app_id.cljs$core$IFn$_invoke$arity$1(Ba), Xa = { pushkey: wa, appId: Ia };
           h[31] = Ba;
           h[32] = wa;
           h[33] = Ia;
@@ -134440,8 +134528,8 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (13 === g) {
-          O = h[20];
-          var Ma = O.json(), kb = cljs.core.async.interop.p__GT_c(Ma);
+          R = h[21];
+          var Ma = R.json(), kb = cljs.core.async.interop.p__GT_c(Ma);
           k = h;
           return cljs.core.async.impl.ioc_helpers.take_BANG_(k, 16, kb);
         }
@@ -134454,12 +134542,12 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
         if (36 === g) {
           U = h[24];
           oa = h[35];
-          R = h[21];
+          S = h[15];
           V = h[26];
-          var Za = oa, ha = R, $a = V, nb = U + 1;
+          var Za = oa, ha = S, $a = V, nb = U + 1;
           h[36] = h[2];
           h[35] = Za;
-          h[21] = ha;
+          h[15] = ha;
           h[26] = $a;
           h[24] = nb;
           var ua = k = h;
@@ -134485,12 +134573,12 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
         if (29 === g) {
           var Fa = h[2], hb = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(Fa, cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs$cst$127$keywordize_keys, true], 0)), ab = cljs$cst$1012$pushers.cljs$core$IFn$_invoke$arity$1(hb);
           oa = cljs.core.seq(ab);
-          R = null;
+          S = null;
           U = V = 0;
-          h[16] = Fa;
+          h[17] = Fa;
           h[22] = ab;
           h[35] = oa;
-          h[21] = R;
+          h[15] = S;
           h[26] = V;
           h[24] = U;
           var bb = k = h;
@@ -134555,9 +134643,9 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           );
         }
         if (12 === g) {
-          O = h[20];
+          R = h[21];
           var sb = h[2], pa = cljs.core.not(sb.ok);
-          h[20] = sb;
+          h[21] = sb;
           k = h;
           k[1] = pa ? 13 : 14;
           return cljs$cst$193$recur;
@@ -134569,7 +134657,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           h[23] = Ja;
           h[29] = pb;
           h[25] = yb;
-          h[19] = zb;
+          h[20] = zb;
           h[28] = Db;
           k = h;
           return cljs.core.async.impl.ioc_helpers.take_BANG_(k, 6, Qb);
@@ -134634,8 +134722,8 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (14 === g) {
-          O = h[20];
-          var ub = O.json(), ib = cljs.core.async.interop.p__GT_c(ub);
+          R = h[21];
+          var ub = R.json(), ib = cljs.core.async.interop.p__GT_c(ub);
           k = h;
           return cljs.core.async.impl.ioc_helpers.take_BANG_(k, 23, ib);
         }
@@ -134651,11 +134739,11 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           G = h[14];
           var tc = h[2];
           oa = cljs.core.next(G);
-          R = null;
+          S = null;
           U = V = 0;
           h[39] = tc;
           h[35] = oa;
-          h[21] = R;
+          h[15] = S;
           h[26] = V;
           h[24] = U;
           var Ub = k = h;
@@ -134705,9 +134793,9 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
         }
         if (52 === g) {
           T = h[23];
-          S = h[18];
+          O = h[19];
           h[4] = cljs.core.cons(55, h[4]);
-          var Fb = T.deletePusher(S), Xb = cljs.core.async.interop.p__GT_c(Fb);
+          var Fb = T.deletePusher(O), Xb = cljs.core.async.interop.p__GT_c(Fb);
           k = h;
           return cljs.core.async.impl.ioc_helpers.take_BANG_(k, 56, Xb);
         }
@@ -134718,13 +134806,13 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (37 === g) {
-          oa = h[35];
+          S = h[15];
           Xa = h[34];
-          O = h[20];
           R = h[21];
           T = h[23];
           U = h[24];
           V = h[26];
+          oa = h[35];
           ka = h[32];
           var dc = h[2], Zb = /* @__PURE__ */ (function() {
             var Ua = ka;
@@ -134742,7 +134830,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
             cljs$cst$579$auto,
             $b,
             null,
-            39,
+            27,
             null,
             null,
             null
@@ -134762,11 +134850,11 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           G = h[14];
           var bc = cljs.core.chunk_first(G), fc = cljs.core.chunk_rest(G), gc = cljs.core.count(bc);
           oa = fc;
-          R = bc;
+          S = bc;
           V = gc;
           U = 0;
           h[35] = oa;
-          h[21] = R;
+          h[15] = S;
           h[26] = V;
           h[24] = U;
           var cc = k = h;
@@ -134975,7 +135063,7 @@ paradise.engine.matrix.timeline.wrap_item = function(a2) {
                           var P = Q;
                           taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.engine.matrix.timeline", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/timeline.cljs", 113, 74, cljs$cst$677$p, cljs$cst$579$auto, new cljs.core.Delay(function() {
                             return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Failed to serialize media source:", P], null);
-                          }, null), null, 23, null, null, null);
+                          }, null), null, 29, null, null, null);
                           return null;
                         }
                       })() : null;
@@ -135006,7 +135094,7 @@ paradise.engine.matrix.timeline.wrap_item = function(a2) {
                         ["Failed to serialize sticker source:", F],
                         null
                       );
-                    }, null), null, 24, null, null, null);
+                    }, null), null, 30, null, null, null);
                     return null;
                   }
                 })() : null;
@@ -135079,7 +135167,7 @@ paradise.engine.matrix.timeline.push_timeline_diff_BANG_ = function(a2, b2, c2) 
       ["Sending timeline diff via Mesh to virtualizer..."],
       null
     );
-  }, null), null, 25, null, null, null);
+  }, null), null, 31, null, null, null);
   return cljs_workers.mesh.do_with_thread_BANG_(cljs$cst$1038$virtualizer_pool, new cljs.core.PersistentArrayMap(null, 2, [cljs$cst$247$handler, cljs$cst$1039$process_timeline_diff, cljs$cst$248$arguments, new cljs.core.PersistentArrayMap(null, 3, [cljs$cst$1040$events, c2, cljs$cst$938$room_id, a2, cljs$cst$398$source, b2], null)], null));
 };
 paradise.engine.matrix.timeline.apply_timeline_diffs_async_BANG_ = function(a2, b2, c2) {
@@ -135108,7 +135196,7 @@ paradise.engine.matrix.timeline.apply_timeline_diffs_async_BANG_ = function(a2, 
               "Timeline Diff Panic:",
               g
             ], null);
-          }, null), null, 26, null, null, null);
+          }, null), null, 32, null, null, null);
         });
       });
     }
@@ -135195,7 +135283,7 @@ paradise.engine.matrix.timeline.boot_timeline_BANG_ = function(a2) {
         return new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [b2, "boot failed:", f], null);
       }, null),
       null,
-      30,
+      33,
       null,
       null,
       null
@@ -135238,7 +135326,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
             cljs$cst$579$auto,
             l,
             null,
-            31,
+            34,
             null,
             null,
             null
@@ -135360,7 +135448,7 @@ paradise.engine.matrix.timeline.safe_cancel_BANG_ = function(a2) {
       return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Could not find a cleanup method for handle:", a2], null);
     }, null),
     null,
-    37,
+    39,
     null,
     null,
     null
@@ -135542,7 +135630,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
             };
           })();
           m = new cljs.core.Delay(m, null);
-          m = taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.engine.matrix.timeline", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/timeline.cljs", 321, 26, cljs$cst$677$p, cljs$cst$579$auto, m, null, 38, null, null, null);
+          m = taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.engine.matrix.timeline", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/timeline.cljs", 321, 26, cljs$cst$677$p, cljs$cst$579$auto, m, null, 40, null, null, null);
           var n = cljs.core.clj__GT_js(c2);
           l = l.toggleReaction(n, d);
           l = cljs.core.async.interop.p__GT_c(l);
@@ -139063,7 +139151,7 @@ paradise.engine.matrix.media_previews.attach_media_preview_listener_BANG_ = func
         ["Failed to bind media preview config listener:", d],
         null
       );
-    }, null), null, 4, null, null, null);
+    }, null), null, 14, null, null, null);
   }
 };
 paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs$cst$940$matrix, cljs$cst$1125$get_url_preview, function(a2) {
@@ -139184,7 +139272,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
             };
           })();
           f = new cljs.core.Delay(f, null);
-          f = taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.engine.matrix.media-previews", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/media_previews.cljs", 66, 13, cljs$cst$677$p, cljs$cst$579$auto, f, null, 10, null, null, null);
+          f = taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.engine.matrix.media-previews", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/media_previews.cljs", 66, 13, cljs$cst$677$p, cljs$cst$579$auto, f, null, 22, null, null, null);
           var l = [cljs$cst$109$status, cljs$cst$239$msg], m = ["error", cljs.core.str.cljs$core$IFn$_invoke$arity$1(k)];
           l = cljs.core.PersistentHashMap.fromArrays(l, m);
           g[8] = f;
@@ -139305,7 +139393,7 @@ paradise.engine.matrix.call.capabilities_provider = { acquireCapabilities: funct
         return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Worker: Forging official Rust FFI WidgetEventFilters..."], null);
       }, null),
       null,
-      5,
+      16,
       null,
       null,
       null
@@ -139317,7 +139405,7 @@ paradise.engine.matrix.call.capabilities_provider = { acquireCapabilities: funct
     e.updateDelayedEvent = true;
     taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$626$info, "paradise.engine.matrix.call", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/call.cljs", 30, 14, cljs$cst$677$p, cljs$cst$579$auto, new cljs.core.Delay(function() {
       return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Worker: Bouncer bypassed. Capabilities fully loaded."], null);
-    }, null), null, 6, null, null, null);
+    }, null), null, 17, null, null, null);
     return e;
   } catch (l) {
     var k = l;
@@ -139334,7 +139422,7 @@ paradise.engine.matrix.call.capabilities_provider = { acquireCapabilities: funct
         return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Capabilities provider crashed!", k], null);
       }, null),
       null,
-      3,
+      15,
       null,
       null,
       null
@@ -139378,7 +139466,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
                     "Recv loop crashed:",
                     A
                   ], null);
-                }, null), null, 7, null, null, null);
+                }, null), null, 18, null, null, null);
               }) : null;
             };
           })();
@@ -139394,7 +139482,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
                   ["Worker: Widget driver stopped."],
                   null
                 );
-              }, null), null, 8, null, null, null);
+              }, null), null, 19, null, null, null);
             };
           })();
           m = m.then(n);
@@ -139405,7 +139493,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
                   "Worker: Widget driver crashed:",
                   x
                 ], null);
-              }, null), null, 9, null, null, null);
+              }, null), null, 20, null, null, null);
             };
           })();
           m = m.catch(n);
@@ -167795,7 +167883,7 @@ paradise.engine.matrix.core.preload_matrix = function() {
         if (6 === h) return g = e[2], h = g instanceof cljs.core.ExceptionInfo, e[7] = g, e[8] = h, cljs.core.truth_(h) ? e[1] = 7 : e[1] = 8, cljs$cst$193$recur;
         if (3 === h) return cljs.core.async.impl.ioc_helpers.return_chan(e, e[2]);
         if (12 === h) return g = e[2], h = cljs.core.PersistentHashMap.fromArrays([cljs$cst$109$status], [cljs$cst$242$success]), e[4] = cljs.core.rest(e[4]), e[9] = g, e[2] = h, e[1] = 3, cljs$cst$193$recur;
-        if (2 === h) return e[4] = cljs.core.cons(5, e[4]), h = uniffiInitAsync("http://localhost:8082/index_bg.wasm"), h = cljs.core.async.interop.p__GT_c(h), cljs.core.async.impl.ioc_helpers.take_BANG_(e, 6, h);
+        if (2 === h) return e[4] = cljs.core.cons(5, e[4]), h = uniffiInitAsync("https://paradise-chat.github.io/engine-matrix/index_bg.wasm"), h = cljs.core.async.interop.p__GT_c(h), cljs.core.async.impl.ioc_helpers.take_BANG_(e, 6, h);
         if (11 === h) return h = e[7], e[2] = h, e[1] = 12, cljs$cst$193$recur;
         if (9 === h) return h = e[2], cljs.core.truth_(h) ? e[1] = 10 : e[1] = 11, cljs$cst$193$recur;
         if (5 === h) return e[4] = cljs.core.rest(e[4]), e[5] = e[2], e[1] = 4, e[5] = null, cljs$cst$193$recur;
