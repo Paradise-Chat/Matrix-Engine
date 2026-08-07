@@ -5,5 +5,9 @@
 ;;        jtk-dvlp/cljs-workers {:local/root "../cljs-workers"}
         funcool/promesa {:mvn/version "11.0.678"}
         com.taoensso/tempura {:mvn/version "1.5.4"}
-        paradise/client {:local/root "../Paradise"}}}
+        paradise/client {:git/url "https://github.com/Paradise-Chat/Paradise.git"
+                         :git/sha "a3842d5ca333b5252dd70cd34c73f925c4f2b545"}
+
+;;paradise/client {:local/root "../Paradise"}
+        }}
 
