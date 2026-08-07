@@ -4,10 +4,11 @@
     "type": "module",
     "main": "dist/matrix-engine.js",
     "scripts": {
+        "build:libs": "clojure -X:deps prep",
         "build:cljs": "shadow-cljs release engine",
         "build:bundle": "esbuild dist/main.js --bundle --format=esm --outfile=dist/plugin.js",
         "build:wasm": "cp node_modules/ffi-bindings/src/generated/wasm-bindgen/index_bg.wasm dist/",
-        "build": "npm run build:cljs && npm run build:bundle && npm run build:wasm"
+        "build": "npm run build:libs && npm run build:cljs && npm run build:bundle && npm run build:wasm"
     },
     "dependencies": {
         "@noble/hashes": "^2.2.0",
