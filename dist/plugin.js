@@ -91538,17 +91538,16 @@ var cljs$cst$646$ns_blacklist = new cljs.core.Keyword(
   1957763142
 );
 var cljs$cst$2607$re_frame_DOT_core_SLASH_reg_sub = new cljs.core.Symbol("re-frame.core", "reg-sub", "re-frame.core/reg-sub", -1693960551, null);
-var cljs$cst$814$meta24452 = new cljs.core.Symbol(null, "meta24452", "meta24452", -365040684, null);
 var cljs$cst$2168$quoted_sym = new cljs.core.Symbol(null, "quoted-sym", "quoted-sym", 474507191, null);
 var cljs$cst$324$rejections = new cljs.core.Keyword(null, "rejections", "rejections", -1620899911);
-var cljs$cst$440$cljs_DOT_core_SLASH_concat = new cljs.core.Symbol(
-  "cljs.core",
-  "concat",
-  "cljs.core/concat",
-  -1133584918,
+var cljs$cst$440$cljs_DOT_core_SLASH_concat = new cljs.core.Symbol("cljs.core", "concat", "cljs.core/concat", -1133584918, null);
+var cljs$cst$540$delay = new cljs.core.Symbol(
+  null,
+  "delay",
+  "delay",
+  1066306308,
   null
 );
-var cljs$cst$540$delay = new cljs.core.Symbol(null, "delay", "delay", 1066306308, null);
 var cljs$cst$1987$halt_when = new cljs.core.Symbol(null, "halt-when", "halt-when", -140999689, null);
 var cljs$cst$1477$sci_DOT_impl_DOT_analyzer_SLASH_method_name = new cljs.core.Keyword("sci.impl.analyzer", "method-name", "sci.impl.analyzer/method-name", -842600667);
 var cljs$cst$1671$cljs_DOT_core_SLASH_bound_fn_STAR_ = new cljs.core.Symbol("cljs.core", "bound-fn*", "cljs.core/bound-fn*", -556238942, null);
@@ -91559,50 +91558,53 @@ var cljs$cst$2055$merge_with = new cljs.core.Symbol(null, "merge-with", "merge-w
 var cljs$cst$1120$packs = new cljs.core.Keyword(null, "packs", "packs", -1048532907);
 var cljs$cst$41$xf = new cljs.core.Symbol(null, "xf", "xf", 2042434515, null);
 var cljs$cst$905$cleanup = new cljs.core.Keyword(null, "cleanup", "cleanup", 1045776959);
-var cljs$cst$834$coeffects = new cljs.core.Keyword(null, "coeffects", "coeffects", 497912985);
+var cljs$cst$834$coeffects = new cljs.core.Keyword(
+  null,
+  "coeffects",
+  "coeffects",
+  497912985
+);
 var cljs$cst$2284$eof = new cljs.core.Symbol(null, "eof", "eof", 1151468290, null);
 var cljs$cst$2113$new_value = new cljs.core.Symbol(null, "new-value", "new-value", -1567397401, null);
 var cljs$cst$1758$simple_ident_QMARK_ = new cljs.core.Symbol(null, "simple-ident?", "simple-ident?", 194189851, null);
 var cljs$cst$182$takes = new cljs.core.Symbol(null, "takes", "takes", 298247964, null);
 var cljs$cst$2077$chunk_rest = new cljs.core.Symbol(null, "chunk-rest", "chunk-rest", -1853526420, null);
-var cljs$cst$489$round = new cljs.core.Keyword(null, "round", "round", 2009433328);
+var cljs$cst$489$round = new cljs.core.Keyword(
+  null,
+  "round",
+  "round",
+  2009433328
+);
 var cljs$cst$2190$xs = new cljs.core.Symbol(null, "xs", "xs", -2004992428, null);
 var cljs$cst$1556$byte = new cljs.core.Symbol(null, "byte", "byte", -1970660549, null);
 var cljs$cst$1877$complement = new cljs.core.Symbol(null, "complement", "complement", -913606051, null);
 var cljs$cst$730$map_builder = new cljs.core.Keyword(null, "map-builder", "map-builder", -1843343288);
-var cljs$cst$1770$hash = new cljs.core.Symbol(
+var cljs$cst$1770$hash = new cljs.core.Symbol(null, "hash", "hash", 1626749931, null);
+var cljs$cst$899$inject_global_interceptors = new cljs.core.Keyword(
   null,
-  "hash",
-  "hash",
-  1626749931,
-  null
+  "inject-global-interceptors",
+  "inject-global-interceptors",
+  -2144129737
 );
-var cljs$cst$899$inject_global_interceptors = new cljs.core.Keyword(null, "inject-global-interceptors", "inject-global-interceptors", -2144129737);
 var cljs$cst$2175$rsym = new cljs.core.Symbol(null, "rsym", "rsym", 204230332, null);
 var cljs$cst$144$trace = new cljs.core.Keyword(null, "trace", "trace", -1082747415);
 var cljs$cst$2141$idx2 = new cljs.core.Symbol(null, "idx2", "idx2", 195459820, null);
 var cljs$cst$580$xhr_pool = new cljs.core.Keyword(null, "xhr-pool", "xhr-pool", 1499305499);
-var cljs$cst$519$keyword = new cljs.core.Symbol(
-  null,
-  "keyword",
-  "keyword",
-  -1843046022,
-  null
-);
+var cljs$cst$519$keyword = new cljs.core.Symbol(null, "keyword", "keyword", -1843046022, null);
 var cljs$cst$912$re_frame_DOT_flow_DOT_alpha_SLASH_cleared_QMARK_ = new cljs.core.Keyword("re-frame.flow.alpha", "cleared?", "re-frame.flow.alpha/cleared?", 1524733548);
 var cljs$cst$523$disallow = new cljs.core.Keyword(null, "disallow", "disallow", -861898595);
 var cljs$cst$2425$reject_BANG_ = new cljs.core.Symbol(null, "reject!", "reject!", -854885003, null);
 var cljs$cst$1027$is_edited_QMARK_ = new cljs.core.Keyword(null, "is-edited?", "is-edited?", 1530351758);
-var cljs$cst$120$initk = new cljs.core.Symbol(
+var cljs$cst$120$initk = new cljs.core.Symbol(null, "initk", "initk", -52811460, null);
+var cljs$cst$918$flow = new cljs.core.Keyword(
   null,
-  "initk",
-  "initk",
-  -52811460,
-  null
+  "flow",
+  "flow",
+  590489032
 );
-var cljs$cst$918$flow = new cljs.core.Keyword(null, "flow", "flow", 590489032);
 var cljs$cst$346$update_map_or_fn = new cljs.core.Symbol(null, "update-map-or-fn", "update-map-or-fn", 1067081399, null);
 var cljs$cst$2386$cljs_DOT_core_DOT_async_DOT_interop_SLASH_p__GT_c = new cljs.core.Symbol("cljs.core.async.interop", "p->c", "cljs.core.async.interop/p->c", 2063436353, null);
+var cljs$cst$814$meta24430 = new cljs.core.Symbol(null, "meta24430", "meta24430", -1517533548, null);
 var cljs$cst$2595$trim_v = new cljs.core.Symbol(null, "trim-v", "trim-v", 365592887, null);
 var cljs$cst$2742$cljs_workers_DOT_worker = new cljs.core.Symbol(null, "cljs-workers.worker", "cljs-workers.worker", -1085812920, null);
 var cljs$cst$2187$ys = new cljs.core.Symbol(null, "ys", "ys", 1606115702, null);
@@ -122852,7 +122854,7 @@ paradise.shared.client.session_store.get_session_class = function() {
       ["FATAL: Could not find Session class on root SDK object."],
       null
     );
-  }, null), null, 2, null, null, null);
+  }, null), null, 3, null, null, null);
 };
 paradise.shared.client.session_store.load_raw_sessions_opfs = function() {
   return promesa.protocols._mcat(promesa.protocols._promise(null), function(a2) {
@@ -123205,7 +123207,7 @@ paradise.shared.client.session_store.delete_db_BANG_ = function(a2) {
                 ["Destroyed IDB:", a2],
                 null
               );
-            }, null), null, 4, null, null, null);
+            }, null), null, 12, null, null, null);
             return c2.cljs$core$IFn$_invoke$arity$1 ? c2.cljs$core$IFn$_invoke$arity$1(true) : c2.call(null, true);
           };
           g.$fn_ptr = cljs$cst$716$fn_SLASH_h1466011990;
@@ -123216,7 +123218,7 @@ paradise.shared.client.session_store.delete_db_BANG_ = function(a2) {
           var g = function() {
             taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.shared.client.session-store", "file:/home/jaggar/Code/Paradise/src-gen/paradise/shared/client/session_store.cljs", 383, 59, cljs$cst$677$p, cljs$cst$579$auto, new cljs.core.Delay(function() {
               return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Error deleting IDB:", a2], null);
-            }, null), null, 5, null, null, null);
+            }, null), null, 13, null, null, null);
             return c2.cljs$core$IFn$_invoke$arity$1 ? c2.cljs$core$IFn$_invoke$arity$1(false) : c2.call(null, false);
           };
           g.$fn_ptr = cljs$cst$719$fn_SLASH_h_455501711;
@@ -123238,7 +123240,7 @@ paradise.shared.client.session_store.delete_db_BANG_ = function(a2) {
                 return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["BLOCKED deleting IDB:", a2], null);
               }, null),
               null,
-              6,
+              14,
               null,
               null,
               null
@@ -123264,7 +123266,7 @@ paradise.shared.client.session_store.delete_db_BANG_ = function(a2) {
             return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Fatal crash attempting to delete IDB:", a2, "Error:", h], null);
           }, null),
           null,
-          3,
+          11,
           null,
           null,
           null
@@ -123424,7 +123426,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
         return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Destroyed IDB:", b2], null);
       }, null),
       null,
-      7,
+      15,
       null,
       null,
       null
@@ -123461,7 +123463,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
         return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["BLOCKED deleting IDB:", b2], null);
       }, null),
       null,
-      8,
+      16,
       null,
       null,
       null
@@ -123602,7 +123604,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
         return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Error deleting IDB:", b2], null);
       }, null),
       null,
-      9,
+      17,
       null,
       null,
       null
@@ -123648,7 +123650,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
               return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Destroyed IDB:", e], null);
             }, null),
             null,
-            11,
+            19,
             null,
             null,
             null
@@ -123683,7 +123685,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
               return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Error deleting IDB:", e], null);
             }, null),
             null,
-            12,
+            20,
             null,
             null,
             null
@@ -123709,7 +123711,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
               return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["BLOCKED deleting IDB:", e], null);
             }, null),
             null,
-            13,
+            21,
             null,
             null,
             null
@@ -123736,7 +123738,7 @@ cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(paradise.shared.client.regist
           ["Fatal crash attempting to delete IDB:", e, "Error:", m],
           null
         );
-      }, null), null, 10, null, null, null);
+      }, null), null, 18, null, null, null);
       return f.cljs$core$IFn$_invoke$arity$1 ? f.cljs$core$IFn$_invoke$arity$1(false) : f.call(null, false);
     }
   };
@@ -128704,41 +128706,41 @@ BigInt.prototype.cljs$core$IHash$ = cljs.core.PROTOCOL_SENTINEL;
 BigInt.prototype.cljs$core$IHash$_hash$arity$1 = function(a2) {
   return cljs.core.hash(this.toString());
 };
-re_frame.db.t_re_frame$db24451 = function(a2) {
-  this.meta24452 = a2;
+re_frame.db.t_re_frame$db24429 = function(a2) {
+  this.meta24430 = a2;
   this.cljs$lang$protocol_mask$partition0$ = 425984;
   this.cljs$lang$protocol_mask$partition1$ = 98306;
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(a2, b2) {
-  return new re_frame.db.t_re_frame$db24451(b2);
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$IWithMeta$_with_meta$arity$2 = function(a2, b2) {
+  return new re_frame.db.t_re_frame$db24429(b2);
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$IMeta$_meta$arity$1 = function(a2) {
-  return this.meta24452;
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$IMeta$_meta$arity$1 = function(a2) {
+  return this.meta24430;
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$IDeref$_deref$arity$1 = function(a2) {
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$IDeref$_deref$arity$1 = function(a2) {
   return cljs.core.deref(re_frame.db._BANG_reactive_state);
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$IReset$_reset_BANG_$arity$2 = function(a2, b2) {
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$IReset$_reset_BANG_$arity$2 = function(a2, b2) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.reset_BANG_(a2, b2), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$ISwap$_swap_BANG_$arity$2 = function(a2, b2) {
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$ISwap$_swap_BANG_$arity$2 = function(a2, b2) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(a2, b2), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$2(re_frame.db._BANG_reactive_state, b2), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$ISwap$_swap_BANG_$arity$3 = function(a2, b2, c2) {
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$ISwap$_swap_BANG_$arity$3 = function(a2, b2, c2) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$3(a2, b2, c2), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$3(re_frame.db._BANG_reactive_state, b2, c2), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$ISwap$_swap_BANG_$arity$4 = function(a2, b2, c2, d) {
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$ISwap$_swap_BANG_$arity$4 = function(a2, b2, c2, d) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(a2, b2, c2, d), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.swap_BANG_.cljs$core$IFn$_invoke$arity$4(re_frame.db._BANG_reactive_state, b2, c2, d), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$ISwap$_swap_BANG_$arity$5 = function(a2, b2, c2, d, e) {
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$ISwap$_swap_BANG_$arity$5 = function(a2, b2, c2, d, e) {
   a2 = cljs.core.deref(re_frame.db._BANG_eve_ref);
   cljs.core.truth_(a2) ? (b2 = cljs.core.apply.cljs$core$IFn$_invoke$arity$variadic(cljs.core.swap_BANG_, a2, b2, c2, d, cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([e], 0)), cljs.core.reset_BANG_(re_frame.db._BANG_reactive_state, b2)) : (a2 = cljs.core.deref(re_frame.db._BANG_reactive_state), b2 = cljs.core.apply.cljs$core$IFn$_invoke$arity$variadic(
     cljs.core.swap_BANG_,
@@ -128750,27 +128752,27 @@ re_frame.db.t_re_frame$db24451.prototype.cljs$core$ISwap$_swap_BANG_$arity$5 = f
   ), re_frame.db.broadcast_async_BANG_(a2, b2));
   return b2;
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$IWatchable$_notify_watches$arity$3 = function(a2, b2, c2) {
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$IWatchable$_notify_watches$arity$3 = function(a2, b2, c2) {
   return re_frame.db._BANG_reactive_state.cljs$core$IWatchable$_notify_watches$arity$3(null, b2, c2);
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$IWatchable$_add_watch$arity$3 = function(a2, b2, c2) {
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$IWatchable$_add_watch$arity$3 = function(a2, b2, c2) {
   return re_frame.db._BANG_reactive_state.cljs$core$IWatchable$_add_watch$arity$3(null, b2, c2);
 };
-re_frame.db.t_re_frame$db24451.prototype.cljs$core$IWatchable$_remove_watch$arity$2 = function(a2, b2) {
+re_frame.db.t_re_frame$db24429.prototype.cljs$core$IWatchable$_remove_watch$arity$2 = function(a2, b2) {
   return re_frame.db._BANG_reactive_state.cljs$core$IWatchable$_remove_watch$arity$2(null, b2);
 };
-re_frame.db.t_re_frame$db24451.getBasis = function() {
-  return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs$cst$814$meta24452], null);
+re_frame.db.t_re_frame$db24429.getBasis = function() {
+  return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [cljs$cst$814$meta24430], null);
 };
-re_frame.db.t_re_frame$db24451.cljs$lang$type = true;
-re_frame.db.t_re_frame$db24451.cljs$lang$ctorStr = "re-frame.db/t_re_frame$db24451";
-re_frame.db.t_re_frame$db24451.cljs$lang$ctorPrWriter = function(a2, b2, c2) {
-  return cljs.core._write(b2, "re-frame.db/t_re_frame$db24451");
+re_frame.db.t_re_frame$db24429.cljs$lang$type = true;
+re_frame.db.t_re_frame$db24429.cljs$lang$ctorStr = "re-frame.db/t_re_frame$db24429";
+re_frame.db.t_re_frame$db24429.cljs$lang$ctorPrWriter = function(a2, b2, c2) {
+  return cljs.core._write(b2, "re-frame.db/t_re_frame$db24429");
 };
-re_frame.db.__GT_t_re_frame$db24451 = function(a2) {
-  return new re_frame.db.t_re_frame$db24451(a2);
+re_frame.db.__GT_t_re_frame$db24429 = function(a2) {
+  return new re_frame.db.t_re_frame$db24429(a2);
 };
-re_frame.db.app_db = new re_frame.db.t_re_frame$db24451(cljs.core.PersistentArrayMap.EMPTY);
+re_frame.db.app_db = new re_frame.db.t_re_frame$db24429(cljs.core.PersistentArrayMap.EMPTY);
 re_frame.loggers = {};
 re_frame.loggers.loggers = cljs.core.atom.cljs$core$IFn$_invoke$arity$1(new cljs.core.PersistentArrayMap(
   null,
@@ -132056,7 +132058,7 @@ paradise.engine.matrix.diffs.apply_generic_diffs_BANG_ = function(a2) {
             ["Diff Panic at", c2, ":", l],
             null
           );
-        }, null), null, 21, null, null, null);
+        }, null), null, 22, null, null, null);
       });
     });
   });
@@ -134418,10 +134420,10 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (54 === g) {
-          var S = h[15], O = h[19], R = h[21], T = h[23];
+          var S = h[17], O = h[19], R = h[21], T = h[22], U = h[24];
           G = h[14];
-          var U = h[24], V = h[26], W = h[27], X = h[2], Y = /* @__PURE__ */ (function() {
-            var Ua = W;
+          var V = h[26], W = h[29], X = h[2], Y = /* @__PURE__ */ (function() {
+            var Ua = V;
             return function() {
               return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Failed to delete pusher", Ua, ":", X], null);
             };
@@ -134461,11 +134463,11 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
         }
         if (50 === g) {
           G = h[14];
-          W = h[27];
+          V = h[26];
           var ta = cljs.core.first(G), va = cljs$cst$994$pushkey.cljs$core$IFn$_invoke$arity$1(ta), Va = cljs$cst$996$app_id.cljs$core$IFn$_invoke$arity$1(ta);
           O = { pushkey: va, appId: Va };
-          h[16] = ta;
-          h[27] = va;
+          h[15] = ta;
+          h[26] = va;
           h[18] = Va;
           h[19] = O;
           var Wa = k = h;
@@ -134489,9 +134491,9 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (32 === g) {
-          S = h[15];
-          U = h[24];
-          var ka = h[32], Ba = cljs.core._nth(S, U), wa = cljs$cst$994$pushkey.cljs$core$IFn$_invoke$arity$1(Ba), Ia = cljs$cst$996$app_id.cljs$core$IFn$_invoke$arity$1(Ba), Xa = { pushkey: wa, appId: Ia };
+          S = h[17];
+          T = h[22];
+          var ka = h[32], Ba = cljs.core._nth(S, T), wa = cljs$cst$994$pushkey.cljs$core$IFn$_invoke$arity$1(Ba), Ia = cljs$cst$996$app_id.cljs$core$IFn$_invoke$arity$1(Ba), Xa = { pushkey: wa, appId: Ia };
           h[31] = Ba;
           h[32] = wa;
           h[33] = Ia;
@@ -134540,16 +134542,16 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (36 === g) {
-          U = h[24];
+          T = h[22];
           oa = h[35];
-          S = h[15];
-          V = h[26];
-          var Za = oa, ha = S, $a = V, nb = U + 1;
+          S = h[17];
+          W = h[29];
+          var Za = oa, ha = S, $a = W, nb = T + 1;
           h[36] = h[2];
           h[35] = Za;
-          h[15] = ha;
-          h[26] = $a;
-          h[24] = nb;
+          h[17] = ha;
+          h[29] = $a;
+          h[22] = nb;
           var ua = k = h;
           ua[2] = null;
           ua[1] = 30;
@@ -134574,13 +134576,13 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           var Fa = h[2], hb = cljs.core.js__GT_clj.cljs$core$IFn$_invoke$arity$variadic(Fa, cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs$cst$127$keywordize_keys, true], 0)), ab = cljs$cst$1012$pushers.cljs$core$IFn$_invoke$arity$1(hb);
           oa = cljs.core.seq(ab);
           S = null;
-          U = V = 0;
-          h[17] = Fa;
-          h[22] = ab;
+          T = W = 0;
+          h[16] = Fa;
+          h[23] = ab;
           h[35] = oa;
-          h[15] = S;
-          h[26] = V;
-          h[24] = U;
+          h[17] = S;
+          h[29] = W;
+          h[22] = T;
           var bb = k = h;
           bb[2] = null;
           bb[1] = 30;
@@ -134651,14 +134653,14 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (2 === g) {
-          T = h[23];
+          U = h[24];
           h[4] = cljs.core.cons(5, h[4]);
           var Ja = cljs.core.deref(paradise.engine.state._BANG_client), pb = Ja.homeserver(), yb = Ja.session().accessToken, zb = clojure.string.replace(pb, /\/+$/, ""), Db = [cljs.core.str.cljs$core$IFn$_invoke$arity$1(zb), "/_matrix/client/v3/pushers"].join(""), Ab = { method: "GET", headers: { Authorization: ["Bearer ", cljs.core.str.cljs$core$IFn$_invoke$arity$1(yb)].join("") } }, tb = net.fetch.cljs$core$IFn$_invoke$arity$2(Db, Ab), Qb = cljs.core.async.interop.p__GT_c(tb);
-          h[23] = Ja;
-          h[29] = pb;
+          h[24] = Ja;
+          h[28] = pb;
           h[25] = yb;
           h[20] = zb;
-          h[28] = Db;
+          h[27] = Db;
           k = h;
           return cljs.core.async.impl.ioc_helpers.take_BANG_(k, 6, Qb);
         }
@@ -134679,10 +134681,10 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (35 === g) {
-          T = h[23];
+          U = h[24];
           Xa = h[34];
           h[4] = cljs.core.cons(38, h[4]);
-          var Tb = T.deletePusher(Xa), Lb = cljs.core.async.interop.p__GT_c(Tb);
+          var Tb = U.deletePusher(Xa), Lb = cljs.core.async.interop.p__GT_c(Tb);
           k = h;
           return cljs.core.async.impl.ioc_helpers.take_BANG_(k, 39, Lb);
         }
@@ -134740,12 +134742,12 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           var tc = h[2];
           oa = cljs.core.next(G);
           S = null;
-          U = V = 0;
+          T = W = 0;
           h[39] = tc;
           h[35] = oa;
-          h[15] = S;
-          h[26] = V;
-          h[24] = U;
+          h[17] = S;
+          h[29] = W;
+          h[22] = T;
           var Ub = k = h;
           Ub[2] = null;
           Ub[1] = 30;
@@ -134776,9 +134778,9 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (30 === g) {
-          U = h[24];
-          V = h[26];
-          var Wb = U < V;
+          T = h[22];
+          W = h[29];
+          var Wb = T < W;
           k = h;
           cljs.core.truth_(Wb) ? k[1] = 32 : k[1] = 33;
           return cljs$cst$193$recur;
@@ -134792,10 +134794,10 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (52 === g) {
-          T = h[23];
+          U = h[24];
           O = h[19];
           h[4] = cljs.core.cons(55, h[4]);
-          var Fb = T.deletePusher(O), Xb = cljs.core.async.interop.p__GT_c(Fb);
+          var Fb = U.deletePusher(O), Xb = cljs.core.async.interop.p__GT_c(Fb);
           k = h;
           return cljs.core.async.impl.ioc_helpers.take_BANG_(k, 56, Xb);
         }
@@ -134806,14 +134808,14 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           return cljs$cst$193$recur;
         }
         if (37 === g) {
-          S = h[15];
+          S = h[17];
           Xa = h[34];
           R = h[21];
-          T = h[23];
+          T = h[22];
           U = h[24];
-          V = h[26];
           oa = h[35];
           ka = h[32];
+          W = h[29];
           var dc = h[2], Zb = /* @__PURE__ */ (function() {
             var Ua = ka;
             return function() {
@@ -134851,12 +134853,12 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
           var bc = cljs.core.chunk_first(G), fc = cljs.core.chunk_rest(G), gc = cljs.core.count(bc);
           oa = fc;
           S = bc;
-          V = gc;
-          U = 0;
+          W = gc;
+          T = 0;
           h[35] = oa;
-          h[15] = S;
-          h[26] = V;
-          h[24] = U;
+          h[17] = S;
+          h[29] = W;
+          h[22] = T;
           var cc = k = h;
           cc[2] = null;
           cc[1] = 30;
@@ -139151,7 +139153,7 @@ paradise.engine.matrix.media_previews.attach_media_preview_listener_BANG_ = func
         ["Failed to bind media preview config listener:", d],
         null
       );
-    }, null), null, 14, null, null, null);
+    }, null), null, 2, null, null, null);
   }
 };
 paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs.core.prim_seq.cljs$core$IFn$_invoke$arity$2([cljs$cst$940$matrix, cljs$cst$1125$get_url_preview, function(a2) {
@@ -139272,7 +139274,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
             };
           })();
           f = new cljs.core.Delay(f, null);
-          f = taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.engine.matrix.media-previews", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/media_previews.cljs", 66, 13, cljs$cst$677$p, cljs$cst$579$auto, f, null, 22, null, null, null);
+          f = taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$243$error, "paradise.engine.matrix.media-previews", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/media_previews.cljs", 66, 13, cljs$cst$677$p, cljs$cst$579$auto, f, null, 10, null, null, null);
           var l = [cljs$cst$109$status, cljs$cst$239$msg], m = ["error", cljs.core.str.cljs$core$IFn$_invoke$arity$1(k)];
           l = cljs.core.PersistentHashMap.fromArrays(l, m);
           g[8] = f;
@@ -139393,7 +139395,7 @@ paradise.engine.matrix.call.capabilities_provider = { acquireCapabilities: funct
         return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Worker: Forging official Rust FFI WidgetEventFilters..."], null);
       }, null),
       null,
-      16,
+      5,
       null,
       null,
       null
@@ -139405,7 +139407,7 @@ paradise.engine.matrix.call.capabilities_provider = { acquireCapabilities: funct
     e.updateDelayedEvent = true;
     taoensso.timbre._log_BANG_.cljs$core$IFn$_invoke$arity$14(taoensso.timbre._STAR_config_STAR_, cljs$cst$626$info, "paradise.engine.matrix.call", "file:/home/jaggar/Code/Matrix-Engine/src/paradise/engine/matrix/call.cljs", 30, 14, cljs$cst$677$p, cljs$cst$579$auto, new cljs.core.Delay(function() {
       return new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Worker: Bouncer bypassed. Capabilities fully loaded."], null);
-    }, null), null, 17, null, null, null);
+    }, null), null, 6, null, null, null);
     return e;
   } catch (l) {
     var k = l;
@@ -139422,7 +139424,7 @@ paradise.engine.matrix.call.capabilities_provider = { acquireCapabilities: funct
         return new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, ["Capabilities provider crashed!", k], null);
       }, null),
       null,
-      15,
+      4,
       null,
       null,
       null
@@ -139466,7 +139468,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
                     "Recv loop crashed:",
                     A
                   ], null);
-                }, null), null, 18, null, null, null);
+                }, null), null, 7, null, null, null);
               }) : null;
             };
           })();
@@ -139482,7 +139484,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
                   ["Worker: Widget driver stopped."],
                   null
                 );
-              }, null), null, 19, null, null, null);
+              }, null), null, 8, null, null, null);
             };
           })();
           m = m.then(n);
@@ -139493,7 +139495,7 @@ paradise.engine.binding.register_BANG_.cljs$core$IFn$_invoke$arity$variadic(cljs
                   "Worker: Widget driver crashed:",
                   x
                 ], null);
-              }, null), null, 20, null, null, null);
+              }, null), null, 9, null, null, null);
             };
           })();
           m = m.catch(n);
@@ -167883,7 +167885,7 @@ paradise.engine.matrix.core.preload_matrix = function() {
         if (6 === h) return g = e[2], h = g instanceof cljs.core.ExceptionInfo, e[7] = g, e[8] = h, cljs.core.truth_(h) ? e[1] = 7 : e[1] = 8, cljs$cst$193$recur;
         if (3 === h) return cljs.core.async.impl.ioc_helpers.return_chan(e, e[2]);
         if (12 === h) return g = e[2], h = cljs.core.PersistentHashMap.fromArrays([cljs$cst$109$status], [cljs$cst$242$success]), e[4] = cljs.core.rest(e[4]), e[9] = g, e[2] = h, e[1] = 3, cljs$cst$193$recur;
-        if (2 === h) return e[4] = cljs.core.cons(5, e[4]), h = uniffiInitAsync("https://paradise-chat.github.io/engine-matrix/index_bg.wasm"), h = cljs.core.async.interop.p__GT_c(h), cljs.core.async.impl.ioc_helpers.take_BANG_(e, 6, h);
+        if (2 === h) return e[4] = cljs.core.cons(5, e[4]), h = uniffiInitAsync("https://paradise-chat.github.io/matrix-engine/index_bg.wasm"), h = cljs.core.async.interop.p__GT_c(h), cljs.core.async.impl.ioc_helpers.take_BANG_(e, 6, h);
         if (11 === h) return h = e[7], e[2] = h, e[1] = 12, cljs$cst$193$recur;
         if (9 === h) return h = e[2], cljs.core.truth_(h) ? e[1] = 10 : e[1] = 11, cljs$cst$193$recur;
         if (5 === h) return e[4] = cljs.core.rest(e[4]), e[5] = e[2], e[1] = 4, e[5] = null, cljs$cst$193$recur;
