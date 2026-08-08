@@ -20,8 +20,33 @@ Changes in the engine repo will trigger a re-compilation, so the overall
 experience from that point should be smooth. Just a bit of set-up to
 get started.
 
+Inside the Paradise client repo shadow-cljs.edn place this next to the other modules:
+#+begin_src
+                  :engine-matrix {:entries [paradise.engine.matrix.core]
+                                  :web-worker true
+                                  :depends-on #{:engine}
+                                  :exports {init paradise.engine.matrix.core/bootstrap}
+                                  }
+#+end_src
+
+Inside the Paradise client deps.edn add the following next to the other dependencies:
+#+begin_src
+paradise/matrix-engine {:local/root "../Matrix-Engine"}
+#+end_src
 
 
+Now the actual dev endpoint needs to be shifted from the prod end point.
+For context, it is left there as is under the assumption that most of
+the time adjusting the engine will be unnecessary.
+
+Inside the Paradise client config.edn:
+#+begin_src
+"matrix" {:dev "https://paradise-chat.github.io/Matrix-Engine/plugin.js", :prod "https://paradise-chat.github.io/Matrix-Engine/plugin.js"}
+#+end_src
+to
+#+begin_src
+"matrix" {:dev "http://localhost:8082/plugin.js", :prod "https://paradise-chat.github.io/Matrix-Engine/plugin.js"}
+#+end_src
 
 
 Notes for myself:
