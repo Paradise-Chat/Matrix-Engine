@@ -207,14 +207,14 @@
 (defn preload-matrix []
   (go
     (try
-      (<p! (sdk/uniffiInitAsync "https://paradise-chat.github.io/matrix-engine/index_bg.wasm"))
+      (<p! (sdk/uniffiInitAsync "https://paradise-chat.github.io/Matrix-Engine/index_bg.wasm"))
       {:status :success}
       (catch :default e
         {:status :error :msg (str e)}))))
 
 (defn ^:export bootstrap [registry-callback]
-  (go
     (js/console.log "External Matrix Engine Bootstrapping...")
+  (go
     (let [preload-res (<! (preload-matrix))]
       (if (= (:status preload-res) :success)
         (let [handlers (clj->js {:preload (fn [] (js/console.log "Preloaded!"))})]
