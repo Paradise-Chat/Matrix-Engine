@@ -39,6 +39,10 @@ Now the actual dev endpoint needs to be shifted from the prod end point.
 For context, it is left there as is under the assumption that most of
 the time adjusting the engine will be unnecessary.
 
+Dev/Prod impacts the CLIENT's running execution (so a hosted release).
+Dev is what you'd want in almost all cases.
+
+***** ONLY FOR TESTING RELEASE ENGINE BUNDLES
 Inside the Paradise client config.edn:
 #+begin_src
 "matrix" {:dev "https://paradise-chat.github.io/Matrix-Engine/plugin.js", :prod "https://paradise-chat.github.io/Matrix-Engine/plugin.js"}
