@@ -2,15 +2,18 @@
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
         org.clojure/clojurescript {:mvn/version "1.11.132"}
         thheller/shadow-cljs {:mvn/version "2.26.2"}
-;;        jtk-dvlp/cljs-workers {:local/root "../cljs-workers"}
         funcool/promesa {:mvn/version "11.0.678"}
         com.taoensso/tempura {:mvn/version "1.5.4"}
-        paradise/client {:git/url "https://github.com/Paradise-Chat/Paradise.git"
-                         :git/sha "3fedd461b284f79d5aad16c1e9438c08b14cb13b"
-        }
-
+        jtk-dvlp/cljs-workers {:git/url "https://github.com/Paradise-Chat/cljs-workers.git"
+                               :git/sha "9d52ca9097702ae640836b9b299a5720f312868a"}
+        paradise/client
+        {:git/url "https://github.com/Paradise-Chat/Paradise.git"
+         :git/sha "f289d4dfeb3ad55e113753a521da87bb0feb8a0e"}
 ;;        paradise/client {:local/root "../Paradise"}
         }
 
-
- }
+ :aliases
+ {:plugin-build
+  {:deps {paradise/client
+          {:git/url "https://github.com/Paradise-Chat/Paradise.git"
+           :git/sha "f289d4dfeb3ad55e113753a521da87bb0feb8a0e"}}}}}
