@@ -215,7 +215,11 @@
 (defn ^:export bootstrap [registry-callback]
   (go
     (js/console.log "External Matrix Engine Bootstrapping...")
-    (preload-matrix)
-    (let [handlers (clj->js {:preload (fn [] (js/console.log "Preloaded!"))})]
-      (registry-callback "matrix" handlers))))
+    (let [preload-res (<! (preload-matrix))]
+      (if (= (:status preload-res) :success)
+        (let [handlers (clj->js {:preload (fn [] (js/console.log "Preloaded!"))})]
+          (js/console.log "WASM Initialized!")
+          (registry-callback "matrix" handlers))
+        (js/console.error "FATAL: Wasm failed to load:" (:msg preload-res))))))
 
+(export-engine "matrix" bootstrap)
