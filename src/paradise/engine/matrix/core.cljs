@@ -6,7 +6,7 @@
    [paradise.shared.client.session-store :as session-store :refer [SessionStore]]
    ["ffi-bindings" :as sdk]
    [cljs.core.async.interop :refer-macros [<p!]]
-   [cljs.core.async :refer [go]]
+   [cljs.core.async :refer [go <!]]
    [net :refer [set-auth-context!] :as net]
    #_[eve.alpha :as eve]
    #_[eve.atom :as ea]
@@ -24,9 +24,8 @@
    [paradise.engine.matrix.media-previews :as previews]
    [paradise.engine.matrix.call]
    [paradise.engine.matrix.rooms :as rooms]
-   [paradise.shared.sci-runner.engine :as sci]))
-
-
+   [paradise.shared.sci-runner.engine :as sci])
+  (:require-macros [paradise.shared.utils.macros :refer [export-engine]]))
 
 (defn maybe-local-session []
   (p/let [store (SessionStore.)
