@@ -212,15 +212,6 @@
       (catch :default e
         {:status :error :msg (str e)}))))
 
-(bind/register! :matrix :preload
-                (fn [_]
-                  (go
-                    (try
-                      (<p! (sdk/uniffiInitAsync "http://localhost:8082/index_bg.wasm"))
-                      {:status :success}
-                      (catch :default e
-                        {:status :error :msg (str e)})))))
-
 (defn ^:export bootstrap [registry-callback]
   (go
     (js/console.log "External Matrix Engine Bootstrapping...")
