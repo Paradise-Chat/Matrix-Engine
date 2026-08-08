@@ -7,7 +7,18 @@ This enables Paradise to be a Matrix client, and so much more.
 
 
 
+**** Testing / Developing
 
+Currently, the best way to develop for and test can seem rather clunky.
+However, since the dev mode for CLJS doesn't do dead code elimination we
+end up with some problematic entries in the created bundle file.
+So instead, when developing for the engine it is FAR easier to simply
+point a module in the client repo directory that you have locally (or should)
+and then launch the client.
+
+Changes in the engine repo will trigger a re-compilation, so the overall
+experience from that point should be smooth. Just a bit of set-up to
+get started.
 
 
 
@@ -18,4 +29,4 @@ guix shell -C -N -F  --share=$HOME/Code -m ./manifest.scm
 
 
 Testing local:
-npx http-server dist --cors -p 8082
+npx http-server dist --cors -p 8082 -c-1
