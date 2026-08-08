@@ -4,23 +4,25 @@
     "type": "module",
     "main": "dist/matrix-engine.js",
     "scripts": {
+        "dev:cljs": "shadow-cljs watch dev-app",
+        "dev:http": "vite --port 8082",
+        "dev": "concurrently \"npm run dev:cljs\" \"npm run dev:http\"",
         "build:libs": "clojure -X:deps prep",
         "build:cljs": "shadow-cljs release engine",
-        "build:bundle": "esbuild dist/main.js --bundle --format=esm --outfile=dist/plugin.js",
+        "build:bundle": "esbuild dist-release/main.js --bundle --format=esm --outfile=dist/plugin.js --define:process.env.NODE_ENV=\"'production'\" --define:process=undefined",
         "build:wasm": "cp node_modules/ffi-bindings/src/generated/wasm-bindgen/index_bg.wasm dist/",
         "build": "npm run build:libs && npm run build:cljs && npm run build:bundle && npm run build:wasm"
     },
     "dependencies": {
-        "@noble/hashes": "^2.2.0",
-        "@nostrify/indexeddb": "^0.1.1",
-        "@nostrify/nostrify": "^0.54.0",
         "ffi-bindings": "^1.0.6",
-        "nostr-tools": "^2.24.1",
         "react": "18.3.1",
         "react-dom": "18.3.1",
         "shadow-cljs": "^3.3.6"
     },
     "devDependencies": {
-        "esbuild": "^0.28.1"
+        "esbuild": "^0.28.1",
+        "concurrently": "^8.2.2",
+        "http-server": "^14.1.1",
+        "vite": "^5.0.0"
     }
 }
