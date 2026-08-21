@@ -41,6 +41,7 @@ the time adjusting the engine will be unnecessary.
 
 Dev/Prod impacts the CLIENT's running execution (so a hosted release).
 Dev is what you'd want in almost all cases.
+The changed value is simply where the generated module gets dumped.
 
 ***** ONLY FOR TESTING RELEASE ENGINE BUNDLES
 Inside the Paradise client config.edn:
