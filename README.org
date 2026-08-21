@@ -50,7 +50,7 @@ Inside the Paradise client config.edn:
 #+end_src
 to
 #+begin_src
-"matrix" {:dev "http://localhost:8082/plugin.js", :prod "https://paradise-chat.github.io/Matrix-Engine/plugin.js"}
+"matrix" {:dev "/matrix-engine.js", :prod "https://paradise-chat.github.io/Matrix-Engine/plugin.js"}
 #+end_src
 
 
