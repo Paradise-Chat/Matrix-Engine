@@ -40,4 +40,4 @@ jobs:
           publish_dir: ./dist
           publish_branch: release
           destination_dir: dist
-          force_orphan: true
+          force_orphan: false
