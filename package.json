@@ -4,9 +4,6 @@
     "type": "module",
     "main": "dist/matrix-engine.js",
     "scripts": {
-        "dev:cljs": "shadow-cljs watch dev-app",
-        "dev:http": "vite --port 8082",
-        "dev": "concurrently \"pnpm run dev:cljs\" \"pnpm run dev:http\"",
         "build:libs": "clojure -X:deps prep",
         "build:cljs": "shadow-cljs release engine",
         "build:bundle": "esbuild build/main.js --bundle --format=esm --outfile=dist/engine.js --define:process.env.NODE_ENV=\"'production'\" --define:process=undefined",
@@ -21,10 +18,7 @@
         "shadow-cljs": "^3.3.6"
     },
     "devDependencies": {
-        "esbuild": "^0.28.1",
-        "concurrently": "^8.2.2",
-        "http-server": "^14.1.1",
-        "vite": "^5.0.0"
+        "esbuild": "^0.28.1"
     },
     "packageManager": "pnpm@10.28.0+sha512.05df71d1421f21399e053fde567cea34d446fa02c76571441bfc1c7956e98e363088982d940465fd34480d4d90a0668bc12362f8aa88000a64e83d0b0e47be48",
     "pnpm": {
