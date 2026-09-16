@@ -41,7 +41,7 @@
             (p/recur (inc i) (vec (or new-items items)))))
         (vec items)))))
 
-(defn apply-generic-diffs!
+#_(defn apply-generic-diffs!
   "A universal mutex-locked diff processor for the Matrix Rust SDK."
   [{:keys [!mutex db-path parse-fn sync-event async-event updates]}]
   (swap! !mutex
