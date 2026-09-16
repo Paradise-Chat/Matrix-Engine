@@ -1,7 +1,8 @@
 {:deps {:aliases [:plugin-build]}
  :builds
  {:engine {:target :esm
+           :js-options {:resolve {"process" false}}
            :compiler-options {:optimizations :simple}
-           :output-dir "dist-release"
+           :output-dir "build"
            :modules {:main {:entries [paradise.engine.matrix.core]
                             :exports {bootstrap paradise.engine.matrix.core/bootstrap}}}}}}
