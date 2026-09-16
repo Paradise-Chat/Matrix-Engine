@@ -1,8 +1,7 @@
 (ns paradise.engine.matrix.diffs
   (:require
    [taoensso.timbre :as log]
-   [promesa.core :as p]
-   [re-frame.core :as re-frame]))
+   [promesa.core :as p]))
 
 (defn apply-matrix-diffs [current-items updates parse-fn]
   (let [initial-items (vec (or current-items []))]
