@@ -2,8 +2,7 @@
  :version "0.2.0"
  :deps-sym paradise/matrix-engine
  :config-key "matrix"
- :config-dev "/matrix-engine.js"
- :config-prod "/matrix-engine.js"
+ :path "/engine-matrix.js"
  :shadow-module {:entries [paradise.engine.matrix.core]
                  :web-worker true
                  :depends-on #{:engine}
