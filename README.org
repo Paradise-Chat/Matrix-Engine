@@ -54,6 +54,11 @@ to
 #+end_src
 
 
+
+
+******* TODO Add notes on running engine in development using the script and client repo
+
+
 Notes for myself:
 guix shell -C -N -F  --share=$HOME/Code -m ./manifest.scm
 
