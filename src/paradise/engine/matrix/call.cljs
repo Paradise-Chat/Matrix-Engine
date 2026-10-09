@@ -670,6 +670,10 @@
   (fn [{:keys [room-id]}]
     (broadcast-current-key! room-id nil)))
 
+(bind/register! :matrix :call/rotate-e2ee-keys
+  (fn [{:keys [room-id force-rotate?]}]
+    (rotate-and-broadcast-keys! room-id nil force-rotate?)))
+
 (def capabilities-provider
   #js {:acquireCapabilities
        (fn [_requested-caps]
