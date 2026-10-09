@@ -792,6 +792,10 @@ fully complete before the operation reports success.
 (bind/register! :matrix :call/broadcast-e2ee-key
   (fn [{:keys [room-id]}]
     (broadcast-current-key! room-id nil)))
+
+(bind/register! :matrix :call/rotate-e2ee-keys
+  (fn [{:keys [room-id force-rotate?]}]
+    (rotate-and-broadcast-keys! room-id nil force-rotate?)))
 #+end_src
 
 **** Capabilities & Inbound Widget Messages
