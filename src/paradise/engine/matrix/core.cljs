@@ -190,10 +190,6 @@
 
 
 
-(bind/register! :matrix :evaluate-worker-form
-  (fn [{:keys [plugin-id code]}]
-      (sci/evaluate-worker-form plugin-id code)))
-
 
 
 
