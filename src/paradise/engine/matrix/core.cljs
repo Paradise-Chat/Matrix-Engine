@@ -8,23 +8,16 @@
    [cljs.core.async.interop :refer-macros [<p!]]
    [cljs.core.async :refer [go <!]]
    [net :refer [set-auth-context!] :as net]
-   #_[eve.alpha :as eve]
-   #_[eve.atom :as ea]
-   #_[eve.mem :as mem]
-   #_[re-frame.db :as db]
-   #_[eve.wasm-mem :as wasm-mem]
-   #_[eve.deftype-proto.alloc :as alloc]
    [paradise.engine.state :as state]
    [paradise.engine.matrix.spaces :as spaces]
    [paradise.engine.matrix.settings :as settings :refer [setup-encryption-listeners!]]
    [paradise.engine.matrix.timeline]
-   #_[worker.media]
    [paradise.engine.matrix.members]
    [paradise.engine.matrix.composer]
    [paradise.engine.matrix.media-previews :as previews]
    [paradise.engine.matrix.call]
    [paradise.engine.matrix.rooms :as rooms]
-   [paradise.shared.sci-runner.engine :as sci])
+   )
   (:require-macros [paradise.shared.utils.macros :refer [export-engine]]))
 
 (defn maybe-local-session []
