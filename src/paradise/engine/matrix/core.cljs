@@ -121,6 +121,19 @@
         (catch :default e
           {:status :error :msg (str e)})))))
 
+(bind/register! :matrix :login-action
+  (fn [{:keys [action-id payload]}]
+    (go
+      (try
+        (case (keyword action-id)
+          :init-sso
+          (let [hs (:homeserver payload)
+                sso-url (str hs "/_matrix/client/v3/login/sso/redirect?redirectUrl="
+                             (js/encodeURIComponent (.. js/globalThis -location -origin)))]
+            {:status "redirect" :url sso-url})
+          {:status "error" :msg (str "Unknown action-id: " action-id)})
+        (catch :default e
+          {:status "error" :msg (str e)})))))
 
 
 (bind/register! :matrix :start-sync
