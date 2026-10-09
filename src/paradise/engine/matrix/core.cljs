@@ -31,7 +31,6 @@
           sessions (.loadSessions store)]
     (aget sessions target-user-id)))
 
-
 (defn build-client [hs passphrase? store-id? restore-or-login!]
   (p/let [sdk-root (if (.-ClientBuilder sdk) sdk (.-default sdk))
           ClientBuilder (.-ClientBuilder sdk-root)
@@ -47,8 +46,7 @@
                       (.serverNameOrHomeserverUrl hs)
                       (.indexeddbStore store-config)
                       (.autoEnableCrossSigning true)
-                      (cond-> (nil? passphrase?)
-                        (.slidingSyncVersionBuilder (.-DiscoverNative SSVBuilder))))
+                      (.slidingSyncVersionBuilder (.-DiscoverNative SSVBuilder)))
           client  (.build builder)
           _ (restore-or-login! client)
           session (.session client)
