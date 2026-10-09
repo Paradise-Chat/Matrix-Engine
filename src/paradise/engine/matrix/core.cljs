@@ -100,26 +100,27 @@
 
 
 (bind/register! :matrix :login
-                (fn [{:keys [hs user pass]}]
-                  (go
-                    (try
-                      (<p! (p/let [client  (build-client hs nil nil #(.login % user pass))
-                                   session (.session client)
-                                   uid     (.-userId session)
-                                   hs-url  (.-homeserverUrl session)
-                                   token   (.-accessToken session)
-                                   dev-id  (.-deviceId session)]
-                             (reset! state/!client client)
-                             (reset! state/!media-cache nil)
-                             {:status :success
-                              :user-id uid
-                              :hs-url hs-url
-                              :session-data {:accessToken token
-                                             :homeserverUrl hs-url
-                                             :userId uid
-                                             :deviceId dev-id}}))
-                      (catch :default e
-                        {:status :error :msg (str e)})))))
+  (fn [{:keys [homeserver username password] :as payload}]
+    (go
+      (try
+        (<p! (p/let [client  (build-client homeserver nil nil #(.login % username password))
+                     session (.session client)
+                     uid     (.-userId session)
+                     hs-url  (.-homeserverUrl session)
+                     token   (.-accessToken session)
+                     dev-id  (.-deviceId session)]
+               (reset! state/!client client)
+               (reset! state/!media-cache nil)
+               {:status :success
+                :user-id uid
+                :hs-url hs-url
+                :session-data {:accessToken token
+                               :homeserverUrl hs-url
+                               :userId uid
+                               :deviceId dev-id}}))
+        (catch :default e
+          {:status :error :msg (str e)})))))
+
 
 
 (bind/register! :matrix :start-sync
