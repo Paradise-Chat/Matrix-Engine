@@ -57,35 +57,44 @@
 (bind/register! :matrix :bootstrap
   (fn [{:keys [target-user-id]}]
     (go
-      (try
-        (let [res (<p! (p/let [data? (if target-user-id
-                                       (get-specific-session target-user-id)
-                                       (maybe-local-session))]
-                         (if data?
-                           (p/let [session (.-session data?)
-                                   hs-url  (.-homeserverUrl session)
-                                   uid     (.-userId session)
-                                   token   (.-accessToken session)
-                                   dev-id  (.-deviceId session)
-                                   client  (build-client hs-url
-                                                         (.-passphrase data?)
-                                                         (.-storeId data?)
-                                                         #(.restoreSession % session))]
-                             (reset! state/!media-cache nil)
-                             (reset! state/!client client)
-                             (set-auth-context! token hs-url)
-                             {:status :success
-                              :user-id uid
-                              :hs-url hs-url
-                              :session-data {:accessToken token
-                                             :homeserverUrl hs-url
-                                             :userId uid
-                                             :deviceId dev-id}})
-                           {:status :empty})))]
-          res)
-        (catch :default e
-          (js/console.error "Bootstrap Exception:" e)
-          {:status :error :msg (str e)})))))
+      (loop [retries 2]
+        (let [[status result-or-err]
+              (<p! (p/catch
+                     (p/let [data? (if target-user-id
+                                     (get-specific-session target-user-id)
+                                     (maybe-local-session))]
+                       (if data?
+                         (p/let [session (.-session data?)
+                                 hs-url  (.-homeserverUrl session)
+                                 uid     (.-userId session)
+                                 token   (.-accessToken session)
+                                 dev-id  (.-deviceId session)
+                                 client  (build-client hs-url
+                                                       (.-passphrase data?)
+                                                       (.-storeId data?)
+                                                       #(.restoreSession % session))]
+                           (reset! state/!media-cache nil)
+                           (reset! state/!client client)
+                           (set-auth-context! token hs-url)
+                           [:ok {:status :success
+                                 :user-id uid
+                                 :hs-url hs-url
+                                 :session-data {:accessToken token
+                                                :homeserverUrl hs-url
+                                                :userId uid
+                                                :deviceId dev-id}}])
+                         [:ok {:status :empty}]))
+                     (fn [e]
+                       [:error e])))]
+          (if (= status :error)
+            (if (pos? retries)
+              (do
+                (<p! (p/delay 1000))
+                (recur (dec retries)))
+              (do
+                (js/console.error "Bootstrap Exception:" result-or-err)
+                {:status :error :msg (str result-or-err)}))
+            result-or-err))))))
 
 
 
