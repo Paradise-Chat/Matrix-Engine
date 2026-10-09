@@ -6,4 +6,30 @@
  :shadow-module {:entries [paradise.engine.matrix.core]
                  :web-worker true
                  :depends-on #{:engine}
-                 :exports {init paradise.engine.matrix.core/bootstrap}}}
+                 :exports {init paradise.engine.matrix.core/bootstrap}}
+ :engine-config
+ {:login
+  {:fields
+   [{:id :homeserver :label "Homeserver" :type :text :default "https://matrix.org"}
+    {:id :username   :label "Username" :type :text}
+    {:id :password   :label "Password" :type :password}
+    ;; Action is intended to inform the UI what method to trigger in the engine
+    ;; So, great for complex flows
+    {:id :sso        :label "Continue with SSO" :type :action :action-id :init-sso}]}
+
+  :notifications
+  ;; Placeholder until we flesh out the notification loader
+  {:notification-script "push-worker.js"}
+
+  :calling
+  ;; Not sure yet if we need to expand this further
+  ;; But the idea is to be able to neatly inform the UI
+  ;; of what thread to launch for call UI
+  ;; encryption
+  {:encoder-script "/livekit-e2ee.js"}
+
+  :media
+  ;; For future use maybe
+  {}
+  }}
+
