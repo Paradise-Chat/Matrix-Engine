@@ -56,9 +56,6 @@
      client))
 
 
-
-
-
 (bind/register! :matrix :bootstrap
   (fn [{:keys [target-user-id]}]
     (go
@@ -187,11 +184,6 @@
         (catch :default e
           (log/error "Worker Logout Panic:" e)
           {:status "error" :msg (str e)})))))
-
-
-
-
-
 
 (defn preload-matrix []
   (go
