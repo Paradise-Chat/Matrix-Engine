@@ -8,7 +8,7 @@
                                :git/sha "9d52ca9097702ae640836b9b299a5720f312868a"}
         paradise/client
         {:git/url "https://github.com/Paradise-Chat/Paradise.git"
-         :git/sha "f289d4dfeb3ad55e113753a521da87bb0feb8a0e"}
+         :git/sha "b9ef2f8c39a1af24f387e233c0cc97f215b9bafb"}
 ;;        paradise/client {:local/root "../Paradise"}
         }
 
@@ -16,4 +16,6 @@
  {:plugin-build
   {:deps {paradise/client
           {:git/url "https://github.com/Paradise-Chat/Paradise.git"
-           :git/sha "f289d4dfeb3ad55e113753a521da87bb0feb8a0e"}}}}}
+           :git/sha "b9ef2f8c39a1af24f387e233c0cc97f215b9bafb"}
+;;          {:local/root "../Paradise"}
+          }}}}
