@@ -210,13 +210,14 @@
 
 (defn preload-matrix []
   (go
-    (let [orig-fetch js/globalThis.fetch
+    (let [raw-fetch  js/globalThis.fetch
+          orig-fetch (.bind raw-fetch js/globalThis)
           wasm-url   (.-href (js/URL. "index_bg.wasm" js/globalThis.__ENGINE_URL__))]
       (try
         (set! js/globalThis.fetch
               (fn [resource & args]
                 (let [url (if (string? resource) resource (.-href resource))]
-                  (if (and url (clojure.string/ends-with? (str url) "index_bg.wasm"))
+                  (if (and url (str/ends-with? (str url) "index_bg.wasm"))
                     (apply orig-fetch wasm-url args)
                     (apply orig-fetch resource args)))))
         (<p! (sdk/uniffiInitAsync))
@@ -224,7 +225,7 @@
         (catch :default e
           {:status :error :msg (str e)})
         (finally
-          (set! js/globalThis.fetch orig-fetch))))))
+          (set! js/globalThis.fetch raw-fetch))))))
 
 (defn ^:export bootstrap [registry-callback]
     (js/console.log "External Matrix Engine Bootstrapping...")
