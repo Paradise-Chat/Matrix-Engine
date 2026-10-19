@@ -1,6 +1,7 @@
 (ns paradise.engine.matrix.core
   (:require
    [paradise.engine.binding :as bind]
+   [clojure.string :as str]
    [promesa.core :as p]
    [taoensso.timbre :as log]
    [paradise.shared.client.session-store :as session-store :refer [SessionStore]]
