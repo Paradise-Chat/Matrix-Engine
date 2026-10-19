@@ -206,13 +206,24 @@
           (log/error "Worker Logout Panic:" e)
           {:status "error" :msg (str e)})))))
 
+
 (defn preload-matrix []
   (go
-    (try
-      (<p! (sdk/uniffiInitAsync "https://paradise-chat.github.io/Matrix-Engine/index_bg.wasm"))
-      {:status :success}
-      (catch :default e
-        {:status :error :msg (str e)}))))
+    (let [orig-fetch js/globalThis.fetch
+          wasm-url   (.-href (js/URL. "index_bg.wasm" js/globalThis.__ENGINE_URL__))]
+      (try
+        (set! js/globalThis.fetch
+              (fn [resource & args]
+                (let [url (if (string? resource) resource (.-href resource))]
+                  (if (and url (clojure.string/ends-with? (str url) "index_bg.wasm"))
+                    (apply orig-fetch wasm-url args)
+                    (apply orig-fetch resource args)))))
+        (<p! (sdk/uniffiInitAsync))
+        {:status :success}
+        (catch :default e
+          {:status :error :msg (str e)})
+        (finally
+          (set! js/globalThis.fetch orig-fetch))))))
 
 (defn ^:export bootstrap [registry-callback]
     (js/console.log "External Matrix Engine Bootstrapping...")
