@@ -10,6 +10,12 @@
             ["ffi-bindings" :as sdk :refer [MessageFormat UploadSource UploadParameters]]
             [cljs.core.async.interop :refer-macros [<p!]]))
 
+(defn- normalize-matrix-html [html]
+  (when html
+    (-> html
+        (str/replace "data-emote=\"\"" "data-emote=\"\" data-mx-emoticon=\"\"")
+        (str/replace #"href=\"mention://([^\"]+)\"" "href=\"https://matrix.to/#/$1\""))))
+
 (bind/register! :matrix :upload-media
   (fn [{:keys [mime buffer]}]
     (go
