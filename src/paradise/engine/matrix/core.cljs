@@ -1,6 +1,7 @@
 (ns paradise.engine.matrix.core
   (:require
    [paradise.engine.binding :as bind]
+   [cljs-workers.mesh :as mesh]
    [clojure.string :as str]
    [promesa.core :as p]
    [taoensso.timbre :as log]
