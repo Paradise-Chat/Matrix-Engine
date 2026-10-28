@@ -7,6 +7,13 @@
                  :web-worker true
                  :depends-on #{:engine}
                  :exports {init paradise.engine.matrix.core/bootstrap}}
+
+ ;; For dev, these files need to be readily available without needing Vite
+ :copy-files [{:from "node_modules/ffi-bindings/src/generated-compat/wasm-bindgen/index_bg.wasm"
+               :to "index_bg.wasm"}
+              {:from "dist/push-matrix.js"
+               :to "push-matrix.js"}]
+
  :engine-config
  {:login
   {:fields
