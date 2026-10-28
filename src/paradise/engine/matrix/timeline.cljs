@@ -7,6 +7,7 @@
    [clojure.string :as str]
    ["ffi-bindings" :as sdk :refer [TimelineConfiguration MessageType ReceiptType]]
    [cljs.core.async.interop :refer-macros [<p!]]
+   [cljs.core.async :refer [<!]]
    [paradise.engine.matrix.diffs :refer [apply-matrix-diffs]]
    [net :as net]
    [paradise.engine.binding :as bind]
