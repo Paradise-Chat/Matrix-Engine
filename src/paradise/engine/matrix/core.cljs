@@ -106,22 +106,22 @@
       (loop [retries 2]
         (let [[status result-or-err]
               (<p! (p/catch
-                     (p/let [data? (if target-user-id
-                                     (get-specific-session target-user-id)
-                                     (maybe-local-session))]
+                     (p/let [sessions (load-hydrated-sessions)
+                             data?    (if target-user-id
+                                        (get sessions target-user-id)
+                                        (second (first sessions)))]
                        (if data?
-                         (p/let [session (.-session data?)
+                         (p/let [{:keys [session passphrase store-id]} data?
                                  hs-url  (.-homeserverUrl session)
                                  uid     (.-userId session)
                                  token   (.-accessToken session)
                                  dev-id  (.-deviceId session)
                                  client  (build-client hs-url
-                                                       (.-passphrase data?)
-                                                       (.-storeId data?)
+                                                       passphrase
+                                                       store-id
                                                        #(.restoreSession % session))]
                            (reset! state/!media-cache nil)
                            (reset! state/!client client)
-                           (set-auth-context! token hs-url)
                            [:ok {:status :success
                                  :user-id uid
                                  :hs-url hs-url
