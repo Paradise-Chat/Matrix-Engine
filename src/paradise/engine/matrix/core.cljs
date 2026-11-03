@@ -22,16 +22,34 @@
    [paradise.engine.matrix.rooms :as rooms])
   (:require-macros [paradise.shared.utils.macros :refer [export-engine]]))
 
-(defn maybe-local-session []
-  (p/let [store (SessionStore.)
-          sessions (.loadSessions store)
-          user-id (first (js/Object.keys sessions))]
-    (when user-id (aget sessions user-id))))
+(defn- get-session-class []
+  (let [sdk-root (if (.-Session sdk) sdk (.-default sdk))]
+    (when sdk-root
+      (.-Session sdk-root))))
 
-(defn get-specific-session [target-user-id]
-  (p/let [store (SessionStore.)
+(defn- matrix-owned-dbs [base-name]
+  [base-name
+   (str base-name "::matrix-sdk-state")
+   (str base-name "::matrix-sdk-crypto")
+   (str base-name "::event_cache")
+   (str base-name "::media")])
+
+(defn- hydrate-session [raw-entry]
+  (when raw-entry
+    (when-let [Session (get-session-class)]
+      {:session    (.new Session (aget raw-entry "session"))
+       :raw        (aget raw-entry "session")
+       :passphrase (aget raw-entry "passphrase")
+       :store-id   (aget raw-entry "storeId")})))
+
+(defn- load-hydrated-sessions []
+  (p/let [store    (SessionStore. :matrix)
           sessions (.loadSessions store)]
-    (aget sessions target-user-id)))
+    (into {}
+          (keep (fn [uid]
+                  (when-let [hydrated (hydrate-session (aget sessions uid))]
+                    [uid hydrated])))
+          (js/Object.keys sessions))))
 
 (defn build-client [hs passphrase? store-id? restore-or-login!]
   (p/let [sdk-root (if (.-ClientBuilder sdk) sdk (.-default sdk))
