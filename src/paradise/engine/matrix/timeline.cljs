@@ -519,3 +519,121 @@
                          {:status "error" :msg (str e)})))))
 
 
+
+
+
+(defn- await-timeline-event [timeline event-id timeout-ms]
+  (js/Promise.
+   (fn [resolve-fn _]
+     (let [!handle (atom nil)
+           !done?  (atom false)
+           finish! (fn [res]
+                     (when (compare-and-set! !done? false true)
+                       (when-let [h @!handle]
+                         (safe-cancel! h))
+                       (resolve-fn res)))
+           timer   (js/setTimeout #(finish! nil) timeout-ms)]
+       (-> (.getEventTimelineItemByEventId timeline event-id)
+           (p/then (fn [item]
+                     (if item
+                       (do
+                         (js/clearTimeout timer)
+                         (finish! item))
+                       (let [h (.addListener timeline
+                                 #js {:onUpdate
+                                      (fn [_]
+                                        (-> (.getEventTimelineItemByEventId timeline event-id)
+                                            (p/then (fn [updated-item]
+                                                      (when updated-item
+                                                        (js/clearTimeout timer)
+                                                        (finish! updated-item))))
+                                            (p/catch (fn [_] nil))))})]
+                         (reset! !handle h)
+                         (when @!done?
+                           (safe-cancel! h))))))
+           (p/catch (fn [_]
+                      (js/clearTimeout timer)
+                      (finish! nil))))))))
+
+(defn resolve-event! [room room-id event-id]
+  (go
+    (let [arrays     @!timeline-arrays
+          cached-hit (or (some #(when (= (:id %) event-id) %) (get arrays [room-id :live]))
+                         (some #(when (= (:id %) event-id) %) (get arrays [room-id :focused]))
+                         (some #(when (= (:id %) event-id) %) (get arrays [room-id :pins])))]
+      (if cached-hit
+        cached-hit
+        (try
+          (let [live-tl   (get-in @!active-timelines [room-id :live :timeline])
+                live-item (when live-tl
+                            (try
+                              (<p! (.getEventTimelineItemByEventId live-tl event-id))
+                              (catch :default _ nil)))
+                raw-item  (if live-item
+                            live-item
+                            (let [focus-obj (focus {:type :event :id event-id :count 1})
+                                  cfg       (create-timeline-config focus-obj (.-Disabled sdk/TimelineReadReceiptTracking))
+                                  temp-tl   (<p! (.timelineWithConfiguration room cfg))
+                                  item      (<p! (await-timeline-event temp-tl event-id 1200))]
+                              (safe-cancel! temp-tl)
+                              item))]
+            (when raw-item
+              (wrap-item (make-timeline-item-shim raw-item event-id))))
+          (catch :default e
+            (log/warn "Failed to resolve event:" event-id e)
+            nil))))))
+
+(bind/register! :matrix :get-event
+  (fn [{:keys [room-id event-id]}]
+    (go
+      (if-let [room (some-> @state/!client (.getRoom room-id))]
+        (if-let [event (<! (resolve-event! room room-id event-id))]
+          {:status "success" :event event}
+          {:status "error" :msg "Event not found"})
+        {:status "error" :msg "Room not found"}))))
+
+(defn- event->notification-body [parsed]
+  (when (= (:content-tag parsed) "MsgLike")
+    (let [kind-tag    (get-in parsed [:content :tag])
+          msg-tag     (get-in parsed [:content :inner :tag])
+          msg-content (get-in parsed [:content :inner :content])]
+      (cond
+        (= kind-tag "Sticker")
+        "Sent a sticker"
+
+        (= kind-tag "Message")
+        (or (:body msg-content)
+            (:caption msg-content)
+            (case msg-tag
+              "Image"   "Sent an image"
+              "Video"   "Sent a video"
+              "Audio"   "Sent an audio file"
+              "File"    "Sent a file"
+              "Sticker" "Sent a sticker"
+              nil))
+
+        :else nil))))
+
+(bind/register! :matrix :resolve-push-notification
+  (fn [{:keys [payload]}]
+    (go
+      (if-let [client @state/!client]
+        (let [room-id  (:room_id payload)
+              event-id (:event_id payload)
+              room     (when room-id (.getRoom client room-id))]
+          (if (and room event-id)
+            (if-let [parsed (<! (resolve-event! room room-id event-id))]
+              (if-let [body (event->notification-body parsed)]
+                (let [sender    (or (:sender-name parsed) (:sender_display_name payload) (:sender payload) "Someone")
+                      room-name (or (try (.displayName room) (catch :default _ nil)) (:room_name payload))]
+                  {:status       "success"
+                   :notification {:title      (if room-name (str sender " in " room-name) sender)
+                                  :body       body
+                                  :avatar-uri (or (:sender-avatar parsed) (:sender_avatar_url payload))
+                                  :room-id    room-id
+                                  :unread     (or (:unread payload) (get-in payload [:counts :unread]))}})
+                {:status "ignored" :msg "No displayable body"})
+              {:status "ignored" :msg "Could not resolve event"})
+            {:status "ignored" :msg "Missing room_id or event_id"}))
+        {:status "error" :msg "No active client"}))))
+
