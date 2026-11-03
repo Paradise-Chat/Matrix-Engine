@@ -32,23 +32,23 @@
           {:status :error :msg (str e)})))))
 
 
-
 (bind/register! :matrix :send-message
   (fn [{:keys [room-id text html context]}]
     (go
       (try
         (if-let [timeline (get-in @!active-timelines [room-id :live :timeline])]
-          (let [action    (keyword (:mode context "send"))
+          (let [html      (normalize-matrix-html html)
+                action    (keyword (:mode context "send"))
                 target-id (:target context)
                 msg-tag   (:msg-tag context "Text")
                 ffi-data  (:ffi-content context)
                 formatted (if-not (str/blank? html)
                             #js {:format (.new (.-Html (.-MessageFormat sdk)))
-                                 :body html}
+                                 :body   html}
                             js/undefined)
                 payload   (if (and (= action :edit) (contains? #{"Image" "Video" "Audio" "File"} msg-tag))
                             (let [updated-ffi (js/Object.assign #js {} ffi-data
-                                                                #js {:caption text
+                                                                #js {:caption          text
                                                                      :formattedCaption formatted})
                                   msg-type    (.new (aget (.-MessageType sdk) msg-tag) #js {:content updated-ffi})
                                   global-msg  #js {:msgType msg-type :mentions #js {:userIds #js [] :room false}}]
@@ -71,7 +71,6 @@
           {:status :error :msg "Timeline not found in worker"})
         (catch :default e
           {:status :error :msg (str e)})))))
-
 
 (bind/register! :matrix :send-attachments
   (fn [{:keys [room-id attachments text html]}]
