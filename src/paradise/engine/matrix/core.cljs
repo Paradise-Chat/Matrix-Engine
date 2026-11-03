@@ -73,23 +73,32 @@
           ClientBuilder (.-ClientBuilder sdk-root)
           SSVBuilder    (.-SlidingSyncVersionBuilder sdk-root)
           IDBBuilder    (.-IndexedDbStoreBuilder sdk-root)
-          store (SessionStore.)
-          store-id   (or store-id? (.generateStoreId store))
-          passphrase (or passphrase? (.generatePassphrase store))
-          store-name (.getStoreName store store-id)
-          store-config (-> (new IDBBuilder store-name)
-                           (.passphrase passphrase))
-          builder (-> (new ClientBuilder)
-                      (.serverNameOrHomeserverUrl hs)
-                      (.indexeddbStore store-config)
-                      (.autoEnableCrossSigning true)
-                      (.slidingSyncVersionBuilder (.-DiscoverNative SSVBuilder)))
-          client  (.build builder)
-          _ (restore-or-login! client)
-          session (.session client)
-          _ (or passphrase? (.save store session passphrase store-id))]
-     client))
-
+          store         (SessionStore. :matrix)
+          store-id      (or store-id? (.generateStoreId store))
+          passphrase    (or passphrase? (.generatePassphrase store))
+          store-name    (.getStoreName store store-id)
+          store-config  (-> (new IDBBuilder store-name)
+                            (.passphrase passphrase))
+          builder       (-> (new ClientBuilder)
+                            (.serverNameOrHomeserverUrl hs)
+                            (.indexeddbStore store-config)
+                            (.autoEnableCrossSigning true)
+                            (.slidingSyncVersionBuilder (.-DiscoverNative SSVBuilder)))
+          client        (.build builder)
+          _             (restore-or-login! client)
+          session       (.session client)
+          user-id       (.-userId session)
+          hs-url        (.-homeserverUrl session)
+          token         (.-accessToken session)
+          _             (or passphrase?
+                            (.save store
+                                   user-id
+                                   #js {:session    session
+                                        :passphrase passphrase
+                                        :storeId    store-id}
+                                   (matrix-owned-dbs store-name)))]
+    (set-auth-context! token hs-url)
+    client))
 
 (bind/register! :matrix :bootstrap
   (fn [{:keys [target-user-id]}]
