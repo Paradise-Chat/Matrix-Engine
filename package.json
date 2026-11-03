@@ -4,7 +4,7 @@
     "type": "module",
     "scripts": {
         "build:libs": "clojure -X:deps prep",
-        "build:cljs": "shadow-cljs release engine",
+        "build:engine": "shadow-cljs release engine",
         "build:bundle": "esbuild build/main.js --bundle --format=esm --outfile=dist/engine-matrix.js --define:globalThis.__ENGINE_URL__=import.meta.url --define:process.env.NODE_ENV=\"'production'\" --define:process=undefined",
         "build:copy": "cp build/main.js dist/engine.js",
         "build:wasm": "cp node_modules/ffi-bindings/src/generated/wasm-bindgen/index_bg.wasm dist/",
