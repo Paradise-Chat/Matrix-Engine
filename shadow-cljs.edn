@@ -1,8 +1,17 @@
 {:deps {:aliases [:plugin-build]}
  :builds
- {:engine {:target :esm
-           :js-options {:resolve {"process" false}}
-           :compiler-options {:optimizations :simple}
-           :output-dir "build"
-           :modules {:main {:entries [paradise.engine.matrix.core]
-                            :exports {bootstrap paradise.engine.matrix.core/bootstrap}}}}}}
+ {:engine      {:target           :esm
+                :js-options       {:resolve {"process" false}}
+                :compiler-options {:optimizations :simple}
+                :output-dir       "dist"
+                :modules          {:main {:entries [paradise.engine.matrix.core]}}}
+
+  :push-worker {:target           :browser
+                :js-options       {:resolve {"process" false}}
+                :compiler-options {:optimizations  :simple
+                                   :output-wrapper true}
+                :output-dir       "dist-push"
+                :devtools         {:enabled false}
+                :modules          {:push-worker {:entries [paradise.engine.matrix.push-worker]}}}
+  }}
+
