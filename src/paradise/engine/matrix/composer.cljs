@@ -77,7 +77,8 @@
     (go
       (try
         (if-let [timeline (get-in @!active-timelines [room-id :live :timeline])]
-          (let [total (count attachments)]
+          (let [html  (normalize-matrix-html html)
+                total (count attachments)]
             (loop [idx 0]
               (if (< idx total)
                 (let [att       (nth attachments idx)
@@ -90,17 +91,17 @@
                       safe-size (if (and raw-size (not (undefined? raw-size)))
                                   (js/BigInt (js/Math.round raw-size))
                                   js/undefined)
-                      info      #js {:mimetype mime
-                                     :size safe-size
-                                     :thumbnailInfo js/undefined
+                      info      #js {:mimetype        mime
+                                     :size            safe-size
+                                     :thumbnailInfo   js/undefined
                                      :thumbnailSource js/undefined}
                       caption   (if is-last? (or text js/undefined) (:filename att))
                       format    (if (and is-last? (not (str/blank? html)))
                                   #js {:format (.new (.-Html MessageFormat)) :body html}
                                   js/undefined)
                       params    (.create UploadParameters
-                                         #js {:source source
-                                              :caption (or caption js/undefined)
+                                         #js {:source           source
+                                              :caption          (or caption js/undefined)
                                               :formattedCaption (or format js/undefined)})]
                   (.sendFile timeline params info)
                   (<p! (p/delay 100))
