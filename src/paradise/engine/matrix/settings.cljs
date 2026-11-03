@@ -78,6 +78,9 @@
     (reset! !recovery-listener-handle handle)))
 
 
+
+(def ^:private b58-alphabet "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz")
+
 (bind/register! :matrix :register-pusher
   (fn [{:keys [p256dh auth endpoint app-id push-url app-name lang pushkey is-native platform]}]
     (go
