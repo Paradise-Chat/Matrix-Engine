@@ -255,7 +255,9 @@
   (go
     (let [raw-fetch  js/globalThis.fetch
           orig-fetch (.bind raw-fetch js/globalThis)
-          wasm-url   (.-href (js/URL. "index_bg.wasm" js/globalThis.__ENGINE_URL__))]
+          wasm-url   (if ^boolean goog.DEBUG
+                       "/index_bg.wasm"
+                       (.-href (js/URL. "index_bg.wasm" js/globalThis.__ENGINE_URL__)))]
       (try
         (set! js/globalThis.fetch
               (fn [resource & args]
@@ -271,7 +273,7 @@
           (set! js/globalThis.fetch raw-fetch))))))
 
 (defn ^:export bootstrap [registry-callback]
-    (js/console.log "External Matrix Engine Bootstrapping...")
+  (js/console.log "External Matrix Engine Bootstrapping...")
   (go
     (let [preload-res (<! (preload-matrix))]
       (if (= (:status preload-res) :success)
