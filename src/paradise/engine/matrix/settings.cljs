@@ -81,6 +81,87 @@
 
 (def ^:private b58-alphabet "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz")
 
+(defn- decode-recovery-key [recovery-key]
+  (let [clean (str/replace (str recovery-key) #"\s+" "")
+        bytes (loop [chars (seq clean)
+                     acc   (vec (repeat 35 0))]
+                (if-let [c (first chars)]
+                  (let [val (.indexOf b58-alphabet (str c))]
+                    (recur (rest chars)
+                           (loop [i     (dec (count acc))
+                                  carry val
+                                  out   acc]
+                             (if (neg? i)
+                               out
+                               (let [total (+ (* (nth out i) 58) carry)]
+                                 (recur (dec i)
+                                        (quot total 256)
+                                        (assoc out i (mod total 256))))))))
+                  acc))]
+    (js/Uint8Array. (subvec bytes 2 34))))
+
+(defn- b64->uint8 [b64]
+  (let [padded (str b64 (subs "====" (mod (count b64) 4)))
+        raw    (js/atob (-> padded (str/replace "-" "+") (str/replace "_" "/")))
+        arr    (js/Uint8Array. (.-length raw))]
+    (dotimes [i (.-length raw)]
+      (aset arr i (.charCodeAt raw i)))
+    arr))
+
+(defn- decrypt-ssss-secret [recovery-key secret-name encrypted-entry]
+  (p/let [raw-key  (decode-recovery-key recovery-key)
+          base-key (.importKey js/crypto.subtle "raw" raw-key "HKDF" false #js ["deriveBits"])
+          bits     (.deriveBits js/crypto.subtle
+                                #js {:name "HKDF"
+                                     :hash "SHA-256"
+                                     :salt (js/Uint8Array. 32)
+                                     :info (.encode (js/TextEncoder.) secret-name)}
+                                base-key
+                                512)
+          aes-raw  (.slice bits 0 32)
+          aes-key  (.importKey js/crypto.subtle "raw" aes-raw #js {:name "AES-CTR"} false #js ["decrypt"])
+          iv       (b64->uint8 (:iv encrypted-entry))
+          cipher   (b64->uint8 (:ciphertext encrypted-entry))
+          plain    (.decrypt js/crypto.subtle
+                             #js {:name    "AES-CTR"
+                                  :counter iv
+                                  :length  64}
+                             aes-key
+                             cipher)]
+    (.decode (js/TextDecoder.) plain)))
+
+(defn- fetch-ssk-seed [base-url token user-id recovery-key]
+  (let [clean-url (str/replace (str base-url) #"/+$" "")
+        url       (str clean-url "/_matrix/client/v3/user/"
+                       (js/encodeURIComponent user-id)
+                       "/account_data/m.cross_signing.self_signing")]
+    (-> (p/let [resp (net/fetch url #js {:headers #js {"Authorization" (str "Bearer " token)
+                                                       "Accept"        "application/json"}})
+                json (when (.-ok resp) (.json resp))
+                data (when json (js->clj json :keywordize-keys true))
+                enc  (some-> data :encrypted vals first)]
+          (when enc
+            (decrypt-ssss-secret recovery-key "m.cross_signing.self_signing" enc)))
+        (p/catch (fn [_] nil)))))
+
+(bind/register! :matrix :prepare-push-verification
+  (fn [{:keys [user-id recovery-key]}]
+    (go
+      (try
+        (if-let [client @state/!client]
+          (let [session    (.session client)
+                base-url   (.-homeserverUrl session)
+                main-token (.-accessToken session)
+                ssk-seed   (when (and base-url main-token recovery-key)
+                             (<p! (fetch-ssk-seed base-url main-token user-id recovery-key)))]
+            {:status            :success
+             :verification-data {:sskSeed         (or ssk-seed "")
+                                 :mainAccessToken (or main-token "")}})
+          {:status :error :msg "No active client"})
+        (catch :default e
+          {:status :error :msg (str e)})))))
+
+
 (bind/register! :matrix :register-pusher
   (fn [{:keys [p256dh auth endpoint app-id push-url app-name lang pushkey is-native platform]}]
     (go
@@ -179,4 +260,6 @@
               {:status "success"})))
         (catch :default e
           {:status "error" :msg (str e)})))))
+
+
 
