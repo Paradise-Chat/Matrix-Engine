@@ -112,22 +112,23 @@
           {:status :error :msg (str e)})))))
 
 (bind/register! :matrix :send-raw-sticker
-  (fn [{:keys [room-id mxc alt-text info]}]
+  (fn [{:keys [room-id uri mxc alt-text info]}]
     (go
       (try
-        (let [client  @state/!client
-              session (.session client)
-              token   (.-accessToken session)
-              hs      (str/replace (.-homeserverUrl session) #"/+$" "")
-              txn-id  (str "stk-" (.getTime (js/Date.)) "-" (rand-int 10000))
-              url     (str hs "/_matrix/client/v3/rooms/" (js/encodeURIComponent room-id) "/send/m.sticker/" txn-id)
-              payload #js {:body (if (keyword? alt-text) (name alt-text) (or alt-text "Sticker"))
-                           :url  mxc
-                           :info (clj->js (merge {:mimetype "image/png"} info))}]
-          (let [resp (<p! (net/fetch url #js {:method "PUT"
+        (let [target-uri (or uri mxc)
+              client     @state/!client
+              session    (.session client)
+              token      (.-accessToken session)
+              hs         (str/replace (.-homeserverUrl session) #"/+$" "")
+              txn-id     (str "stk-" (.getTime (js/Date.)) "-" (rand-int 10000))
+              url        (str hs "/_matrix/client/v3/rooms/" (js/encodeURIComponent room-id) "/send/m.sticker/" txn-id)
+              payload    #js {:body (if (keyword? alt-text) (name alt-text) (or alt-text "Sticker"))
+                              :url  target-uri
+                              :info (clj->js (merge {:mimetype "image/png"} info))}]
+          (let [resp (<p! (net/fetch url #js {:method  "PUT"
                                               :headers #js {"Authorization" (str "Bearer " token)
-                                                            "Content-Type" "application/json"}
-                                              :body (js/JSON.stringify payload)}))]
+                                                            "Content-Type"  "application/json"}
+                                              :body    (js/JSON.stringify payload)}))]
             (if (.-ok resp)
               {:status :success}
               {:status :error :msg (.-status resp)})))
