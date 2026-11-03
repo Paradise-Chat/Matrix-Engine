@@ -51,6 +51,23 @@
                     [uid hydrated])))
           (js/Object.keys sessions))))
 
+
+(bind/register! :matrix :load-sessions
+  (fn [_]
+    (go
+      (try
+        (let [sessions (<p! (load-hydrated-sessions))
+              summary  (into {}
+                             (map (fn [[uid {:keys [raw]}]]
+                                    [uid {:user-id        (.-userId raw)
+                                          :homeserver-url (.-homeserverUrl raw)
+                                          :device-id      (.-deviceId raw)}]))
+                             sessions)]
+          {:status :success :sessions summary})
+        (catch :default e
+          {:status :error :msg (str e)})))))
+
+
 (defn build-client [hs passphrase? store-id? restore-or-login!]
   (p/let [sdk-root (if (.-ClientBuilder sdk) sdk (.-default sdk))
           ClientBuilder (.-ClientBuilder sdk-root)
