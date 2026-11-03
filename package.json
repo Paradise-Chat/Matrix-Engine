@@ -6,6 +6,8 @@
         "build:libs": "clojure -X:deps prep",
         "build:engine": "shadow-cljs release engine",
         "build:bundle": "esbuild build/main.js --bundle --format=esm --outfile=dist/engine-matrix.js --define:globalThis.__ENGINE_URL__=import.meta.url --define:process.env.NODE_ENV=\"'production'\" --define:process=undefined",
+        "build:push": "npx shadow-cljs release push-worker",
+        "build:combine": "cat node_modules/paradise-matrix-push-crypto/dist/paradise_matrix_push_crypto_bundle.js dist-push/push-worker.js > dist/push-matrix.js",
         "build:copy": "cp build/main.js dist/engine.js",
         "build:wasm": "cp node_modules/ffi-bindings/src/generated/wasm-bindgen/index_bg.wasm dist/",
         "build:manifest": "cp config.edn dist/manifest.edn",
