@@ -142,11 +142,8 @@
                 {:status :error :msg (str result-or-err)}))
             result-or-err))))))
 
-
-
-
 (bind/register! :matrix :login
-  (fn [{:keys [homeserver username password] :as payload}]
+  (fn [{:keys [homeserver username password]}]
     (go
       (try
         (<p! (p/let [client  (build-client homeserver nil nil #(.login % username password))
@@ -180,7 +177,6 @@
           {:status "error" :msg (str "Unknown action-id: " action-id)})
         (catch :default e
           {:status "error" :msg (str e)})))))
-
 
 (bind/register! :matrix :start-sync
                  (fn [_]
