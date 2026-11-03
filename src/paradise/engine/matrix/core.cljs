@@ -14,12 +14,12 @@
    [paradise.engine.matrix.spaces :as spaces]
    [paradise.engine.matrix.settings :as settings :refer [setup-encryption-listeners!]]
    [paradise.engine.matrix.timeline]
+   [paradise.engine.matrix.media]
    [paradise.engine.matrix.members]
    [paradise.engine.matrix.composer]
    [paradise.engine.matrix.media-previews :as previews]
    [paradise.engine.matrix.call]
-   [paradise.engine.matrix.rooms :as rooms]
-   )
+   [paradise.engine.matrix.rooms :as rooms])
   (:require-macros [paradise.shared.utils.macros :refer [export-engine]]))
 
 (defn maybe-local-session []
