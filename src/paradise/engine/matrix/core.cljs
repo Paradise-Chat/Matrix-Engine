@@ -69,7 +69,7 @@
 
 
 (defn build-client [hs passphrase? store-id? restore-or-login!]
-  (p/let [sdk-root (if (.-ClientBuilder sdk) sdk (.-default sdk))
+  (p/let [sdk-root      (if (.-ClientBuilder sdk) sdk (.-default sdk))
           ClientBuilder (.-ClientBuilder sdk-root)
           SSVBuilder    (.-SlidingSyncVersionBuilder sdk-root)
           IDBBuilder    (.-IndexedDbStoreBuilder sdk-root)
