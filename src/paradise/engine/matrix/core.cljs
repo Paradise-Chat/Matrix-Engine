@@ -179,23 +179,22 @@
           {:status "error" :msg (str e)})))))
 
 (bind/register! :matrix :start-sync
-                 (fn [_]
-                   (go
-                     (try
-                       (<p! (p/let [client       @state/!client
-                                    sync-service (-> (.syncService client) (.withOfflineMode) (.finish))
-                                    rls-instance (.roomListService sync-service)
-                                    room-list    (.allRooms rls-instance)
-                                    space-service (.spaceService client)]
-                              (rooms/start-room-list-sync! client room-list space-service)
-                              (.start sync-service)
-                              (spaces/init-space-service! client)
-                              (setup-encryption-listeners! client)
-                              (previews/attach-media-preview-listener! client)
-                              ))
-                       {:status :success}
-                       (catch :default e
-                         {:status :error :msg (str e)})))))
+  (fn [_]
+    (go
+      (try
+        (<p! (p/let [client        @state/!client
+                     sync-service  (-> (.syncService client) (.withOfflineMode) (.finish))
+                     rls-instance  (.roomListService sync-service)
+                     room-list     (.allRooms rls-instance)
+                     space-service (.spaceService client)]
+               (rooms/start-room-list-sync! client room-list space-service)
+               (.start sync-service)
+               (spaces/init-space-service! client)
+               (setup-encryption-listeners! client)
+               (previews/attach-media-preview-listener! client)))
+        {:status :success}
+        (catch :default e
+          {:status :error :msg (str e)})))))
 
 (bind/register! :matrix :fetch-profile
                  (fn [_]
