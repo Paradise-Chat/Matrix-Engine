@@ -197,18 +197,18 @@
           {:status :error :msg (str e)})))))
 
 (bind/register! :matrix :fetch-profile
-                 (fn [_]
-                   (go
-                     (try
-                       (let [client  @state/!client
-                             user-id (.-userId (.session client))
-                             profile (<p! (.getProfile client user-id))]
-                         {:status :success
-                          :profile {:user-id user-id
-                                    :display-name (.-displayName profile)
-                                    :avatar-url   (.-avatarUrl profile)}})
-                       (catch :default e
-                         {:status :error :msg (str e)})))))
+  (fn [_]
+    (go
+      (try
+        (let [client  @state/!client
+              user-id (.-userId (.session client))
+              profile (<p! (.getProfile client user-id))]
+          {:status :success
+           :profile {:user-id      user-id
+                     :display-name (.-displayName profile)
+                     :avatar-url   (.-avatarUrl profile)}})
+        (catch :default e
+          {:status :error :msg (str e)})))))
 
 (bind/register! :matrix :get-client-context
                  (fn [_]
