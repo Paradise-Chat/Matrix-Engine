@@ -14,19 +14,24 @@
 
 
 (bind/register! :matrix :get-available-accounts
-                 (fn [_]
-                   (go
-                     (try
-                       (<p! (p/let [store (SessionStore.)
-                                    sessions (.loadSessions store)]
-                              (let [accs (for [uid (js/Object.keys sessions)
-                                               :let [data (aget sessions uid)
-                                                     session (.-session data)]]
-                                           {:userId uid
-                                            :hs_url (.-homeserverUrl session)})]
-                                {:status :success :accounts (vec accs)})))
-                       (catch :default e
-                         {:status :error :msg (str e)})))))
+                (fn [_]
+                  (go
+                    (try
+                      (<p! (p/let [store    (SessionStore. :matrix)
+                                   sessions (.loadSessions store)]
+                             (let [uids (if sessions (js/Object.keys sessions) #js [])
+                                   accs (keep (fn [uid]
+                                                (when-let [data (aget sessions uid)]
+                                                  (when-let [session (.-session data)]
+                                                    (let [url (.-homeserverUrl session)]
+                                                      {:userId   uid
+                                                       :user-id  uid
+                                                       :base-url url
+                                                       :hs_url   url}))))
+                                              uids)]
+                               {:status :success :accounts (vec accs)})))
+                      (catch :default e
+                        {:status :error :msg (str e)})))))
 
 (bind/register! :matrix :get-account-data
                  (fn [{:keys [event-type]}]
