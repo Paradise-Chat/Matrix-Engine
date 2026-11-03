@@ -211,41 +211,44 @@
           {:status :error :msg (str e)})))))
 
 (bind/register! :matrix :get-client-context
-                 (fn [_]
-                   (go
-                     (try
-                       (if-let [client @state/!client]
-                         (let [session (.session client)]
-                           {:status :success
-                            :session {:userId        (.-userId session)
-                                      :deviceId      (.-deviceId session)
-                                      :accessToken   (.-accessToken session)
-                                      :homeserverUrl (.-homeserverUrl session)}})
-                         {:status :error :msg "No active client"})
-                       (catch :default e
-                         {:status :error :msg (str e)})))))
-
-(bind/register! :matrix :logout-client
-  (fn [{:keys [user-id]}]
+  (fn [_]
     (go
       (try
-        (when-let [client @state/!client]
-          (<p! (.logout client))
-          (when (fn? (.-free client))
-            (.free client))
-          (reset! state/!client nil))
-
-        (<p! (p/delay 1500))
-
-        (when user-id
-          (let [store (session-store/->SessionStore)]
-            (<p! (.clear store user-id))
-            (log/info "Worker successfully wiped OPFS session for:" user-id)))
-
-        {:status "success"}
+        (if-let [client @state/!client]
+          (let [session (.session client)]
+            {:status :success
+             :session {:userId        (.-userId session)
+                       :deviceId      (.-deviceId session)
+                       :accessToken   (.-accessToken session)
+                       :homeserverUrl (.-homeserverUrl session)}})
+          {:status :error :msg "No active client"})
         (catch :default e
-          (log/error "Worker Logout Panic:" e)
-          {:status "error" :msg (str e)})))))
+          {:status :error :msg (str e)})))))
+
+
+(bind/register! :matrix :logout-client
+                (fn [{:keys [user-id]}]
+                  (go
+                    (try
+                      (let [client     @state/!client
+                            target-uid (or user-id
+                                           (when client
+                                             (.-userId (.session client))))]
+                        (when client
+                          (<p! (.logout client))
+                          (when (fn? (.-free client))
+                            (.free client))
+                          (reset! state/!client nil))
+                        (set-auth-context! nil nil)
+                        (<p! (p/delay 1500))
+                        (when target-uid
+                          (let [store (session-store/->SessionStore :matrix)]
+                            (<p! (.clear store target-uid))
+                            (log/info "Worker successfully wiped OPFS session for:" target-uid)))
+                        {:status "success"})
+                      (catch :default e
+                        (log/error "Worker Logout Panic:" e)
+                        {:status "error" :msg (str e)})))))
 
 
 (defn preload-matrix []
