@@ -188,9 +188,13 @@
          :setScreenShareEnabled
          (fn [enabled?]
            (if-let [^js lp (.-localParticipant room)]
-             (p/let [pub (.setScreenShareEnabled lp (boolean enabled?))]
-               (sync-all!)
-               pub)
+             (let [capture-opts #js {:audio       #js {:echoCancellation false
+                                                       :noiseSuppression false
+                                                       :autoGainControl  false}
+                                     :systemAudio "include"}]
+               (p/let [pub (.setScreenShareEnabled lp (boolean enabled?) capture-opts)]
+                 (sync-all!)
+                 pub))
              (p/rejected (js/Error. "No local participant"))))
 
          :switchDevice
