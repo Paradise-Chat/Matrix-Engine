@@ -1444,10 +1444,8 @@
                   room-id
                   nil))
 
-                (let [base-url    (or js/globalThis.__ENGINE_URL__
-                                      ;; "https://paradise-chat.github.io/Matrix-Engine/"
-                                      "http://localhost:8000"
-                                      )
+                (let [base-url
+                      js/self.location.origin
                       driver-url  (.-href (js/URL. "call-driver.js" base-url))
                       encoder-url (.-href (js/URL. "call-encoder.js" base-url))]
                   {:status         :success
