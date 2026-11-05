@@ -250,35 +250,49 @@
                         (log/error "Worker Logout Panic:" e)
                         {:status "error" :msg (str e)})))))
 
-(defn preload-matrix []
+(defn preload-matrix [engine-url]
   (go
     (let [raw-fetch   js/globalThis.fetch
           orig-fetch  (.bind raw-fetch js/globalThis)
-          base-url    js/self.location.origin
+          base-url    (if engine-url
+                        (.-href (js/URL. engine-url js/self.location.origin))
+                        js/self.location.origin)
           wasm-url    (.-href (js/URL. "index_bg.wasm" base-url))
           driver-url  (.-href (js/URL. "call-driver.js" base-url))
-          encoder-url (.-href (js/URL. "call-encoder.js" base-url))]
+          encoder-url (.-href (js/URL. "call-encoder.js" base-url))
+          push-url    (.-href (js/URL. "push-matrix.js" base-url))]
+      (reset! state/!asset-urls {:base-url    base-url
+                                 :wasm-url    wasm-url
+                                 :push-url    push-url
+                                 :driver-url  driver-url
+                                 :encoder-url encoder-url})
       (try
         (set! js/globalThis.fetch
               (fn [resource & args]
-                (let [url (if (string? resource) resource (.-href resource))]
+                (let [url (if (string? resource)
+                            resource
+                            (or (.-href resource) (.-url resource)))]
                   (if (and url (str/ends-with? (str url) "index_bg.wasm"))
                     (apply orig-fetch wasm-url args)
                     (apply orig-fetch resource args)))))
         (<p! (js/Promise.all
-               #js [(sdk/uniffiInitAsync)
-                    (orig-fetch driver-url)
-                    (orig-fetch encoder-url)]))
-        {:status :success}
+              #js [(sdk/uniffiInitAsync)
+                   (orig-fetch driver-url)
+                   (orig-fetch encoder-url)
+                   (orig-fetch push-url)]))
+        {:status :success
+         :base-url base-url
+         :driver-url driver-url
+         :encoder-url encoder-url}
         (catch :default e
           {:status :error :msg (str e)})
         (finally
           (set! js/globalThis.fetch raw-fetch))))))
 
-(defn ^:export bootstrap [registry-callback]
-  (js/console.log "External Matrix Engine Bootstrapping...")
+(defn ^:export bootstrap [registry-callback engine-url]
+  (js/console.log "External Matrix Engine Bootstrapping from:" engine-url)
   (go
-    (let [preload-res (<! (preload-matrix))]
+    (let [preload-res (<! (preload-matrix engine-url))]
       (if (= (:status preload-res) :success)
         (let [handlers (clj->js {:preload (fn [] (js/console.log "Preloaded!"))})]
           (js/console.log "WASM Initialized!")
