@@ -6,16 +6,18 @@
         com.taoensso/tempura {:mvn/version "1.5.4"}
         jtk-dvlp/cljs-workers {:git/url "https://github.com/Paradise-Chat/cljs-workers.git"
                                :git/sha "9d52ca9097702ae640836b9b299a5720f312868a"}
-        paradise/client
-        {:git/url "https://github.com/Paradise-Chat/Paradise.git"
-         :git/sha "b9ef2f8c39a1af24f387e233c0cc97f215b9bafb"}
-;;        paradise/client {:local/root "../Paradise"}
-        }
-
+        paradise/client {:git/url "https://github.com/Paradise-Chat/Paradise.git"
+                         :git/sha "b9ef2f8c39a1af24f387e233c0cc97f215b9bafb"}}
  :aliases
- {:plugin-build
-  {:deps {paradise/client
-          {:git/url "https://github.com/Paradise-Chat/Paradise.git"
-           :git/sha "b9ef2f8c39a1af24f387e233c0cc97f215b9bafb"}
-;;          {:local/root "../Paradise"}
-          }}}}
+ {:engine-prep
+  {:deps {paradise/client {:git/url "https://github.com/Paradise-Chat/Paradise.git"
+                           :git/sha "b9ef2f8c39a1af24f387e233c0cc97f215b9bafb"}}}
+  :local-client
+  {:override-deps {paradise/client {:local/root "../Paradise"}}}
+  :build
+  {:deps {io.github.clojure/tools.build {:mvn/version "0.10.5"}}
+   :ns-default build}}
+ :deps/prep-lib
+ {:ensure "dist"
+  :alias :build
+  :fn build/prep}}
