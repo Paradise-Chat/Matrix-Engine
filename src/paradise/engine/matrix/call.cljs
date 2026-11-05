@@ -1443,18 +1443,15 @@
                  (broadcast-current-key!
                   room-id
                   nil))
-
-                (let [base-url
-                      js/self.location.origin
-                      driver-url  (.-href (js/URL. "call-driver.js" base-url))
-                      encoder-url (.-href (js/URL. "call-encoder.js" base-url))]
+                (let [{:keys [driver-url encoder-url]} @state/!asset-urls]
                   {:status         :success
                    :driver-url     driver-url
                    :encoder-url    encoder-url
                    :url            livekit-url
                    :token          livekit-jwt
                    :session-config {:url   livekit-url
-                                    :token livekit-jwt}}))))))
+                                    :token livekit-jwt}})
+                )))))
 
       (catch :default e
         (stop-delayed-leave-heartbeat!)
