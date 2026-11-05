@@ -13,5 +13,12 @@
                 :output-dir       "dist-push"
                 :devtools         {:enabled false}
                 :modules          {:push-worker {:entries [paradise.engine.matrix.push-worker]}}}
-  }}
+  :call-driver
+  {:target :esm
+   :output-dir "dist-call"
+   :js-options {:js-provider :import
+                :resolve {"process" false}}
+   :modules {:driver {:exports {createCallDriver paradise.engine.matrix.call-driver/createCallDriver}}}
+   :compiler-options   {:optimizations      :simple
+                        :output-feature-set :es2020}}}}
 
