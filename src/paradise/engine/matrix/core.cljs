@@ -282,12 +282,32 @@
                    (orig-fetch push-url)]))
         {:status :success
          :base-url base-url
+         :push-url    push-url
          :driver-url driver-url
          :encoder-url encoder-url}
         (catch :default e
           {:status :error :msg (str e)})
         (finally
           (set! js/globalThis.fetch raw-fetch))))))
+
+
+(bind/register! :matrix :get-asset-urls
+                (fn [_]
+                  (go
+                    (try
+                      (let [{:keys [base-url wasm-url push-url driver-url encoder-url]} @state/!asset-urls]
+                        (if push-url
+                          {:status      "success"
+                           :base-url    base-url
+                           :wasm-url    wasm-url
+                           :push-url    push-url
+                           :driver-url  driver-url
+                           :encoder-url encoder-url}
+                          {:status "error"
+                           :msg    "Engine asset URLs not initialized"}))
+                      (catch :default e
+                        (log/error "Worker Get Asset URLs Panic:" e)
+                        {:status "error" :msg (str e)})))))
 
 (defn ^:export bootstrap [registry-callback engine-url]
   (js/console.log "External Matrix Engine Bootstrapping from:" engine-url)
