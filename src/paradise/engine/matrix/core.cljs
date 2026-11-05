@@ -250,14 +250,14 @@
                         (log/error "Worker Logout Panic:" e)
                         {:status "error" :msg (str e)})))))
 
-
 (defn preload-matrix []
   (go
-    (let [raw-fetch  js/globalThis.fetch
-          orig-fetch (.bind raw-fetch js/globalThis)
-          wasm-url   (if ^boolean goog.DEBUG
-                       "/index_bg.wasm"
-                       (.-href (js/URL. "index_bg.wasm" js/globalThis.__ENGINE_URL__)))]
+    (let [raw-fetch   js/globalThis.fetch
+          orig-fetch  (.bind raw-fetch js/globalThis)
+          base-url    js/self.location.origin
+          wasm-url    (.-href (js/URL. "index_bg.wasm" base-url))
+          driver-url  (.-href (js/URL. "call-driver.js" base-url))
+          encoder-url (.-href (js/URL. "call-encoder.js" base-url))]
       (try
         (set! js/globalThis.fetch
               (fn [resource & args]
@@ -265,7 +265,10 @@
                   (if (and url (str/ends-with? (str url) "index_bg.wasm"))
                     (apply orig-fetch wasm-url args)
                     (apply orig-fetch resource args)))))
-        (<p! (sdk/uniffiInitAsync))
+        (<p! (js/Promise.all
+               #js [(sdk/uniffiInitAsync)
+                    (orig-fetch driver-url)
+                    (orig-fetch encoder-url)]))
         {:status :success}
         (catch :default e
           {:status :error :msg (str e)})
