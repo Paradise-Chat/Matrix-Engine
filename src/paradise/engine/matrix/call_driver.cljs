@@ -85,6 +85,34 @@
         (.forEach remotes (fn [p] (add-p! p false))))
       tiles)))
 
+
+(defn- publish-manual-screen-audio! [^js lkc ^js lp]
+  (p/let [devices (.enumerateDevices js/navigator.mediaDevices)
+          target  (some (fn [^js d]
+                          (when (and (= "audioinput" (.-kind d))
+                                     (or (.includes (.-label d) "Paradise_ScreenShare_Input")
+                                         (.includes (.-label d) "paradise_share")))
+                            d))
+                        (array-seq devices))]
+    (when target
+      (p/let [stream (.getUserMedia js/navigator.mediaDevices
+                                    #js {:audio #js {:deviceId         #js {:exact (.-deviceId target)}
+                                                     :echoCancellation false
+                                                     :noiseSuppression false
+                                                     :autoGainControl  false}})
+              tracks (.getAudioTracks stream)
+              track  (aget tracks 0)]
+        (when track
+          (.publishTrack lp
+                         track
+                         #js {:name   "screen_share_audio"
+                              :source (.. lkc -Track -Source -ScreenShareAudio)}))))))
+
+(defn- unpublish-manual-screen-audio! [^js lkc ^js lp]
+  (when-let [^js pub (.getTrackPublication lp (.. lkc -Track -Source -ScreenShareAudio))]
+    (when-let [^js track (.-track pub)]
+      (.unpublishTrack lp track true))))
+
 (defn ^:export createCallDriver [^js bridge]
   (let [session-cfg     (.-sessionConfig bridge)
         sfu-url         (aget session-cfg "url")
@@ -188,11 +216,13 @@
          :setScreenShareEnabled
          (fn [enabled?]
            (if-let [^js lp (.-localParticipant room)]
-             (let [capture-opts #js {:audio       #js {:echoCancellation false
-                                                       :noiseSuppression false
-                                                       :autoGainControl  false}
-                                     :systemAudio "include"}]
-               (p/let [pub (.setScreenShareEnabled lp (boolean enabled?) capture-opts)]
+             (let [on?  (boolean enabled?)
+                   opts (when on?
+                          #js {:audio       #js {:echoCancellation false
+                                                 :noiseSuppression false
+                                                 :autoGainControl  false}
+                               :systemAudio "include"})]
+               (p/let [pub (.setScreenShareEnabled lp on? opts)]
                  (sync-all!)
                  pub))
              (p/rejected (js/Error. "No local participant"))))
