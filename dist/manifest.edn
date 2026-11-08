@@ -11,8 +11,14 @@
  ;; For dev, these files need to be readily available without needing Vite
  :copy-files [{:from "node_modules/ffi-bindings/src/generated-compat/wasm-bindgen/index_bg.wasm"
                :to "index_bg.wasm"}
+              ;; might find a better handling for these, but this'll do for now
               {:from "dist/push-matrix.js"
-               :to "push-matrix.js"}]
+               :to "push-matrix.js"}
+              {:from "dist/call-driver.js"
+               :to "call-driver.js"}
+              {:from "dist/call-encoder.js"
+               :to "call-encoder.js"}
+ ]
 
  :engine-config
  {:login
@@ -25,18 +31,9 @@
     {:id :sso        :label "Continue with SSO" :type :action :action-id :init-sso}]}
 
   :notifications
-  ;; Placeholder until we flesh out the notification loader
-  {:notification-script "push-worker.js"}
-
+  {:notification-script "./push-matrix.js"}
+  ;; maybe suffix these with the protocol name
   :calling
-  ;; Not sure yet if we need to expand this further
-  ;; But the idea is to be able to neatly inform the UI
-  ;; of what thread to launch for call UI
-  ;; encryption
-  {:encoder-script "/livekit-e2ee.js"}
-
-  :media
-  ;; For future use maybe
-  {}
-  }}
-
+  {:driver-script "./call-driver.js"
+   :encoder-script "./call-encoder.js"
+   }}}
