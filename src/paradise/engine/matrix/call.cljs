@@ -1104,6 +1104,37 @@
         legacy-auth-url legacy-body modern-failure)))))
 
 
+(defn- well-known-urls [user-id clean-hs]
+  (let [domain     (when (string? user-id)
+                     (second (re-find #"^@[^:]+:([^/]+)$" user-id)))
+        domain-url (when (and domain (not (str/blank? domain)))
+                     (str "https://" (str/replace domain #"/+$" "") "/.well-known/matrix/client"))
+        hs-wk-url  (when (and clean-hs (not (str/blank? clean-hs)))
+                     (str clean-hs "/.well-known/matrix/client"))]
+    (vec (distinct (remove nil? [domain-url hs-wk-url])))))
+
+(defn- fetch-rtc-well-known! [user-id clean-hs]
+  (go
+    (let [urls (well-known-urls user-id clean-hs)]
+      (loop [[url & more] urls
+             last-err     nil]
+        (if-not url
+          (throw (or last-err (js/Error. "Unable to resolve .well-known/matrix/client")))
+          (let [res (try
+                      (let [resp (<p! (js/fetch url #js {:method "GET"
+                                                         :headers #js {"Accept" "application/json"}}))]
+                        (if (.-ok resp)
+                          {:ok (<p! (.json resp))}
+                          {:err (js/Error. (str "HTTP " (.-status resp) " from " url))}))
+                      (catch :default e
+                        {:err e}))]
+            (if-let [data (:ok res)]
+              (if (or (aget data "org.matrix.msc4143.rtc_foci")
+                      (aget data "im.vector.rtc.sfu")
+                      (empty? more))
+                data
+                (recur more (:err res)))
+              (recur more (:err res)))))))))
 
 (defn- request-call-session! [{:keys [room-id]}]
   (go
@@ -1129,7 +1160,7 @@
            (js/Error.
             (str "Room not found: " room-id))))
 
-        (let [wk-url
+        (let #_[wk-url
               (str hs-url "/.well-known/matrix/client")
 
               wk-resp
@@ -1137,6 +1168,18 @@
 
               wk-data
               (<p! (.json wk-resp))
+
+              foci
+              (or
+               (aget wk-data "org.matrix.msc4143.rtc_foci")
+               (aget wk-data "im.vector.rtc.sfu"))
+
+              sfu-base-url
+              (when (and foci (pos? (.-length foci)))
+                (.-livekit_service_url (aget foci 0)))]
+
+             [wk-data
+              (<! (fetch-rtc-well-known! user-id clean-hs))
 
               foci
               (or
