@@ -10,6 +10,12 @@
 (defonce !media-session (atom nil))
 (defonce !hydrating-promise (atom nil))
 
+(defn- normalize-server-url [url]
+  (when (and url (not (str/blank? (str url))))
+    (-> (net/ensure-protocol url)
+        str
+        (str/replace #"/+$" ""))))
+
 (defn- read-store-session [target-user-id]
   (p/let [store    (SessionStore. :matrix)
           sessions (.loadSessions store)
@@ -21,12 +27,13 @@
           entry    (when uid (aget sessions uid))
           raw      (when entry (or (aget entry "session") entry))
           base-url (when raw (or (.-homeserverUrl raw) (.-homeserver_url raw)))
-          token    (when raw (or (.-accessToken raw) (.-access_token raw)))]
-    (when (and base-url token)
-      (let [s {:base-url (net/ensure-protocol base-url)
+          token    (when raw (or (.-accessToken raw) (.-access_token raw)))
+          clean-hs (normalize-server-url base-url)]
+    (when (and clean-hs token)
+      (let [s {:base-url clean-hs
                :token    token}]
         (reset! !media-session s)
-        (net/set-auth-context! token (:base-url s))
+        (net/set-auth-context! token clean-hs)
         s))))
 
 (defn- ensure-media-session! [target-user-id]
@@ -62,12 +69,13 @@
 (defn- strip-matrix-uri [uri]
   (-> (str uri)
       (str/replace #"^mxc://" "")
-      (str/replace #"^emote://matrix/" "")))
+      (str/replace #"^emote://matrix/" "")
+      (str/replace #"^/+" "")))
 
 (defn- build-media-url [server uri {:keys [width height method]}]
   (if (or (str/starts-with? (str uri) "http://")
           (str/starts-with? (str uri) "https://"))
-    (str uri)
+    (str/replace (str uri) #"([^:])//+_matrix/" "$1/_matrix/")
     (let [clean-id (strip-matrix-uri uri)]
       (if (and width height)
         (str server "/_matrix/client/v1/media/thumbnail/" clean-id
@@ -75,6 +83,52 @@
              "&height=" (int height)
              "&method=" (or method "scale"))
         (str server "/_matrix/client/v1/media/download/" clean-id)))))
+
+(defn- retryable-status? [status]
+  (contains? #{429 502 503 504} status))
+
+(defn- fetch-with-retry! [url opts retries]
+  (p/loop [attempt 0]
+    (-> (net/fetch url opts)
+        (p/then
+         (fn [resp]
+           (if (or (.-ok resp)
+                   (>= attempt retries)
+                   (not (retryable-status? (.-status resp))))
+             resp
+             (let [retry-after (some-> (.-headers resp)
+                                       (.get "Retry-After")
+                                       js/parseFloat)
+                   delay-ms    (if (and retry-after (not (js/isNaN retry-after)))
+                                 (* retry-after 1000)
+                                 (* 450 (inc attempt)))]
+               (p/do!
+                 (p/delay delay-ms)
+                 (p/recur (inc attempt)))))))
+        (p/catch
+         (fn [err]
+           (if (>= attempt retries)
+             (p/rejected err)
+             (p/do!
+               (p/delay (* 450 (inc attempt)))
+               (p/recur (inc attempt)))))))))
+
+(defn- fetch-media-response! [server raw-uri thumb-opts fetch-opts]
+  (let [primary-url  (build-media-url server raw-uri thumb-opts)
+        has-thumb?   (and (:width thumb-opts) (:height thumb-opts))
+        fallback-url (when has-thumb?
+                       (build-media-url server raw-uri nil))]
+    (-> (fetch-with-retry! primary-url fetch-opts 2)
+        (p/then
+         (fn [resp]
+           (if (or (.-ok resp) (not fallback-url))
+             resp
+             (fetch-with-retry! fallback-url fetch-opts 1))))
+        (p/catch
+         (fn [err]
+           (if fallback-url
+             (fetch-with-retry! fallback-url fetch-opts 1)
+             (p/rejected err)))))))
 
 (bind/register!
  :matrix :get-media
@@ -86,7 +140,7 @@
          {:status "ignored" :msg "No source provided"}
          (try
            (let [{:keys [base-url token]} (<p! (ensure-media-session! user-id))
-                 server                   (str/replace (str base-url) #"/+$" "")]
+                 server                   (normalize-server-url base-url)]
              (if (str/blank? server)
                {:status "error" :msg "No active Matrix session found in SessionStore"}
                (let [fetch-opts (if token
@@ -99,17 +153,15 @@
                                      (js->clj source-map :keywordize-keys true))
                          file-info (:file sm-clj)]
                      (if-not file-info
-                       (let [raw-uri   (or target-uri (:url sm-clj) (get-in sm-clj [:plain :url]) "")
-                             fetch-url (build-media-url server raw-uri thumb-opts)
-                             resp      (<p! (net/fetch fetch-url fetch-opts))]
+                       (let [raw-uri (or target-uri (:url sm-clj) (get-in sm-clj [:plain :url]) "")
+                             resp    (<p! (fetch-media-response! server raw-uri thumb-opts fetch-opts))]
                          (if-not (.-ok resp)
                            (throw (ex-info "Fetch failed" {:status (.-status resp)}))
                            (let [buf (<p! (.arrayBuffer resp))]
                              {:status "success" :bytes buf :transfer [:bytes]})))
-                       (let [jwk       (clj->js (:key file-info))
-                             iv-b64    (:iv file-info)
-                             fetch-url (build-media-url server (:url file-info) nil)
-                             resp      (<p! (net/fetch fetch-url fetch-opts))]
+                       (let [jwk  (clj->js (:key file-info))
+                             iv-b64 (:iv file-info)
+                             resp (<p! (fetch-media-response! server (:url file-info) nil fetch-opts))]
                          (if-not (.-ok resp)
                            (throw (ex-info "Fetch failed" {:status (.-status resp)}))
                            (let [enc-buf    (<p! (.arrayBuffer resp))
@@ -123,8 +175,7 @@
                              {:status "success" :bytes dec-buf :transfer [:bytes]})))))
 
                    target-uri
-                   (let [fetch-url (build-media-url server target-uri thumb-opts)
-                         resp      (<p! (net/fetch fetch-url fetch-opts))]
+                   (let [resp (<p! (fetch-media-response! server target-uri thumb-opts fetch-opts))]
                      (if-not (.-ok resp)
                        (throw (ex-info "Fetch failed" {:status (.-status resp)}))
                        (let [buf (<p! (.arrayBuffer resp))]
