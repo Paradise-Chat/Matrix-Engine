@@ -32,7 +32,7 @@ jobs:
 
       - run: pnpm install
 
-      - run: pnpm run build:scratch
+      - run: mkdir -p dist && pnpm run build:scratch
 
       - uses: peaceiris/actions-gh-pages@v4
         with:
