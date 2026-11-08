@@ -15,6 +15,7 @@
         "build:copy": "cp build/main.js dist/engine.js",
         "build:wasm": "cp node_modules/ffi-bindings/src/generated/wasm-bindgen/index_bg.wasm dist/",
         "build:manifest": "cp config.edn dist/manifest.edn",
+        "build:scratch": "pnpm run build:libs && pnpm run build:engine && pnpm run build:push && pnpm run build:combine && pnpm run build:driver-encoder && pnpm run build:bundle && pnpm run build:manifest && pnpm run build:wasm",
         "build": "pnpm run build:libs && pnpm run build:engine && pnpm run build:driver-encoder && pnpm run build:bundle && pnpm run build:manifest && pnpm run build:wasm",
         "build:local": "LOCAL=1 pnpm run build"
     },
