@@ -34,57 +34,61 @@
 (defn- collect-participant-tiles [^js room]
   (if-not room
     #js []
-    (let [tiles      (js/Array.)
-          mic-source (.. ^js lkc -Track -Source -Microphone)
-          cam-source (.. ^js lkc -Track -Source -Camera)
-          scr-source (.. ^js lkc -Track -Source -ScreenShare)
-          add-p!     (fn [^js p local?]
-                       (when p
-                         (let [pid            (or (not-empty (.-identity p)) "unknown")
-                               uid            (or (extract-matrix-user-id pid) pid)
-                               dname          (or (not-empty (.-name p)) uid)
-                               speaking?      (boolean (.-isSpeaking p))
-                               ^js mic-pub    (.getTrackPublication p mic-source)
-                               ^js cam-pub    (.getTrackPublication p cam-source)
-                               ^js scr-pub    (.getTrackPublication p scr-source)
-                               ^js mic-t      (some-> mic-pub .-track)
-                               ^js cam-t      (some-> cam-pub .-track)
-                               ^js scr-t      (some-> scr-pub .-track)
-                               mic-track      (some-> mic-t .-mediaStreamTrack)
-                               cam-track      (some-> cam-t .-mediaStreamTrack)
-                               scr-track      (some-> scr-t .-mediaStreamTrack)
-                               audio-muted    (if mic-pub (boolean (.-isMuted mic-pub)) true)
-                               video-muted    (if cam-pub (boolean (.-isMuted cam-pub)) true)]
-                           (.push tiles
-                                  #js {"id"             (str pid ":camera")
-                                       "participant-id" pid
-                                       "user-id"        uid
-                                       "display-name"   dname
-                                       "source"         "camera"
-                                       "local?"         local?
-                                       "speaking?"      speaking?
-                                       "audio-muted?"   audio-muted
-                                       "video-muted?"   video-muted
-                                       "video-track"    cam-track
-                                       "audio-track"    mic-track})
-                           (when (and scr-pub scr-track (not (.-isMuted scr-pub)))
-                             (.push tiles
-                                    #js {"id"             (str pid ":screen-share")
-                                         "participant-id" pid
-                                         "user-id"        uid
-                                         "display-name"   (str dname " (Screen)")
-                                         "source"         "screen-share"
-                                         "local?"         local?
-                                         "speaking?"      false
-                                         "audio-muted?"   true
-                                         "video-muted?"   false
-                                         "video-track"    scr-track
-                                         "audio-track"    nil})))))]
+    (let [tiles          (js/Array.)
+          mic-source     (.. ^js lkc -Track -Source -Microphone)
+          cam-source     (.. ^js lkc -Track -Source -Camera)
+          scr-source     (.. ^js lkc -Track -Source -ScreenShare)
+          scr-aud-source (.. ^js lkc -Track -Source -ScreenShareAudio)
+          add-p!         (fn [^js p local?]
+                           (when p
+                             (let [pid            (or (not-empty (.-identity p)) "unknown")
+                                   uid            (or (extract-matrix-user-id pid) pid)
+                                   dname          (or (not-empty (.-name p)) uid)
+                                   speaking?      (boolean (.-isSpeaking p))
+                                   ^js mic-pub    (.getTrackPublication p mic-source)
+                                   ^js cam-pub    (.getTrackPublication p cam-source)
+                                   ^js scr-pub    (.getTrackPublication p scr-source)
+                                   ^js scr-a-pub  (.getTrackPublication p scr-aud-source)
+                                   ^js mic-t      (some-> mic-pub .-track)
+                                   ^js cam-t      (some-> cam-pub .-track)
+                                   ^js scr-t      (some-> scr-pub .-track)
+                                   ^js scr-a-t    (some-> scr-a-pub .-track)
+                                   mic-track      (some-> mic-t .-mediaStreamTrack)
+                                   cam-track      (some-> cam-t .-mediaStreamTrack)
+                                   scr-track      (some-> scr-t .-mediaStreamTrack)
+                                   scr-a-track    (some-> scr-a-t .-mediaStreamTrack)
+                                   audio-muted    (if mic-pub (boolean (.-isMuted mic-pub)) true)
+                                   video-muted    (if cam-pub (boolean (.-isMuted cam-pub)) true)
+                                   scr-a-muted    (if scr-a-pub (boolean (.-isMuted scr-a-pub)) true)]
+                               (.push tiles
+                                      #js {"id"             (str pid ":camera")
+                                           "participant-id" pid
+                                           "user-id"        uid
+                                           "display-name"   dname
+                                           "source"         "camera"
+                                           "local?"         local?
+                                           "speaking?"      speaking?
+                                           "audio-muted?"   audio-muted
+                                           "video-muted?"   video-muted
+                                           "video-track"    cam-track
+                                           "audio-track"    mic-track})
+                               (when (and scr-pub scr-track (not (.-isMuted scr-pub)))
+                                 (.push tiles
+                                        #js {"id"             (str pid ":screen-share")
+                                             "participant-id" pid
+                                             "user-id"        uid
+                                             "display-name"   (str dname " (Screen)")
+                                             "source"         "screen-share"
+                                             "local?"         local?
+                                             "speaking?"      false
+                                             "audio-muted?"   scr-a-muted
+                                             "video-muted?"   false
+                                             "video-track"    scr-track
+                                             "audio-track"    scr-a-track})))))]
       (add-p! (.-localParticipant room) true)
       (when-let [^js remotes (.-remoteParticipants room)]
         (.forEach remotes (fn [p] (add-p! p false))))
       tiles)))
-
 
 (defn- publish-manual-screen-audio! [^js lkc ^js lp]
   (p/let [devices (.enumerateDevices js/navigator.mediaDevices)
@@ -123,6 +127,7 @@
         on-local-media  (.-onLocalMediaChanged bridge)
         on-connected    (.-onConnected bridge)
         on-disconnected (.-onDisconnected bridge)
+        on-data         (.-onDataReceived bridge)
         on-error        (.-onError bridge)
         ^js kp          (when encoder-worker
                           (new (.-BaseKeyProvider ^js lkc)
@@ -134,6 +139,7 @@
                           (assoc :e2ee #js {:keyProvider kp :worker encoder-worker}))
         ^js room        (new (.-Room ^js lkc) (clj->js room-opts))
         !known-keys     (atom {})
+        !custom-pubs    (atom {})
         sync-all!       (fn [& _]
                           (when on-participants
                             (on-participants (collect-participant-tiles room)))
@@ -143,6 +149,18 @@
                                #js {:audio          (boolean (.-isMicrophoneEnabled lp))
                                     :video          (boolean (.-isCameraEnabled lp))
                                     :screen-sharing (boolean (.-isScreenShareEnabled lp))}))))
+        unpublish-key!  (fn [stream-name]
+                          (if-let [^js lp (.-localParticipant room)]
+                            (let [pubs (get @!custom-pubs stream-name)]
+                              (swap! !custom-pubs dissoc stream-name)
+                              (-> (p/all
+                                   (keep (fn [^js pub]
+                                           (when-let [^js t (.-track pub)]
+                                             (.unpublishTrack lp t true)))
+                                         pubs))
+                                  (p/then (fn [_] (sync-all!)))
+                                  (p/catch (fn [_] (sync-all!)))))
+                            (p/resolved nil)))
         attach-proc!    (fn [^js ltrack]
                           (when (and ltrack get-processor)
                             (when-not (.getProcessor ltrack)
@@ -169,8 +187,18 @@
              (when (= (.-source pub) (.. ^js lkc -Track -Source -Microphone))
                (attach-proc! (.-track pub)))))
 
+      (.on room (.-DataReceived ev)
+           (fn [payload ^js participant kind topic]
+             (when on-data
+               (on-data payload
+                        #js {:participant-id (some-> participant .-identity)
+                             :user-id        (some-> participant .-identity extract-matrix-user-id)
+                             :kind           kind
+                             :topic          topic}))))
+
       (.on room (.-Disconnected ev)
            (fn [reason]
+             (reset! !custom-pubs {})
              (when on-disconnected
                (on-disconnected reason)))))
 
@@ -193,6 +221,7 @@
 
          :disconnect
          (fn []
+           (reset! !custom-pubs {})
            (.disconnect room))
 
          :setMicrophoneEnabled
@@ -222,10 +251,74 @@
                                                  :noiseSuppression false
                                                  :autoGainControl  false}
                                :systemAudio "include"})]
-               (p/let [pub (.setScreenShareEnabled lp on? opts)]
+               (p/let [_   (if (and (not on?) (seq @!custom-pubs))
+                             (p/all (map unpublish-key! (keys @!custom-pubs)))
+                             (p/resolved nil))
+                       pub (.setScreenShareEnabled lp on? opts)]
                  (sync-all!)
                  pub))
              (p/rejected (js/Error. "No local participant"))))
+
+         :publishCustomStream
+         (fn [stream-name ^js media-stream ^js opts]
+           (if-let [^js lp (.-localParticipant room)]
+             (let [scr-source     (.. ^js lkc -Track -Source -ScreenShare)
+                   scr-aud-source (.. ^js lkc -Track -Source -ScreenShareAudio)
+                   use-screen?    (= (or (when opts (aget opts "source")) "screen-share")
+                                     "screen-share")
+                   v-tracks       (array-seq (.getVideoTracks media-stream))
+                   a-tracks       (array-seq (.getAudioTracks media-stream))]
+               (p/let [_      (unpublish-key! stream-name)
+                       _      (if (and use-screen? (.-isScreenShareEnabled lp))
+                                (.setScreenShareEnabled lp false)
+                                (p/resolved nil))
+                       v-pubs (p/all
+                               (map (fn [^js vt]
+                                      (.publishTrack
+                                       lp vt
+                                       (if use-screen?
+                                         #js {:name       (str "custom_v_" stream-name)
+                                              :source     scr-source
+                                              :simulcast  false
+                                              :videoCodec "vp8"}
+                                         #js {:name       (str "custom_v_" stream-name)
+                                              :simulcast  false
+                                              :videoCodec "vp8"})))
+                                    v-tracks))
+                       a-pubs (p/all
+                               (map (fn [^js at]
+                                      (.publishTrack
+                                       lp at
+                                       (if use-screen?
+                                         #js {:name   (str "custom_a_" stream-name)
+                                              :source scr-aud-source}
+                                         #js {:name   (str "custom_a_" stream-name)})))
+                                    a-tracks))]
+                 (swap! !custom-pubs assoc stream-name (vec (concat v-pubs a-pubs)))
+                 (sync-all!)
+                 v-pubs))
+             (p/rejected (js/Error. "No local participant"))))
+
+         :unpublishCustomStream
+         (fn [stream-name]
+           (unpublish-key! stream-name))
+
+         :publishData
+         (fn [^js bytes ^js opts]
+           (if-let [^js lp (.-localParticipant room)]
+             (let [reliable? (if (and opts (some? (aget opts "reliable")))
+                               (boolean (aget opts "reliable"))
+                               true)
+                   topic     (when opts (aget opts "topic"))
+                   pub-opts  (if topic
+                               #js {:reliable reliable? :topic topic}
+                               #js {:reliable reliable?})]
+               (-> (.publishData lp bytes pub-opts)
+                   (p/catch (fn [err]
+                              (when (and reliable? on-error)
+                                (on-error "data" err))
+                              nil))))
+             (p/resolved nil)))
 
          :switchDevice
          (fn [kind device-id]
